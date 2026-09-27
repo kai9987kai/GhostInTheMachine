@@ -1,0 +1,36 @@
+{
+  "phase": "dev",
+  "status": "EXPLORATORY (development seeds)",
+  "spec": {
+    "steps": 6000,
+    "burn": 2000,
+    "n_surrogates": 49,
+    "placebo": true,
+    "conditions": [
+      "full",
+      "no_comparator",
+      "no_efference",
+      "no_selffeedback",
+      "frozen"
+    ],
+    "agent_defaults": "ghost_v4.engine.AgentConfig defaults: 120 nodes, 16 observation dims, 7 actions, radius 1.0 (no gain ramp), leak 0.5, temperature 0.18",
+    "seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111
+    ],
+    "world_blocks": 1,
+    "world_seed_base": 1
+  },
+  "lock": {},
+  "version": "4.0"
+}

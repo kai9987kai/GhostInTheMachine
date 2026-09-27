@@ -1,0 +1,926 @@
+{
+  "8be1c64cb47b": {
+    "seed": 100,
+    "cond": "full",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "bfb1636bc9ed": {
+    "seed": 100,
+    "cond": "no_comparator",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "604394de7f9e": {
+    "seed": 100,
+    "cond": "no_efference",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "3f0f6677fa79": {
+    "seed": 100,
+    "cond": "no_selffeedback",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "b3c2d2063315": {
+    "seed": 100,
+    "cond": "frozen",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "4fbe1c56f40b": {
+    "seed": 100,
+    "cond": "full",
+    "role": "placebo",
+    "world": 1,
+    "donor": null
+  },
+  "222001d50c5b": {
+    "seed": 101,
+    "cond": "full",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "44b50fa71b54": {
+    "seed": 101,
+    "cond": "no_comparator",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "d7f3fb03ee58": {
+    "seed": 101,
+    "cond": "no_efference",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "dce0991a7286": {
+    "seed": 101,
+    "cond": "no_selffeedback",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "9ab07e712267": {
+    "seed": 101,
+    "cond": "frozen",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "fd71bcad56fa": {
+    "seed": 101,
+    "cond": "full",
+    "role": "placebo",
+    "world": 1,
+    "donor": null
+  },
+  "5d05b6918f4d": {
+    "seed": 102,
+    "cond": "full",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "a0050f79e242": {
+    "seed": 102,
+    "cond": "no_comparator",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "d99aa346334f": {
+    "seed": 102,
+    "cond": "no_efference",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "b64471f0ae45": {
+    "seed": 102,
+    "cond": "no_selffeedback",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "abb59def8c1b": {
+    "seed": 102,
+    "cond": "frozen",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "e6065c6ee7e3": {
+    "seed": 102,
+    "cond": "full",
+    "role": "placebo",
+    "world": 1,
+    "donor": null
+  },
+  "0c6744b1023f": {
+    "seed": 103,
+    "cond": "full",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "22185938a05a": {
+    "seed": 103,
+    "cond": "no_comparator",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "a76ce7bdd060": {
+    "seed": 103,
+    "cond": "no_efference",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "c0fba417c205": {
+    "seed": 103,
+    "cond": "no_selffeedback",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "641dab4f3b31": {
+    "seed": 103,
+    "cond": "frozen",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "ce170611143b": {
+    "seed": 103,
+    "cond": "full",
+    "role": "placebo",
+    "world": 1,
+    "donor": null
+  },
+  "79bb5e8b9f22": {
+    "seed": 104,
+    "cond": "full",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "b2365ad914d2": {
+    "seed": 104,
+    "cond": "no_comparator",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "98b5536ea026": {
+    "seed": 104,
+    "cond": "no_efference",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "3c689292bcf5": {
+    "seed": 104,
+    "cond": "no_selffeedback",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "374865a014b7": {
+    "seed": 104,
+    "cond": "frozen",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "ef98a16e0040": {
+    "seed": 104,
+    "cond": "full",
+    "role": "placebo",
+    "world": 1,
+    "donor": null
+  },
+  "c615b39e786c": {
+    "seed": 105,
+    "cond": "full",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "c62613725c95": {
+    "seed": 105,
+    "cond": "no_comparator",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "5823b83b3f11": {
+    "seed": 105,
+    "cond": "no_efference",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "3bc1a5b5f9f7": {
+    "seed": 105,
+    "cond": "no_selffeedback",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "82a66a47d8f9": {
+    "seed": 105,
+    "cond": "frozen",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "2b852347908e": {
+    "seed": 105,
+    "cond": "full",
+    "role": "placebo",
+    "world": 1,
+    "donor": null
+  },
+  "ded3a5632a68": {
+    "seed": 106,
+    "cond": "full",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "79da43a65310": {
+    "seed": 106,
+    "cond": "no_comparator",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "c575bb138693": {
+    "seed": 106,
+    "cond": "no_efference",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "43746f5d2da0": {
+    "seed": 106,
+    "cond": "no_selffeedback",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "23b8c7c5b843": {
+    "seed": 106,
+    "cond": "frozen",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "19f7e1111c05": {
+    "seed": 106,
+    "cond": "full",
+    "role": "placebo",
+    "world": 1,
+    "donor": null
+  },
+  "adc8045e0fbd": {
+    "seed": 107,
+    "cond": "full",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "e430de5fc91e": {
+    "seed": 107,
+    "cond": "no_comparator",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "a688d6e43d3b": {
+    "seed": 107,
+    "cond": "no_efference",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "9850b34fdda4": {
+    "seed": 107,
+    "cond": "no_selffeedback",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "e1d11379a682": {
+    "seed": 107,
+    "cond": "frozen",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "50887bb5117c": {
+    "seed": 107,
+    "cond": "full",
+    "role": "placebo",
+    "world": 1,
+    "donor": null
+  },
+  "9ccf971c047b": {
+    "seed": 108,
+    "cond": "full",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "6402280d496b": {
+    "seed": 108,
+    "cond": "no_comparator",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "abe520b44b11": {
+    "seed": 108,
+    "cond": "no_efference",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "4e276d900deb": {
+    "seed": 108,
+    "cond": "no_selffeedback",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "8c3353d68b5c": {
+    "seed": 108,
+    "cond": "frozen",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "304ae6781fde": {
+    "seed": 108,
+    "cond": "full",
+    "role": "placebo",
+    "world": 1,
+    "donor": null
+  },
+  "b7b9b56a450a": {
+    "seed": 109,
+    "cond": "full",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "f815486cf5d8": {
+    "seed": 109,
+    "cond": "no_comparator",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "b2ddcec2190f": {
+    "seed": 109,
+    "cond": "no_efference",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "c0722b57a7df": {
+    "seed": 109,
+    "cond": "no_selffeedback",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "d236d6e694aa": {
+    "seed": 109,
+    "cond": "frozen",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "c81e97fa82d6": {
+    "seed": 109,
+    "cond": "full",
+    "role": "placebo",
+    "world": 1,
+    "donor": null
+  },
+  "2487adb7e384": {
+    "seed": 110,
+    "cond": "full",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "1130fc30cfdc": {
+    "seed": 110,
+    "cond": "no_comparator",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "625cc458db04": {
+    "seed": 110,
+    "cond": "no_efference",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "c5c94d2dde1a": {
+    "seed": 110,
+    "cond": "no_selffeedback",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "559b7b630ab2": {
+    "seed": 110,
+    "cond": "frozen",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "2392eb01798b": {
+    "seed": 110,
+    "cond": "full",
+    "role": "placebo",
+    "world": 1,
+    "donor": null
+  },
+  "cc8b6ef0f436": {
+    "seed": 111,
+    "cond": "full",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "f0c45196562e": {
+    "seed": 111,
+    "cond": "no_comparator",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "7a2273b92ff0": {
+    "seed": 111,
+    "cond": "no_efference",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "0ec417130713": {
+    "seed": 111,
+    "cond": "no_selffeedback",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "9ea27cfd7375": {
+    "seed": 111,
+    "cond": "frozen",
+    "role": "master",
+    "world": 1,
+    "donor": null
+  },
+  "0bb31850c564": {
+    "seed": 111,
+    "cond": "full",
+    "role": "placebo",
+    "world": 1,
+    "donor": null
+  },
+  "27cccd8fe8ab": {
+    "seed": 100,
+    "cond": "full",
+    "role": "twin",
+    "world": 1,
+    "donor": 101
+  },
+  "32cc8ad9b9b4": {
+    "seed": 100,
+    "cond": "no_comparator",
+    "role": "twin",
+    "world": 1,
+    "donor": 101
+  },
+  "52270c1f196a": {
+    "seed": 100,
+    "cond": "no_efference",
+    "role": "twin",
+    "world": 1,
+    "donor": 101
+  },
+  "b2130a8e0f84": {
+    "seed": 100,
+    "cond": "no_selffeedback",
+    "role": "twin",
+    "world": 1,
+    "donor": 101
+  },
+  "8f340ea5b5d5": {
+    "seed": 100,
+    "cond": "frozen",
+    "role": "twin",
+    "world": 1,
+    "donor": 101
+  },
+  "9b48d56fceef": {
+    "seed": 101,
+    "cond": "full",
+    "role": "twin",
+    "world": 1,
+    "donor": 102
+  },
+  "bf25c838506f": {
+    "seed": 101,
+    "cond": "no_comparator",
+    "role": "twin",
+    "world": 1,
+    "donor": 102
+  },
+  "365c6fc97f92": {
+    "seed": 101,
+    "cond": "no_efference",
+    "role": "twin",
+    "world": 1,
+    "donor": 102
+  },
+  "02fcfbdac0d5": {
+    "seed": 101,
+    "cond": "no_selffeedback",
+    "role": "twin",
+    "world": 1,
+    "donor": 102
+  },
+  "703cf9c3f714": {
+    "seed": 101,
+    "cond": "frozen",
+    "role": "twin",
+    "world": 1,
+    "donor": 102
+  },
+  "63aa05e8ec04": {
+    "seed": 102,
+    "cond": "full",
+    "role": "twin",
+    "world": 1,
+    "donor": 103
+  },
+  "be98c9cbc2b5": {
+    "seed": 102,
+    "cond": "no_comparator",
+    "role": "twin",
+    "world": 1,
+    "donor": 103
+  },
+  "2f382c020224": {
+    "seed": 102,
+    "cond": "no_efference",
+    "role": "twin",
+    "world": 1,
+    "donor": 103
+  },
+  "91dc0b224d5f": {
+    "seed": 102,
+    "cond": "no_selffeedback",
+    "role": "twin",
+    "world": 1,
+    "donor": 103
+  },
+  "64473236df80": {
+    "seed": 102,
+    "cond": "frozen",
+    "role": "twin",
+    "world": 1,
+    "donor": 103
+  },
+  "23fc436c2bfc": {
+    "seed": 103,
+    "cond": "full",
+    "role": "twin",
+    "world": 1,
+    "donor": 104
+  },
+  "d7303d63da25": {
+    "seed": 103,
+    "cond": "no_comparator",
+    "role": "twin",
+    "world": 1,
+    "donor": 104
+  },
+  "7a8904403491": {
+    "seed": 103,
+    "cond": "no_efference",
+    "role": "twin",
+    "world": 1,
+    "donor": 104
+  },
+  "00847926c351": {
+    "seed": 103,
+    "cond": "no_selffeedback",
+    "role": "twin",
+    "world": 1,
+    "donor": 104
+  },
+  "9871632680a9": {
+    "seed": 103,
+    "cond": "frozen",
+    "role": "twin",
+    "world": 1,
+    "donor": 104
+  },
+  "2d466e62951f": {
+    "seed": 104,
+    "cond": "full",
+    "role": "twin",
+    "world": 1,
+    "donor": 105
+  },
+  "3beedb64dac6": {
+    "seed": 104,
+    "cond": "no_comparator",
+    "role": "twin",
+    "world": 1,
+    "donor": 105
+  },
+  "20507564bb68": {
+    "seed": 104,
+    "cond": "no_efference",
+    "role": "twin",
+    "world": 1,
+    "donor": 105
+  },
+  "dfdad643c414": {
+    "seed": 104,
+    "cond": "no_selffeedback",
+    "role": "twin",
+    "world": 1,
+    "donor": 105
+  },
+  "8553447fd2b0": {
+    "seed": 104,
+    "cond": "frozen",
+    "role": "twin",
+    "world": 1,
+    "donor": 105
+  },
+  "ef5ab1519c3b": {
+    "seed": 105,
+    "cond": "full",
+    "role": "twin",
+    "world": 1,
+    "donor": 106
+  },
+  "6b8989a907a3": {
+    "seed": 105,
+    "cond": "no_comparator",
+    "role": "twin",
+    "world": 1,
+    "donor": 106
+  },
+  "395e50ce0254": {
+    "seed": 105,
+    "cond": "no_efference",
+    "role": "twin",
+    "world": 1,
+    "donor": 106
+  },
+  "c2b9d6fc25d3": {
+    "seed": 105,
+    "cond": "no_selffeedback",
+    "role": "twin",
+    "world": 1,
+    "donor": 106
+  },
+  "0639b8761df7": {
+    "seed": 105,
+    "cond": "frozen",
+    "role": "twin",
+    "world": 1,
+    "donor": 106
+  },
+  "f060a1388693": {
+    "seed": 106,
+    "cond": "full",
+    "role": "twin",
+    "world": 1,
+    "donor": 107
+  },
+  "bf3033b25563": {
+    "seed": 106,
+    "cond": "no_comparator",
+    "role": "twin",
+    "world": 1,
+    "donor": 107
+  },
+  "1bf463c933c0": {
+    "seed": 106,
+    "cond": "no_efference",
+    "role": "twin",
+    "world": 1,
+    "donor": 107
+  },
+  "5ac3069741c5": {
+    "seed": 106,
+    "cond": "no_selffeedback",
+    "role": "twin",
+    "world": 1,
+    "donor": 107
+  },
+  "6c6715fc8fc4": {
+    "seed": 106,
+    "cond": "frozen",
+    "role": "twin",
+    "world": 1,
+    "donor": 107
+  },
+  "88896d21f607": {
+    "seed": 107,
+    "cond": "full",
+    "role": "twin",
+    "world": 1,
+    "donor": 108
+  },
+  "725c8fb7722a": {
+    "seed": 107,
+    "cond": "no_comparator",
+    "role": "twin",
+    "world": 1,
+    "donor": 108
+  },
+  "fbbfcf429093": {
+    "seed": 107,
+    "cond": "no_efference",
+    "role": "twin",
+    "world": 1,
+    "donor": 108
+  },
+  "cf18eab2a449": {
+    "seed": 107,
+    "cond": "no_selffeedback",
+    "role": "twin",
+    "world": 1,
+    "donor": 108
+  },
+  "d65ec8d207c2": {
+    "seed": 107,
+    "cond": "frozen",
+    "role": "twin",
+    "world": 1,
+    "donor": 108
+  },
+  "54ea04e5cee5": {
+    "seed": 108,
+    "cond": "full",
+    "role": "twin",
+    "world": 1,
+    "donor": 109
+  },
+  "9b2f9e517283": {
+    "seed": 108,
+    "cond": "no_comparator",
+    "role": "twin",
+    "world": 1,
+    "donor": 109
+  },
+  "7ff7f618ba00": {
+    "seed": 108,
+    "cond": "no_efference",
+    "role": "twin",
+    "world": 1,
+    "donor": 109
+  },
+  "986ceab12ece": {
+    "seed": 108,
+    "cond": "no_selffeedback",
+    "role": "twin",
+    "world": 1,
+    "donor": 109
+  },
+  "689d0a594c43": {
+    "seed": 108,
+    "cond": "frozen",
+    "role": "twin",
+    "world": 1,
+    "donor": 109
+  },
+  "0814016ad4e0": {
+    "seed": 109,
+    "cond": "full",
+    "role": "twin",
+    "world": 1,
+    "donor": 110
+  },
+  "5ab3c234f6a1": {
+    "seed": 109,
+    "cond": "no_comparator",
+    "role": "twin",
+    "world": 1,
+    "donor": 110
+  },
+  "025013fedbf9": {
+    "seed": 109,
+    "cond": "no_efference",
+    "role": "twin",
+    "world": 1,
+    "donor": 110
+  },
+  "cedf7d54d4a8": {
+    "seed": 109,
+    "cond": "no_selffeedback",
+    "role": "twin",
+    "world": 1,
+    "donor": 110
+  },
+  "8888469e4524": {
+    "seed": 109,
+    "cond": "frozen",
+    "role": "twin",
+    "world": 1,
+    "donor": 110
+  },
+  "ab990380e412": {
+    "seed": 110,
+    "cond": "full",
+    "role": "twin",
+    "world": 1,
+    "donor": 111
+  },
+  "90a27309d20d": {
+    "seed": 110,
+    "cond": "no_comparator",
+    "role": "twin",
+    "world": 1,
+    "donor": 111
+  },
+  "54f5ab3267bb": {
+    "seed": 110,
+    "cond": "no_efference",
+    "role": "twin",
+    "world": 1,
+    "donor": 111
+  },
+  "069501fc5a47": {
+    "seed": 110,
+    "cond": "no_selffeedback",
+    "role": "twin",
+    "world": 1,
+    "donor": 111
+  },
+  "daf6b90702d8": {
+    "seed": 110,
+    "cond": "frozen",
+    "role": "twin",
+    "world": 1,
+    "donor": 111
+  },
+  "81915bdfabe5": {
+    "seed": 111,
+    "cond": "full",
+    "role": "twin",
+    "world": 1,
+    "donor": 100
+  },
+  "c87f90680340": {
+    "seed": 111,
+    "cond": "no_comparator",
+    "role": "twin",
+    "world": 1,
+    "donor": 100
+  },
+  "4271370960f9": {
+    "seed": 111,
+    "cond": "no_efference",
+    "role": "twin",
+    "world": 1,
+    "donor": 100
+  },
+  "fc7803ef9f83": {
+    "seed": 111,
+    "cond": "no_selffeedback",
+    "role": "twin",
+    "world": 1,
+    "donor": 100
+  },
+  "00941e327a71": {
+    "seed": 111,
+    "cond": "frozen",
+    "role": "twin",
+    "world": 1,
+    "donor": 100
+  }
+}

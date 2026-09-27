@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+results/**/checkpoint.pkl
+ghost_experiment_*/
+ghost_v3_experiment_*/
