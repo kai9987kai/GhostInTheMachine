@@ -1,5 +1,29 @@
 # Changelog
 
+## v7.0 - 2026-09-27 — an author's error is its own
+
+Preregistered studies. Hypotheses were committed before any v7 data (`3731203`); the lock was pushed before the confirmatory run (`22002fd`); results are in `ddaad5a`.
+
+- **`src/ghost_v7/`**: an engine that is bit-identical to v6 at defaults. It splits the comparator input into a state-predicted part (`c + B x`, fitted by ridge regression) and the rest, either of which can be desynchronized while the other stays live. It also adds a bounded persistence measure (lag-1 autocorrelation ρ), a signed-rank test and Hodges–Lehmann estimates.
+- **Study K, feedback vs innovation (48 new networks):** K1–K4 supported; the preregistered decision is "both".
+  - Desynchronization costs the author again but costs the twin nothing.
+  - The author's own state predicts 64% of its error; for the twin it is 30%.
+  - Descriptively, the state-predicted part alone is a strongly stabilizing feedback loop.
+- **Study L, powered Ψ test (72 new networks):** Ψ not supported (d_z 0.12). Bounded persistence supported (66/72).
+- **Study M, comparator gain with the robust measure (48 new networks):** the effect is present at half gain and grows with the gain, resolving v6 Study J.
+- **Prespecified cumulative meta-analysis** (8 samples, 360 networks; DL + HKSJ, leave-one-out, prediction intervals):
+  - persistence +0.139 nats, I² 0, 320/360 networks;
+  - Ψ +0.083, I² 0.56, prediction interval includes zero. **Ψ returns to "not replicated".**
+- **Evidence explorer:** `docs/index.html`, generated from the claims ledger and ready for GitHub Pages. It is checked in CI like the README table.
+- Ledger updates:
+  - three new claims;
+  - Ψ back to not replicated;
+  - gain claim supported;
+  - timing claim replicated.
+- Figure 7, `paper/Ghost_in_the_Machine_v7_Feedback.{md,docx,pdf}`, and update boxes in the v4, v5 and v6 papers.
+- `pyproject.toml` 7.0 with the `ghost-v7` command. CI verifies all four locks.
+- v4, v5 and v6 code are untouched; all their locks still verify.
+
 ## v6.0 - 2026-09-27 — what the comparator's prediction error carries
 
 Preregistered mechanism studies. Hypotheses were committed before any v6 data (`e7da0f1`); the lock was pushed before the confirmatory run (`88b10c2`); results are in `0d4a521`.

@@ -42,7 +42,7 @@
       "status": "replicated",
       "headline": true,
       "claim": "Authoring one's own actions makes the slow collective mode of the self-model population more persistent",
-      "evidence_text": "d_z {v4} (v4, 48 networks) → {rep} (replication, 48 new networks); KSG estimator {ksg}; pooled over {k} independent samples / {nn} networks: +{pm} nats [{lo}, {hi}], I² {i2} (post hoc)",
+      "evidence_text": "d_z {v4} (v4, 48 networks) → {rep} (replication, 48 new networks); KSG estimator {ksg}; pooled over {k} independent samples / {nn} networks: +{pm} nats, HKSJ 95% CI [{lo}, {hi}], I² {i2}; {pos}/{nn} networks positive",
       "evidence": {
         "v4": {
           "file": "results/v4/results_v4.json",
@@ -63,40 +63,46 @@
           "decimals": 2
         },
         "k": {
-          "file": "results/v6/results_v6.json",
+          "file": "results/v7/results_v7.json",
           "pointer": "/meta_analysis/self_persistence/k",
-          "value": 5,
+          "value": 8,
           "decimals": "int"
         },
         "nn": {
-          "file": "results/v6/results_v6.json",
+          "file": "results/v7/results_v7.json",
           "pointer": "/meta_analysis/self_persistence/n_networks",
-          "value": 192,
+          "value": 360,
           "decimals": "int"
         },
         "pm": {
-          "file": "results/v6/results_v6.json",
+          "file": "results/v7/results_v7.json",
           "pointer": "/meta_analysis/self_persistence/pooled_mean_diff",
-          "value": 0.13394331767202813,
+          "value": 0.13885453299880593,
           "decimals": 3
         },
         "lo": {
-          "file": "results/v6/results_v6.json",
-          "pointer": "/meta_analysis/self_persistence/ci95/0",
-          "value": 0.11543430611270863,
+          "file": "results/v7/results_v7.json",
+          "pointer": "/meta_analysis/self_persistence/hksj/ci95/0",
+          "value": 0.12474767545790744,
           "decimals": 3
         },
         "hi": {
-          "file": "results/v6/results_v6.json",
-          "pointer": "/meta_analysis/self_persistence/ci95/1",
-          "value": 0.15245232923134763,
+          "file": "results/v7/results_v7.json",
+          "pointer": "/meta_analysis/self_persistence/hksj/ci95/1",
+          "value": 0.15296139053970442,
           "decimals": 3
         },
         "i2": {
-          "file": "results/v6/results_v6.json",
+          "file": "results/v7/results_v7.json",
           "pointer": "/meta_analysis/self_persistence/I2",
           "value": 0.0,
           "decimals": 2
+        },
+        "pos": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/meta_analysis/self_persistence/all_networks_signed_rank/positive",
+          "value": 320,
+          "decimals": "int"
         }
       }
     },
@@ -137,11 +143,11 @@
     {
       "id": "v6-contingency",
       "introduced": "6.0",
-      "status": "supported",
+      "status": "replicated",
       "headline": true,
       "claim": "It is not only noise amplitude: the error must be in step with the network's own state",
       "history": "Preregistered decision between an amplitude account and a contingency account: contingency (G1 and G3 significant). Amplitude also contributes (G4).",
-      "evidence_text": "desynchronizing the author's own stream (identical values and spectrum) keeps only {sh} of the effect (G3 d_z {g3}); rescaling the twin's stream to author amplitude lifts {tw} to {ts} (G4 d_z {g4})",
+      "evidence_text": "desynchronizing the author's own stream (identical values and spectrum) keeps only {sh} of the effect (G3 d_z {g3}); rescaling the twin's stream to author amplitude lifts {tw} to {ts} (G4 d_z {g4}); replicated in v7 (K1 d_z {k1})",
       "evidence": {
         "sh": {
           "file": "results/v6/results_v6.json",
@@ -171,6 +177,114 @@
           "file": "results/v6/results_v6.json",
           "pointer": "/studies/G/primary/G4_amplitude_matters/d_z",
           "value": 1.1885505488319643,
+          "decimals": 2
+        },
+        "k1": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/K/primary/K1_desynchronization_costs_the_author/d_z",
+          "value": 0.5309543171591513,
+          "decimals": 2
+        }
+      }
+    },
+    {
+      "id": "v7-own-error",
+      "introduced": "7.0",
+      "status": "supported",
+      "headline": true,
+      "claim": "An author's prediction error is largely predictable from its own state",
+      "evidence_text": "a linear map of the network's current state predicts {rm} of the author's error variance but {ry} of the twin's (Study K); master − twin difference d_z {ld} in Study L",
+      "evidence": {
+        "rm": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/K/state_predictable_share/master",
+          "value": 0.6375692678335928,
+          "decimals": 2
+        },
+        "ry": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/K/state_predictable_share/twin",
+          "value": 0.2959161844413027,
+          "decimals": 2
+        },
+        "ld": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/L/secondary/state_predictable_share_master_minus_twin/d_z",
+          "value": 5.536970147581818,
+          "decimals": 2
+        }
+      }
+    },
+    {
+      "id": "v7-synchrony-author",
+      "introduced": "7.0",
+      "status": "supported",
+      "claim": "Keeping the error in step with the network matters for the author, not for the twin",
+      "history": "Resolves the unexplained v6 observation (a twin given the author's stream reached 0.85, an author given its own desynchronized stream 0.60).",
+      "evidence_text": "desynchronizing costs the author {ka} nats but the twin {tw} (n.s.); difference d_z {k4}",
+      "evidence": {
+        "ka": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/K/primary/K1_desynchronization_costs_the_author/mean_diff",
+          "value": 0.05652084727101817,
+          "decimals": 3
+        },
+        "tw": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/K/secondary/twin_desync_cost/mean_diff",
+          "value": -0.010521722303620043,
+          "decimals": 3
+        },
+        "k4": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/K/primary/K4_synchrony_matters_more_for_the_author/d_z",
+          "value": 0.6588667703609336,
+          "decimals": 2
+        }
+      }
+    },
+    {
+      "id": "v7-two-parts",
+      "introduced": "7.0",
+      "status": "supported",
+      "claim": "Both parts of the error matter, and they interact: the state-predicted part is a stabilizing loop",
+      "history": "Preregistered decision: 'both' (K2 and K3 significant). The interaction is descriptive.",
+      "evidence_text": "with only the state-predicted part in step, persistence is {fb} nats, well above the live run ({live}); with only the rest in step, {inn} (K2 d_z {k2}, K3 d_z {k3}); desynchronizing both gives {sh}",
+      "evidence": {
+        "fb": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/K/levels/master:fbLive_innShift/mean",
+          "value": 1.3475088209994006,
+          "decimals": 2
+        },
+        "live": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/K/levels/master:live/mean",
+          "value": 1.150600351229272,
+          "decimals": 2
+        },
+        "inn": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/K/levels/master:fbShift_innLive/mean",
+          "value": 1.1586098277115193,
+          "decimals": 2
+        },
+        "sh": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/K/levels/master:shift/mean",
+          "value": 1.0940795039582538,
+          "decimals": 2
+        },
+        "k2": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/K/primary/K2_live_state_feedback_restores/d_z",
+          "value": 0.6984534964441764,
+          "decimals": 2
+        },
+        "k3": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/K/primary/K3_live_innovation_restores/d_z",
+          "value": 0.278597382400327,
           "decimals": 2
         }
       }
@@ -219,6 +333,46 @@
           "decimals": 2
         }
       }
+    },
+    {
+      "id": "v6-gain",
+      "introduced": "6.0",
+      "status": "supported",
+      "claim": "The authorship effect grows with the comparator's gain",
+      "evidence_text": "present at half gain (Hodges–Lehmann {m1} on ρ, {m1pos}/48 networks) and growing with the gain ({m2}, {m2pos}/48); the v6 mean test had not been supported (J2 d_z {j2})",
+      "evidence": {
+        "m1": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/M/primary/M1_effect_present_at_half_gain/hodges_lehmann",
+          "value": 0.011429921716153313,
+          "decimals": 4
+        },
+        "m1pos": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/M/primary/M1_effect_present_at_half_gain/positive",
+          "value": 42,
+          "decimals": "int"
+        },
+        "m2": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/M/primary/M2_effect_grows_with_gain/hodges_lehmann",
+          "value": 0.01135649548529788,
+          "decimals": 4
+        },
+        "m2pos": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/M/primary/M2_effect_grows_with_gain/positive",
+          "value": 38,
+          "decimals": "int"
+        },
+        "j2": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/J/primary/J2_effect_grows_with_gain/d_z",
+          "value": 0.1565025429462684,
+          "decimals": 2
+        }
+      },
+      "history": "v6 Study J was inconclusive: two of 24 networks with near-frozen twins dominated a mean test on unbounded persistence. v7 Study M re-ran it with 48 networks, a bounded measure and a signed-rank test."
     },
     {
       "id": "v4-H3",
@@ -284,9 +438,9 @@
     {
       "id": "v4-H4",
       "introduced": "4.0",
-      "status": "revised",
+      "status": "not replicated",
       "claim": "Authorship increases causal emergence of the self (Rosas Ψ)",
-      "evidence_text": "d_z {v4} (v4) → {rep} in the preregistered replication (p {p}); {g} in v6 Study G (secondary); pooled over {k} samples: +{pm} [{lo}, {hi}], I² {i2}; the replication cannot rule out d_z {d33} (small telescopes)",
+      "evidence_text": "d_z {v4} (v4) → {rep} (replication) → {l1} in the powered v7 test (p {l1p}; {lpos}/72 networks); pooled over {k} samples: +{pm}, HKSJ 95% CI [{lo}, {hi}], I² {i2}, prediction interval for a new sample [{pil}, {pih}]",
       "evidence": {
         "v4": {
           "file": "results/v4/results_v4.json",
@@ -300,56 +454,68 @@
           "value": 0.2,
           "decimals": 2
         },
-        "p": {
-          "file": "results/v5/results_v5.json",
-          "pointer": "/studies/A/primary/H4_authorship_causal_emergence/p",
-          "value": 0.097,
-          "decimals": 3
-        },
-        "g": {
-          "file": "results/v6/results_v6.json",
-          "pointer": "/studies/G/secondary/psi_live_master_minus_twin/d_z",
-          "value": 0.5507212118660936,
+        "l1": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/L/primary/L1_authorship_raises_psi/d_z",
+          "value": 0.120447346589097,
           "decimals": 2
         },
+        "l1p": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/L/primary/L1_authorship_raises_psi/p",
+          "value": 0.1535423228838558,
+          "decimals": 2
+        },
+        "lpos": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/studies/L/psi_positive",
+          "value": 41,
+          "decimals": "int"
+        },
         "k": {
-          "file": "results/v6/results_v6.json",
+          "file": "results/v7/results_v7.json",
           "pointer": "/meta_analysis/self_psi/k",
-          "value": 5,
+          "value": 8,
           "decimals": "int"
         },
         "pm": {
-          "file": "results/v6/results_v6.json",
+          "file": "results/v7/results_v7.json",
           "pointer": "/meta_analysis/self_psi/pooled_mean_diff",
-          "value": 0.12870674184254272,
+          "value": 0.0829378982597274,
           "decimals": 3
         },
         "lo": {
-          "file": "results/v6/results_v6.json",
-          "pointer": "/meta_analysis/self_psi/ci95/0",
-          "value": 0.07674739403789452,
+          "file": "results/v7/results_v7.json",
+          "pointer": "/meta_analysis/self_psi/hksj/ci95/0",
+          "value": 0.02520614608560283,
           "decimals": 3
         },
         "hi": {
-          "file": "results/v6/results_v6.json",
-          "pointer": "/meta_analysis/self_psi/ci95/1",
-          "value": 0.18066608964719091,
+          "file": "results/v7/results_v7.json",
+          "pointer": "/meta_analysis/self_psi/hksj/ci95/1",
+          "value": 0.140669650433852,
           "decimals": 3
         },
         "i2": {
-          "file": "results/v6/results_v6.json",
+          "file": "results/v7/results_v7.json",
           "pointer": "/meta_analysis/self_psi/I2",
-          "value": 0.19508108093992113,
+          "value": 0.564248929846637,
           "decimals": 2
         },
-        "d33": {
-          "file": "results/v6/results_v6.json",
-          "pointer": "/posthoc_v5/A_H4_psi/small_telescopes/d33",
-          "value": 0.17524404052560308,
-          "decimals": 2
+        "pil": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/meta_analysis/self_psi/prediction_interval95/0",
+          "value": -0.05739791638044499,
+          "decimals": 3
+        },
+        "pih": {
+          "file": "results/v7/results_v7.json",
+          "pointer": "/meta_analysis/self_psi/prediction_interval95/1",
+          "value": 0.22327371289989978,
+          "decimals": 3
         }
       },
-      "history": "v4: supported (d_z 0.59). v5: the preregistered replication missed (d_z 0.20), reported as 'did not replicate'. v6 (post hoc): that null is not evidence of absence, Ψ was significant again in the Study G sample, and the pooled estimate over all independent samples is positive but smaller and more variable than v4 estimated."
+      "history": "v4: supported (d_z 0.59). v5: the preregistered replication missed (d_z 0.20). v6 (post hoc): pooled over five samples it looked modest and variable, and the claim was revised. v7: a preregistered test sized for that pooled effect (72 networks) failed, and the prespecified eight-sample meta-analysis halved the estimate with substantial heterogeneity. Early samples overestimated it."
     },
     {
       "id": "v4-verdict",
@@ -538,33 +704,6 @@
           "pointer": "/posthoc_v5/E_switched_off_persistence/equivalence/ci90/1",
           "value": 0.021091761731614412,
           "decimals": 3
-        }
-      }
-    },
-    {
-      "id": "v6-gain",
-      "introduced": "6.0",
-      "status": "open",
-      "claim": "The authorship effect grows with the comparator's gain",
-      "evidence_text": "not supported (J2 d_z {j2}); the effect at half gain misses Holm (J1 p {j1p}), though at least {pos}/24 networks go in the predicted direction at every gain; two networks with near-frozen twins dominate the means",
-      "evidence": {
-        "j2": {
-          "file": "results/v6/results_v6.json",
-          "pointer": "/studies/J/primary/J2_effect_grows_with_gain/d_z",
-          "value": 0.1565025429462684,
-          "decimals": 2
-        },
-        "j1p": {
-          "file": "results/v6/results_v6.json",
-          "pointer": "/studies/J/primary/J1_effect_present_at_half_gain/p",
-          "value": 0.052247387630618466,
-          "decimals": 3
-        },
-        "pos": {
-          "file": "results/v6/results_v6.json",
-          "pointer": "/descriptive/J_direction_counts/gain0.5/positive",
-          "value": 21,
-          "decimals": "int"
         }
       }
     }

@@ -2,22 +2,29 @@
 
 **What does it take for a synthetic agent's self-model to be stabilized by acting? Preregistered, null-calibrated, replicated.**
 
-Author/project lead: **Kai Piper** · Version **6.0** (v4 laboratory, v5 follow-up, v6 mechanism) · 27 September 2026
+Author/project lead: **Kai Piper** · Version **7.0** (v4 laboratory, v5 follow-up, v6–v7 mechanism) · 27 September 2026
 
 > **Scientific status.** This is a synthetic computational experiment. It does **not** create, detect, measure or prove phenomenal consciousness in any system. "GHOST-v4" names a preregistered conjunction of statistical results in a simulated network, and nothing more.
 
-## Current state of the evidence (after v6)
+**Browse the evidence:** [`docs/index.html`](docs/index.html) is an explorer of every claim, filterable by status. It can be served with GitHub Pages from `/docs`.
 
-In this model, the comparator feeds the population it targets a prediction-error signal (what happened minus what was predicted), and that input shakes the population's slowest collective mode. **When the agent authors its own actions, the error it receives is smaller, gentler in spectrum and in step with its own state, so the slow mode is shaken less.**
+## Current state of the evidence (after v7)
 
-v6 showed this causally by transplanting error streams:
-- An author given a non-author's stream loses almost the whole advantage (0.08 of the way from twin to master).
-- A non-author given the author's stream recovers most of it (0.85).
-- Desynchronizing the author's own stream, with identical values and spectrum, removes 40% of the advantage. The preregistered noise-only ("amplitude") explanation predicted no loss at all.
+In this model, the comparator feeds the population it targets a prediction-error signal (what happened minus what was predicted), and that input shakes the population's slowest collective mode. **When the agent authors its own actions, its error is largely predictable from its own state, smaller, and in step with it, so the slow mode is shaken less.** This result has been tested across 8 independent samples (360 networks): +0.139 nats, 320 of 360 networks, no detectable difference between samples.
 
-Two earlier claims were revised:
-- The dose-response is not a threshold at exactly 100% authorship: 5% foreign actions cost persistence, 1% does not.
-- The v5 verdict that causal emergence (Ψ) "did not replicate" was too strong. A post-hoc meta-analysis across all five independent samples finds a modest, variable Ψ effect.
+How we know:
+- **v6: transplanting error streams moves the effect.** An author given a non-author's errors loses almost the whole advantage (0.08 of the way from twin to master). A non-author given the author's errors recovers most of it (0.85).
+- **v6 and v7: timing matters, but only for the author.** Desynchronizing an author's own errors costs persistence; desynchronizing a twin's costs nothing.
+- **v7: an author's error is its own.** The network's state predicts 64% of an author's error but only 30% of a twin's. Put back in step on its own, that state-predicted part acts as a strongly stabilizing feedback loop.
+- **v7: the effect grows with the comparator's gain.** It is present even at half gain. v6's inconclusive gain test is resolved.
+
+What did not hold up:
+- **Causal emergence (Ψ).**
+  - A preregistered test sized for the pooled effect (72 networks) failed.
+  - Across all eight samples the estimate halved and varies between samples; its prediction interval includes zero.
+  - The two early positive samples overestimated it.
+- **The self population as special.** The effect sits wherever the comparator projects.
+- **v3's emergent-self event.** It was a gain ramp held on by detector hysteresis.
 
 Every number in the table below is checked in CI against the results file it comes from (`tools/claims.py`). Retracted and unreplicated claims stay in the ledger ([`docs/CLAIMS.md`](docs/CLAIMS.md)).
 
@@ -26,13 +33,17 @@ Every number in the table below is checked in CI against the results file it com
 | claim | introduced | status | evidence |
 |---|---|---|---|
 | v3's sustained 'cross-theory' event is an emergent self-model regime | v3.0 | **retracted** | fires in 0.92 of master runs but also 0.75 of twins that never author their actions; persistence equals detector hysteresis in 1.00 of firing runs; gain cap reached in 0.96 of runs |
-| **Authoring one's own actions makes the slow collective mode of the self-model population more persistent** | v4.0 | **replicated** | d_z 1.21 (v4, 48 networks) → 0.89 (replication, 48 new networks); KSG estimator 1.38; pooled over 5 independent samples / 192 networks: +0.134 nats [0.115, 0.152], I² 0.00 (post hoc) |
+| **Authoring one's own actions makes the slow collective mode of the self-model population more persistent** | v4.0 | **replicated** | d_z 1.21 (v4, 48 networks) → 0.89 (replication, 48 new networks); KSG estimator 1.38; pooled over 8 independent samples / 360 networks: +0.139 nats, HKSJ 95% CI [0.125, 0.153], I² 0.00; 320/360 networks positive |
 | **The authorship effect is carried by the comparator's prediction-error stream** | v6.0 | **supported** | an author given a non-author's error stream falls to 0.08 of the way from twin to master (G1 d_z 1.02); a non-author given the author's stream rises to 0.85 (G2 d_z 0.99) |
-| **It is not only noise amplitude: the error must be in step with the network's own state** | v6.0 | **supported** | desynchronizing the author's own stream (identical values and spectrum) keeps only 0.60 of the effect (G3 d_z 0.64); rescaling the twin's stream to author amplitude lifts 0.08 to 0.36 (G4 d_z 1.19) |
+| **It is not only noise amplitude: the error must be in step with the network's own state** | v6.0 | **replicated** | desynchronizing the author's own stream (identical values and spectrum) keeps only 0.60 of the effect (G3 d_z 0.64); rescaling the twin's stream to author amplitude lifts 0.08 to 0.36 (G4 d_z 1.19); replicated in v7 (K1 d_z 0.53) |
+| **An author's prediction error is largely predictable from its own state** | v7.0 | **supported** | a linear map of the network's current state predicts 0.64 of the author's error variance but 0.30 of the twin's (Study K); master − twin difference d_z 5.54 in Study L |
+| Keeping the error in step with the network matters for the author, not for the twin | v7.0 | **supported** | desynchronizing costs the author 0.057 nats but the twin -0.011 (n.s.); difference d_z 0.66 |
+| Both parts of the error matter, and they interact: the state-predicted part is a stabilizing loop | v7.0 | **supported** | with only the state-predicted part in step, persistence is 1.35 nats, well above the live run (1.15); with only the rest in step, 1.16 (K2 d_z 0.70, K3 d_z 0.28); desynchronizing both gives 1.09 |
 | The comparator perturbs the slow mode; authorship makes the perturbation smaller and better timed | v6.0 | **supported** | silencing the comparator raises master persistence from 1.12 to 1.46 nats (twin: 0.98 → 1.48); both fall as the comparator gain rises (master d_z -1.28, twin d_z -1.64) |
+| The authorship effect grows with the comparator's gain | v6.0 | **supported** | present at half gain (Hodges–Lehmann 0.0114 on ρ, 42/48 networks) and growing with the gain (0.0114, 38/48); the v6 mean test had not been supported (J2 d_z 0.16) |
 | The effect depends on the efference-copy/comparator loop | v4.0 | **replicated** | comparator interaction d_z 0.54 (v4) → 0.75 (replication); dose-response needs the comparator, d_z 0.62 |
 | The effect is specific to the 'self' population | v4.0 | **revised** | self-specificity d_z 0.84 (v4); rerouting the comparator to DMN moves the peak there (DMN d_z 0.96 → 1.70; shift d_z 1.26) |
-| Authorship increases causal emergence of the self (Rosas Ψ) | v4.0 | **revised** | d_z 0.59 (v4) → 0.20 in the preregistered replication (p 0.097); 0.55 in v6 Study G (secondary); pooled over 5 samples: +0.129 [0.077, 0.181], I² 0.20; the replication cannot rule out d_z 0.18 (small telescopes) |
+| Authorship increases causal emergence of the self (Rosas Ψ) | v4.0 | **not replicated** | d_z 0.59 (v4) → 0.20 (replication) → 0.12 in the powered v7 test (p 0.15; 41/72 networks); pooled over 8 samples: +0.083, HKSJ 95% CI [0.025, 0.141], I² 0.56, prediction interval for a new sample [-0.057, 0.223] |
 | Preregistered verdict level 4 (GHOST-v4) | v4.0 | **not replicated** | level 4 in the v4 sample; level 3 in the preregistered replication; single-sample verdicts are noisy (see the Ψ entry) |
 | Authorship increases the nonlinear arrow of time of the network dynamics | v4.0 | **replicated** | d_z 0.44 (v4) → 0.58 (replication) |
 | Master and twin can be told apart blind, from the network dynamics alone | v4.0 | **replicated** | AUC 0.69 (v4) → 0.79 (replication); placebo master-vs-master AUC 0.50 |
@@ -40,11 +51,12 @@ Every number in the table below is checked in CI against the results file it com
 | The dose-response is a threshold at exactly full authorship | v5.0 | **revised** | 5% foreign actions cost 0.034 nats (I1 d_z 0.83); 1% cost nothing detectable (I2 d_z 0.09); foreign actions degrade even own-action predictions (I3 d_z 2.39) and persistence tracks the prediction error within networks (I4 d_z -2.55) |
 | The effect survives other unit and coupling settings | v5.0 | **supported** | leak 1.0: d_z 1.05; leak 0.3: 0.87; radius 0.9: 1.32; radius 1.1: 0.53 |
 | The effect is online: it exists while the comparator signal arrives | v5.0 | **supported** | appears when the comparator is switched on mid-run (d_z 1.28); disappears when switched off (d_z 0.83); residual when off at most +0.021 nats (90% CI upper bound) |
-| The authorship effect grows with the comparator's gain | v6.0 | **open** | not supported (J2 d_z 0.16); the effect at half gain misses Holm (J1 p 0.052), though at least 21/24 networks go in the predicted direction at every gain; two networks with near-frozen twins dominate the means |
 
 <!-- claims:end -->
 
-Reports: [v6](paper/Ghost_in_the_Machine_v6_Mechanism.md) · [v5](paper/Ghost_in_the_Machine_v5_Followup.md) · [v4](paper/Ghost_in_the_Machine_v4_Paper.md). All numbers: [`results/v6/SUMMARY_v6.md`](results/v6/SUMMARY_v6.md), [`results/v5/SUMMARY_v5.md`](results/v5/SUMMARY_v5.md), [`results/v4/SUMMARY.md`](results/v4/SUMMARY.md).
+Reports: [v7](paper/Ghost_in_the_Machine_v7_Feedback.md) · [v6](paper/Ghost_in_the_Machine_v6_Mechanism.md) · [v5](paper/Ghost_in_the_Machine_v5_Followup.md) · [v4](paper/Ghost_in_the_Machine_v4_Paper.md). All numbers: [`results/v7/SUMMARY_v7.md`](results/v7/SUMMARY_v7.md), [`results/v6/SUMMARY_v6.md`](results/v6/SUMMARY_v6.md), [`results/v5/SUMMARY_v5.md`](results/v5/SUMMARY_v5.md), [`results/v4/SUMMARY.md`](results/v4/SUMMARY.md).
+
+![Figure 7](figures/ghost_v7_figure_7_feedback.png)
 
 ![Figure 6](figures/ghost_v6_figure_6_transplant.png)
 
@@ -52,7 +64,7 @@ Reports: [v6](paper/Ghost_in_the_Machine_v6_Mechanism.md) · [v5](paper/Ghost_in
 
 ## v4 in one paragraph
 
-v3 reported a sustained, spontaneous "cross-theory" event and a surrogate test it could not pass. v4 first **re-adjudicates v3**, with its code unchanged. The event turns out to be mostly a homeostatic gain ramp measured against an early baseline and held on by detector hysteresis. It fires almost as often in a twin that never authors its actions, and most of v3's evidence channels cannot, by construction, tell real dynamics from shuffled ones. v4 then replaces convergence-of-proxies with **contrasts**. The same network is run closed-loop and as a **cross-yoked twin** that receives an equivalent sensory/action stream it did not author. Each metric is tested against a **ladder of null models**, and false-positive rate and power were **measured on ground-truth systems first**. Everything ran under a **cryptographically locked preregistration** that was pushed before any confirmatory seed. On 48 held-out networks in 4 held-out worlds, authorship made the slowest collective mode of the agent's self-model population more persistent (d_z = 1.21, in 44 of 48 networks). The effect was strongest in the self population, vanished when the efference copy or the comparator was lesioned, and was detectable blind from the dynamics alone. By the preregistered ladder this is **GHOST-v4**, with bounds stated below. Its Ψ component then missed in the preregistered replication; pooled over all later samples it is a modest, variable effect (see above).
+v3 reported a sustained, spontaneous "cross-theory" event and a surrogate test it could not pass. v4 first **re-adjudicates v3**, with its code unchanged. The event turns out to be mostly a homeostatic gain ramp measured against an early baseline and held on by detector hysteresis. It fires almost as often in a twin that never authors its actions, and most of v3's evidence channels cannot, by construction, tell real dynamics from shuffled ones. v4 then replaces convergence-of-proxies with **contrasts**. The same network is run closed-loop and as a **cross-yoked twin** that receives an equivalent sensory/action stream it did not author. Each metric is tested against a **ladder of null models**, and false-positive rate and power were **measured on ground-truth systems first**. Everything ran under a **cryptographically locked preregistration** that was pushed before any confirmatory seed. On 48 held-out networks in 4 held-out worlds, authorship made the slowest collective mode of the agent's self-model population more persistent (d_z = 1.21, in 44 of 48 networks). The effect was strongest in the self population, vanished when the efference copy or the comparator was lesioned, and was detectable blind from the dynamics alone. By the preregistered ladder this is **GHOST-v4**, with bounds stated below. Its Ψ component then missed in the preregistered replication and in a later powered test (see above).
 
 ## v4 headline results (original confirmatory sample)
 
@@ -80,7 +92,7 @@ v3 reported a sustained, spontaneous "cross-theory" event and a surrogate test i
 
 ## Quick start
 
-Python 3.10+ with NumPy and Matplotlib. The entry points install them if they are missing, as v1–v3 did. Alternatively, `pip install -e ".[test]"` installs the packages and the `ghost-v4`, `ghost-v5` and `ghost-v6` commands.
+Python 3.10+ with NumPy and Matplotlib. The entry points install them if they are missing, as v1–v3 did. Alternatively, `pip install -e ".[test]"` installs the packages and the `ghost-v4` … `ghost-v7` commands.
 
 ```bash
 # one closed-loop agent and its cross-yoked twin (~10 s)
@@ -101,7 +113,11 @@ python src/ghost_in_the_machine_v6.py verify
 python src/ghost_in_the_machine_v6.py run --study all && python src/ghost_in_the_machine_v6.py posthoc \
   && python src/ghost_in_the_machine_v6.py analyze && python src/ghost_in_the_machine_v6.py report
 
-# tests (50, ~1 min) and the claims ledger
+# v7 studies (feedback vs innovation, powered Ψ, robust gain; ~15 min)
+python src/ghost_in_the_machine_v7.py verify
+python src/ghost_in_the_machine_v7.py run --study all && python src/ghost_in_the_machine_v7.py analyze && python src/ghost_in_the_machine_v7.py report
+
+# tests (61, ~2 min) and the claims ledger
 python -m pip install pytest && python -m pytest
 python tools/claims.py check
 ```
@@ -195,8 +211,12 @@ src/
                                  prediction-error channel (replay, transplant, desynchronize, phase-randomize,
                                  rescale) and comparator gain; TOST equivalence; study runners and analyses;
                                  lock; post-hoc re-reading of v5 nulls; living meta-analysis; report
+  ghost_in_the_machine_v7.py     v7 entry point
+  ghost_v7/                      v7 studies: engine (bit-identical to v6 at defaults) that splits the comparator
+                                 input into a state-predicted part and the rest; bounded persistence and
+                                 signed-rank tests; studies K, L, M; lock; cumulative meta-analysis (HKSJ)
   ghost_in_the_machine_v3.py     v3, byte-identical to the validated build
-prereg/                          v4, v5 and v6 preregistrations, replication prereg, and their locks
+prereg/                          v4-v7 preregistrations, replication prereg, and their locks
 claims/claims.json               the claims ledger: every claim, its status and the data behind each number
 results/v4/                      SUMMARY.md, results_v4.json, pipeline.log,
                                  calibration/, v3_forensics/, campaign/, dev_campaign/, posthoc/
@@ -205,24 +225,26 @@ results/v5_pilot/                v5 technical pilot (development networks)
 results/v6/                      SUMMARY_v6.md, results_v6.json, per-study coded runs (G, I, J),
                                  posthoc_v5_equivalence.json, pipeline.log
 results/v6_pilot/                v6 technical pilot (development networks)
+results/v7/, results/v7_pilot/   v7 summary, results, coded runs (K, L, M) and technical pilot
 results/final_validation/        v3 validation run (unchanged)
-figures/                         ghost_v6_figure_6_*.png, ghost_v5_figure_5_*.png, ghost_v4_figure_{1..4}_*.png, ghost_v3_figure_{1..3}_*.png
-paper/                           v6 mechanism report, v5 follow-up report, v4 paper, v3 paper (md, docx, pdf)
+figures/                         ghost_v7_figure_7_*.png, ghost_v6_figure_6_*.png, ghost_v5_figure_5_*.png, ghost_v4_figure_{1..4}_*.png, ghost_v3_figure_{1..3}_*.png
+paper/                           v7 report, v6 mechanism report, v5 follow-up report, v4 paper, v3 paper (md, docx, pdf)
 .github/workflows/tests.yml      CI: tests, all lock verifications and the claims check on Linux and Windows
-pyproject.toml                   editable install with the ghost-v4/v5/v6 commands
+pyproject.toml                   editable install with the ghost-v4 … ghost-v7 commands
 docs/REVIEW_OF_V3_ASSESSMENT.md  point-by-point review of an external assessment of v3
 docs/HOW_TO_REVIEW_OR_REPLICATE.md  guide for reviewers and independent replicators
-docs/CLAIMS.md                   the rendered claims ledger
+docs/CLAIMS.md, docs/index.html the rendered claims ledger and the evidence explorer (GitHub Pages)
 tests/                           estimator ground-truth tests, pipeline tests, v5/v6 engine identity tests, ledger tests
-tools/claims.py                  checks every ledger number against its results file; renders the README table
+tools/claims.py                  checks every ledger number against its results file; renders the README table,
+                                 docs/CLAIMS.md and docs/index.html
 tools/export_paper.py            Markdown → DOCX (pandoc) and PDF (headless Chromium)
 legacy/                          v1, v2
 ```
 
 ## Interpretation, stated three ways
 
-1. **Observed.** In 48 held-out synthetic networks, authoring actions increased the persistence of the self population's slowest collective mode. That increase lived in the collective mode rather than in the parts, depended on the efference-copy/comparator loop, and was detectable blind. All preregistered tests passed; all placebo contrasts were null. In a preregistered replication on 48 new networks, everything except the Ψ (emergence) component replicated; Ψ is positive but modest and variable when all five independent samples are pooled. v6 showed the persistence effect is carried by the comparator's prediction-error stream.
-2. **Supported computational interpretation.** In this architecture, the comparator couples a population to the consequences of action by injecting prediction errors, and those errors shake the population's slow dynamics. An author's errors are smaller, spectrally gentler and in step with its own state, so they shake it less. This holds online and wherever the comparator projects (v6 transplant, v5 timing and rerouting).
+1. **Observed.** In 48 held-out synthetic networks, authoring actions increased the persistence of the self population's slowest collective mode. That increase lived in the collective mode rather than in the parts, depended on the efference-copy/comparator loop, and was detectable blind. All preregistered tests passed; all placebo contrasts were null. In a preregistered replication on 48 new networks, everything except the Ψ (emergence) component replicated, and a powered v7 test of Ψ also failed. v6 and v7 showed the persistence effect is carried by the comparator's prediction-error stream, whose state-predicted part acts as a stabilizing feedback loop for the author.
+2. **Supported computational interpretation.** In this architecture, the comparator couples a population to the consequences of action by injecting prediction errors, and those errors shake the population's slow dynamics. An author's errors are largely predictable from its own state (64% vs 30% of the variance), smaller and in step with it, so they shake it less; the state-predicted part acts as a stabilizing feedback loop. This holds online, wherever the comparator projects and at every comparator gain tested (v5 timing and rerouting, v6 transplant, v7 decomposition and gain).
 3. **Not supported.** That the program is conscious, has experiences or a self in any philosophical sense, or that this model says anything about any person or clinical condition.
 
 ## Previous versions
@@ -257,6 +279,7 @@ v2 removed v1's scripted self-model phase and added learned recurrent modules, p
 - Preregistration locked 2026-09-27T12:48:56Z (`prereg/PREREGISTRATION_v4.lock.json`); `python src/ghost_in_the_machine_v4.py verify` checks it.
 - v5 hypotheses committed before any v5 data (`7452b44`); v5 lock 2026-09-27T14:57:16Z (`prereg/PREREGISTRATION_v5.lock.json`, commit `5c38075`); `python src/ghost_in_the_machine_v5.py verify` checks it.
 - v6 hypotheses committed before any v6 data (`e7da0f1`); v6 lock 2026-09-27T15:54:13Z (`prereg/PREREGISTRATION_v6.lock.json`, commit `88b10c2`, pushed before the confirmatory run); `python src/ghost_in_the_machine_v6.py verify` checks it.
+- v7 hypotheses committed before any v7 data (`3731203`); v7 lock (`prereg/PREREGISTRATION_v7.lock.json`, commit `22002fd`, pushed before the confirmatory run); `python src/ghost_in_the_machine_v7.py verify` checks it.
 - `python tools/claims.py check` verifies every headline number against its results file (also run in CI).
 - `.gitattributes` disables line-ending conversion so these SHA-256 checks also pass on Windows checkouts.
 - Source hashes: `docs/SHA256SUMS.txt`.

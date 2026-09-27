@@ -9,6 +9,7 @@ CODE_OF_CONDUCT.md
 docs/CLAIMS.md
 docs/ENVIRONMENT.txt
 docs/HOW_TO_REVIEW_OR_REPLICATE.md
+docs/index.html
 docs/REVIEW_OF_V3_ASSESSMENT.md
 docs/SHA256SUMS.txt
 figures/ghost_v3_figure_1_dynamics.png
@@ -20,6 +21,7 @@ figures/ghost_v4_figure_3_fingerprints.png
 figures/ghost_v4_figure_4_calibration_discrimination.png
 figures/ghost_v5_figure_5_followup.png
 figures/ghost_v6_figure_6_transplant.png
+figures/ghost_v7_figure_7_feedback.png
 legacy/ghost_in_the_machine_v1.py
 legacy/ghost_in_the_machine_v2.py
 LICENSE
@@ -36,12 +38,17 @@ paper/Ghost_in_the_Machine_v5_Followup.pdf
 paper/Ghost_in_the_Machine_v6_Mechanism.docx
 paper/Ghost_in_the_Machine_v6_Mechanism.md
 paper/Ghost_in_the_Machine_v6_Mechanism.pdf
+paper/Ghost_in_the_Machine_v7_Feedback.docx
+paper/Ghost_in_the_Machine_v7_Feedback.md
+paper/Ghost_in_the_Machine_v7_Feedback.pdf
 prereg/PREREGISTRATION_v4.json
 prereg/PREREGISTRATION_v4.lock.json
 prereg/PREREGISTRATION_v5.json
 prereg/PREREGISTRATION_v5.lock.json
 prereg/PREREGISTRATION_v6.json
 prereg/PREREGISTRATION_v6.lock.json
+prereg/PREREGISTRATION_v7.json
+prereg/PREREGISTRATION_v7.lock.json
 prereg/REPLICATION_v4_1.json
 pyproject.toml
 pytest.ini
@@ -75,6 +82,13 @@ results/v6/results_v6.json
 results/v6/SUMMARY_v6.md
 results/v6_pilot/G/ ... results/v6_pilot/J/
 results/v6_pilot/pilot_results.json
+results/v7/K/ ... results/v7/M/
+results/v7/manifest_v7.json
+results/v7/pipeline.log
+results/v7/results_v7.json
+results/v7/SUMMARY_v7.md
+results/v7_pilot/K/ ... results/v7_pilot/M/
+results/v7_pilot/pilot_results.json
 run_full.bat
 run_v4.bat
 run_v4.sh
@@ -86,6 +100,7 @@ src/ghost_in_the_machine_v3.py
 src/ghost_in_the_machine_v4.py
 src/ghost_in_the_machine_v5.py
 src/ghost_in_the_machine_v6.py
+src/ghost_in_the_machine_v7.py
 src/ghost_v4/__init__.py
 src/ghost_v4/__main__.py
 src/ghost_v4/_bootstrap.py
@@ -119,11 +134,19 @@ src/ghost_v6/posthoc_v5.py
 src/ghost_v6/prereg.py
 src/ghost_v6/report.py
 src/ghost_v6/studies.py
+src/ghost_v7/__init__.py
+src/ghost_v7/cli.py
+src/ghost_v7/engine.py
+src/ghost_v7/meta.py
+src/ghost_v7/prereg.py
+src/ghost_v7/report.py
+src/ghost_v7/studies.py
 tests/conftest.py
 tests/test_claims.py
 tests/test_estimators.py
 tests/test_pipeline.py
 tests/test_v5.py
 tests/test_v6.py
+tests/test_v7.py
 tools/claims.py
 tools/export_paper.py
