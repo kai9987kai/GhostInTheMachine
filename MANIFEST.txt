@@ -1,3 +1,7 @@
+.gitattributes
+.github/workflows/tests.yml
+.gitignore
+.zenodo.json
 CHANGELOG.md
 CITATION.cff
 CODE_OF_CONDUCT.md
@@ -6,6 +10,7 @@ MANIFEST.txt
 README.md
 SECURITY.md
 docs/ENVIRONMENT.txt
+docs/HOW_TO_REVIEW_OR_REPLICATE.md
 docs/REVIEW_OF_V3_ASSESSMENT.md
 docs/SHA256SUMS.txt
 figures/ghost_v3_figure_1_dynamics.png
@@ -15,6 +20,7 @@ figures/ghost_v4_figure_1_v3_forensics.png
 figures/ghost_v4_figure_2_authorship.png
 figures/ghost_v4_figure_3_fingerprints.png
 figures/ghost_v4_figure_4_calibration_discrimination.png
+figures/ghost_v5_figure_5_followup.png
 legacy/ghost_in_the_machine_v1.py
 legacy/ghost_in_the_machine_v2.py
 paper/Ghost_in_the_Machine_v3_Paper.docx
@@ -23,8 +29,14 @@ paper/Ghost_in_the_Machine_v3_Paper.pdf
 paper/Ghost_in_the_Machine_v4_Paper.docx
 paper/Ghost_in_the_Machine_v4_Paper.md
 paper/Ghost_in_the_Machine_v4_Paper.pdf
+paper/Ghost_in_the_Machine_v5_Followup.docx
+paper/Ghost_in_the_Machine_v5_Followup.md
+paper/Ghost_in_the_Machine_v5_Followup.pdf
 prereg/PREREGISTRATION_v4.json
 prereg/PREREGISTRATION_v4.lock.json
+prereg/PREREGISTRATION_v5.json
+prereg/PREREGISTRATION_v5.lock.json
+prereg/REPLICATION_v4_1.json
 pytest.ini
 requirements.txt
 results/final_validation/run.log
@@ -40,6 +52,13 @@ results/v4/pipeline.log
 results/v4/posthoc/
 results/v4/results_v4.json
 results/v4/v3_forensics/
+results/v5/A/ ... results/v5/F/
+results/v5/SUMMARY_v5.md
+results/v5/manifest_v5.json
+results/v5/pipeline.log
+results/v5/results_v5.json
+results/v5_pilot/B/ ... results/v5_pilot/F/
+results/v5_pilot/pilot_results.json
 run_full.bat
 run_v4.bat
 run_v4.sh
@@ -48,6 +67,7 @@ run_validation.bat
 run_validation.sh
 src/ghost_in_the_machine_v3.py
 src/ghost_in_the_machine_v4.py
+src/ghost_in_the_machine_v5.py
 src/ghost_v4/__init__.py
 src/ghost_v4/__main__.py
 src/ghost_v4/_bootstrap.py
@@ -66,7 +86,15 @@ src/ghost_v4/stats.py
 src/ghost_v4/surrogates.py
 src/ghost_v4/temporal.py
 src/ghost_v4/v3_bridge.py
+src/ghost_v5/__init__.py
+src/ghost_v5/cli.py
+src/ghost_v5/engine.py
+src/ghost_v5/estimators.py
+src/ghost_v5/prereg.py
+src/ghost_v5/report.py
+src/ghost_v5/studies.py
 tests/conftest.py
 tests/test_estimators.py
 tests/test_pipeline.py
+tests/test_v5.py
 tools/export_paper.py

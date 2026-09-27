@@ -1,0 +1,28 @@
+{
+  "title": "Ghost in the Machine: a preregistered, null-calibrated laboratory for authorship, emergence and specificity in synthetic self-models",
+  "upload_type": "software",
+  "description": "Synthetic computational experiments on self-modelling recurrent agents. v4 re-adjudicates the v3 'cross-theory' event (a gain ramp measured against an early baseline and held on by detector hysteresis) and tests, with a cryptographically locked preregistration, cross-yoked twins, paired lesions, placebo contrasts, a calibrated four-rung null ladder and 48 held-out networks, whether authoring one's own actions stabilizes the collective dynamics of a self-model through an efference-copy/comparator loop. Nothing in this software creates, detects or measures consciousness. v5 adds six preregistered follow-up studies: the authorship-stabilization effect replicates, scales with authorship, survives nonlinear estimators and other architectures, is an online comparator effect and follows the comparator's wiring; the causal-emergence (Psi) component and hence the GHOST-v4 verdict did not replicate.",
+  "creators": [
+    {
+      "name": "Piper, Kai"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "computational consciousness",
+    "sense of agency",
+    "comparator model",
+    "yoked control",
+    "causal emergence",
+    "surrogate data",
+    "preregistration",
+    "recurrent neural networks"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/kai9987kai/GhostInTheMachine",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

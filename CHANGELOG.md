@@ -1,5 +1,24 @@
 # Changelog
 
+## v5.0 - 2026-09-27 — follow-up studies on the v4 authorship effect
+
+Six preregistered studies. Hypotheses were committed before any v5 data (7452b44); a technical pilot ran on development networks; the preregistration, the frozen v4 code and the v5 study code were then locked and pushed (5c38075) before the confirmatory runs.
+
+- **A — direct replication** (frozen v4 pipeline, 48 new networks, 4 new worlds): level 3. H1–H3 and H5–H7 replicate; **H4 (authorship-dependent Ψ) does not** (d_z 0.20, p 0.10). GHOST-v4 did not replicate.
+- **B — graded authorship**: persistence rises with authorship (slope d_z 0.76, 42/48 networks) and only with the comparator. The curve is threshold-like, with most of the effect at full authorship. Ψ shows no dose-response.
+- **C — nonlinear estimators**: the effect is larger under KSG (d_z 1.38) and Gaussian-copula MI (1.27). In the v4 sample Ψ also holds under both, so H4 was sample-specific rather than an estimator artifact. Re-simulation reproduces v4 exactly.
+- **D — architectures**: the effect holds at leak 1.0 and 0.3 and at radius 0.9 and 1.1; Ψ is null in all four.
+- **E — comparator timing**: the effect is online; it appears when the comparator is switched on and vanishes when it is switched off.
+- **F — comparator rerouting**: the peak effect follows the comparator's target (DMN d_z 0.96 → 1.70), so "self-specificity" was wiring.
+
+Code and infrastructure:
+- `ghost_v5` package: an engine bit-identical to v4 at defaults, with graded authorship, comparator schedule and rerouting; KSG and Gaussian-copula estimators; study runners; lock; report.
+- 36 tests.
+- CI on Linux and Windows.
+- `.gitattributes` keeps hash checks valid on Windows.
+- `.zenodo.json`; `docs/HOW_TO_REVIEW_OR_REPLICATE.md`; replication CLI (`ghost_in_the_machine_v5.py replicate --prereg ...`).
+- README, v4 paper and review updated with the replication outcome.
+
 ## v4.0 - 2026-09-27 — the Specificity Laboratory
 
 v4 changes the question from "do many consciousness-inspired proxies rise together?" to three questions that can each fail: is there a self-level macro-variable whose dynamics depend on the agent **authoring** its actions (A), is that effect **specific** (to the self population, to a mechanism, to structure that survives calibrated nulls) (S), and is it **causally emergent** (E)?

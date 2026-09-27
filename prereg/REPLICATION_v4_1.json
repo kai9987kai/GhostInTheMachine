@@ -1,0 +1,161 @@
+{
+  "title": "Ghost in the Machine v4.1 \u2014 direct replication of the v4 authorship campaign (Study A of the v5 follow-up)",
+  "version": "4.1",
+  "author": "Kai Piper",
+  "drafted": "2026-09-27",
+  "scientific_status": "Synthetic computational experiment. No hypothesis below concerns, measures or can establish phenomenal consciousness.",
+  "question": "Does a closed-loop self/world-modelling agent contain a macroscopic self-variable whose dynamics (E) are causally emergent, (A) depend on the agent authoring its own actions, and (S) are specific to the self population, to a comparator mechanism, and to structure that survives a calibrated null ladder?",
+  "replication_of": {
+    "preregistration": "prereg/PREREGISTRATION_v4.json",
+    "lock_commit": "6a20b41",
+    "confirmatory_results": "results/v4 (commit 7854e1e)"
+  },
+  "development_phase": {
+    "seeds_examined": [],
+    "note": "None. Code and analysis are the frozen v4 files (hashes in the v5 lock), unchanged. Only seeds and worlds are new."
+  },
+  "design": {
+    "common": {
+      "steps": 6000,
+      "burn": 2000,
+      "n_surrogates": 49,
+      "placebo": true,
+      "conditions": [
+        "full",
+        "no_comparator",
+        "no_efference",
+        "no_selffeedback",
+        "frozen"
+      ],
+      "agent_defaults": "ghost_v4.engine.AgentConfig defaults: 120 nodes, 16 observation dims, 7 actions, radius 1.0 (no gain ramp), leak 0.5, temperature 0.18"
+    },
+    "confirm": {
+      "seeds": [
+        5000,
+        5001,
+        5002,
+        5003,
+        5004,
+        5005,
+        5006,
+        5007,
+        5008,
+        5009,
+        5010,
+        5011,
+        5012,
+        5013,
+        5014,
+        5015,
+        5016,
+        5017,
+        5018,
+        5019,
+        5020,
+        5021,
+        5022,
+        5023,
+        5024,
+        5025,
+        5026,
+        5027,
+        5028,
+        5029,
+        5030,
+        5031,
+        5032,
+        5033,
+        5034,
+        5035,
+        5036,
+        5037,
+        5038,
+        5039,
+        5040,
+        5041,
+        5042,
+        5043,
+        5044,
+        5045,
+        5046,
+        5047
+      ],
+      "world_blocks": 4,
+      "world_seed_base": 21
+    },
+    "yoking": "Cross-yoking within a world block: network s (same weights, same world) is run once closed-loop and once as a twin receiving the recorded observation stream and executed actions of the next network in its block (cyclic). The twin still forms intentions, sends efference copies and learns; its intentions no longer cause what it senses.",
+    "placebo": "Each full master is re-run with different world noise and action-sampling noise (replicate = 1): an A/A contrast with no authorship difference, used to check that the paired contrast pipeline is calibrated.",
+    "analysis_window": "cycles 2001-6000 of every run",
+    "unit_of_analysis": "network seed (paired contrasts within seed)"
+  },
+  "endpoints": {
+    "self_persistence": "I(V_t; V_t+1), V = maximum-autocorrelation linear feature of the self population, Gaussian estimator (nats).",
+    "self_psi": "Rosas et al. (2020) Psi for the same V against the self population's nodes as parts.",
+    "atlas_persistence_<population>": "the same persistence quantity for each of the 12 populations.",
+    "phi_r_mean": "Mean pairwise Phi_R (Mediano et al. 2022) across the 66 pairs of population mean-fields.",
+    "irr_nodes": "Mean over all 120 nodes of the ordinal-pattern (order 3) KL time-irreversibility.",
+    "te_net_to_obs": "Gaussian transfer entropy from the top-5 network PCs to the top-4 observation PCs, conditioned on 10 steps of observation history."
+  },
+  "gate": {
+    "id": "M",
+    "name": "manipulation check: authorship is real",
+    "test": "te_net_to_obs(master/full) > te_net_to_obs(twin/full), paired sign-flip test, one-sided, alpha 0.05",
+    "consequence": "If M fails, H1-H7 authorship contrasts are uninterpretable and the verdict is level 0."
+  },
+  "primary_family": [
+    {
+      "id": "H1",
+      "name": "authorship increases self persistence",
+      "contrast": "self_persistence master/full - twin/full",
+      "direction": "greater"
+    },
+    {
+      "id": "H2",
+      "name": "the authorship effect is self-specific",
+      "contrast": "(persistence_self master-twin) - mean over the 11 other populations of (persistence_p master-twin)",
+      "direction": "greater"
+    },
+    {
+      "id": "H3",
+      "name": "the authorship effect depends on the comparator",
+      "contrast": "(self_persistence master-twin | full) - (self_persistence master-twin | no_comparator)",
+      "direction": "greater"
+    },
+    {
+      "id": "H4",
+      "name": "authorship increases causal emergence of the self (ghost conjecture)",
+      "contrast": "self_psi master/full - twin/full",
+      "direction": "greater"
+    },
+    {
+      "id": "H5",
+      "name": "authorship increases integration",
+      "contrast": "phi_r_mean master/full - twin/full",
+      "direction": "greater"
+    },
+    {
+      "id": "H6",
+      "name": "the network's arrow of time is nonlinear",
+      "contrast": "per-seed z of irr_nodes(master/full) against 49 multivariate phase-randomized (L2) surrogates",
+      "direction": "greater (mean z > 0)"
+    },
+    {
+      "id": "H7",
+      "name": "authorship increases the arrow of time",
+      "contrast": "irr_nodes master/full - twin/full",
+      "direction": "greater"
+    }
+  ],
+  "test": "Exact/Monte-Carlo paired sign-flip randomization test on the mean (20000 flips), one-sided in the stated direction.",
+  "alpha": 0.05,
+  "multiplicity": "Holm-Bonferroni over H1-H7 (family-wise error rate 0.05). The gate M is tested separately.",
+  "effect_sizes": "mean paired difference with 95% percentile bootstrap CI, Cohen's d_z and Hedges' g_z.",
+  "verdict_levels": {
+    "0": "No authorship effect on the self (or manipulation check failed).",
+    "1": "Authorship effect: the self's slowest mode is more persistent when the agent authors its actions (M and H1).",
+    "2": "Self-specific authorship effect (M, H1, H2).",
+    "3": "Self-specific, comparator-dependent authorship effect (M, H1, H2, H3): a self-stabilization mechanism.",
+    "4": "GHOST-v4: level 3 plus authorship-dependent causal emergence of the self (H4). An operational label for a conjunction of synthetic results, not a claim about experience."
+  },
+  "success_criterion": "The v4 verdict (level 4) replicates if the replication also reaches level 4. Each hypothesis is reported individually whatever the verdict."
+}

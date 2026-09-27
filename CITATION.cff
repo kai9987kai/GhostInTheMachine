@@ -1,11 +1,11 @@
 cff-version: 1.2.0
-title: "Ghost in the Machine v4: A Preregistered, Null-Calibrated Test of Authorship, Emergence and Specificity in a Synthetic Self"
+title: "Ghost in the Machine: Preregistered, Null-Calibrated Tests of Authorship, Emergence and Specificity in a Synthetic Self (v4 laboratory and v5 follow-up)"
 message: "If you use this experimental software, cite the accompanying project paper and state clearly that it is a synthetic computational experiment, not a consciousness detector."
 type: software
 authors:
   - family-names: "Piper"
     given-names: "Kai"
-version: "4.0"
+version: "5.0"
 date-released: "2026-09-27"
 repository-code: "https://github.com/kai9987kai/GhostInTheMachine"
 license: MIT

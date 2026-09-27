@@ -1,0 +1,4 @@
+# Keep file bytes identical on every platform. The SHA-256 checks of the validated
+# v3 build and of the preregistration locks depend on exact bytes, so git must never
+# convert line endings on checkout (e.g. core.autocrlf on Windows).
+* -text
