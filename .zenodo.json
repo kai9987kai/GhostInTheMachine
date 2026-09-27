@@ -1,7 +1,7 @@
 {
-  "title": "Ghost in the Machine: a preregistered, null-calibrated laboratory for authorship, emergence and specificity in synthetic self-models",
+  "title": "Ghost in the Machine: preregistered, null-calibrated experiments on authorship, prediction error and self-model dynamics in a synthetic agent",
   "upload_type": "software",
-  "description": "Synthetic computational experiments on self-modelling recurrent agents. v4 re-adjudicates the v3 'cross-theory' event (a gain ramp measured against an early baseline and held on by detector hysteresis) and tests, with a cryptographically locked preregistration, cross-yoked twins, paired lesions, placebo contrasts, a calibrated four-rung null ladder and 48 held-out networks, whether authoring one's own actions stabilizes the collective dynamics of a self-model through an efference-copy/comparator loop. Nothing in this software creates, detects or measures consciousness. v5 adds six preregistered follow-up studies: the authorship-stabilization effect replicates, scales with authorship, survives nonlinear estimators and other architectures, is an online comparator effect and follows the comparator's wiring; the causal-emergence (Psi) component and hence the GHOST-v4 verdict did not replicate.",
+  "description": "Synthetic computational experiments on self-modelling recurrent agents. v4 re-adjudicates the v3 'cross-theory' event (a gain ramp measured against an early baseline and held on by detector hysteresis). It then tests, with a cryptographically locked preregistration, cross-yoked twins, paired lesions, placebo contrasts and a calibrated null ladder, whether authoring one's own actions stabilizes the slow dynamics of a self-model through an efference-copy/comparator loop. v5's six preregistered studies replicate that effect, show that it scales with authorship, survives nonlinear estimators and other architectures, is online, and follows the comparator's wiring. v6 shows, by transplanting prediction-error streams between agent and twin, that the effect is carried by the comparator's prediction error: the comparator perturbs the slow mode, and authorship attenuates that perturbation by making the error smaller and in step with the network's own state. A claims ledger checks every headline number against its results file. Nothing in this software creates, detects or measures consciousness.",
   "creators": [
     {
       "name": "Piper, Kai"
@@ -16,7 +16,11 @@
     "causal emergence",
     "surrogate data",
     "preregistration",
-    "recurrent neural networks"
+    "recurrent neural networks",
+    "prediction error",
+    "sensory attenuation",
+    "equivalence testing",
+    "meta-analysis"
   ],
   "related_identifiers": [
     {

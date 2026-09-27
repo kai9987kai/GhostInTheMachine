@@ -1,0 +1,572 @@
+{
+  "schema": 1,
+  "note": "Edit this file, then run: python tools/claims.py render. CI runs: python tools/claims.py check.",
+  "claims": [
+    {
+      "id": "v3-event",
+      "introduced": "3.0",
+      "status": "retracted",
+      "claim": "v3's sustained 'cross-theory' event is an emergent self-model regime",
+      "history": "Claimed in v3; re-adjudicated in v4 with the v3 code unchanged.",
+      "evidence_text": "fires in {master} of master runs but also {twin} of twins that never author their actions; persistence equals detector hysteresis in {hyst} of firing runs; gain cap reached in {cap} of runs",
+      "evidence": {
+        "master": {
+          "file": "results/v4/results_v4.json",
+          "pointer": "/v3_forensics/conditions/master/event_rate",
+          "value": 0.92,
+          "decimals": 2
+        },
+        "twin": {
+          "file": "results/v4/results_v4.json",
+          "pointer": "/v3_forensics/conditions/twin/event_rate",
+          "value": 0.75,
+          "decimals": 2
+        },
+        "hyst": {
+          "file": "results/v4/results_v4.json",
+          "pointer": "/v3_forensics/conditions/master/persistence_equals_hysteresis_rate",
+          "value": 1.0,
+          "decimals": 2
+        },
+        "cap": {
+          "file": "results/v4/results_v4.json",
+          "pointer": "/v3_forensics/gain_audit/cap_reached_rate",
+          "value": 0.96,
+          "decimals": 2
+        }
+      }
+    },
+    {
+      "id": "v4-H1",
+      "introduced": "4.0",
+      "status": "replicated",
+      "headline": true,
+      "claim": "Authoring one's own actions makes the slow collective mode of the self-model population more persistent",
+      "evidence_text": "d_z {v4} (v4, 48 networks) → {rep} (replication, 48 new networks); KSG estimator {ksg}; pooled over {k} independent samples / {nn} networks: +{pm} nats [{lo}, {hi}], I² {i2} (post hoc)",
+      "evidence": {
+        "v4": {
+          "file": "results/v4/results_v4.json",
+          "pointer": "/v4/primary/H1_authorship_self_persistence/d_z",
+          "value": 1.21,
+          "decimals": 2
+        },
+        "rep": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/A/primary/H1_authorship_self_persistence/d_z",
+          "value": 0.89,
+          "decimals": 2
+        },
+        "ksg": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/C/primary/C1_ksg_persistence/d_z",
+          "value": 1.38,
+          "decimals": 2
+        },
+        "k": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/meta_analysis/self_persistence/k",
+          "value": 5,
+          "decimals": "int"
+        },
+        "nn": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/meta_analysis/self_persistence/n_networks",
+          "value": 192,
+          "decimals": "int"
+        },
+        "pm": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/meta_analysis/self_persistence/pooled_mean_diff",
+          "value": 0.13394331767202813,
+          "decimals": 3
+        },
+        "lo": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/meta_analysis/self_persistence/ci95/0",
+          "value": 0.11543430611270863,
+          "decimals": 3
+        },
+        "hi": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/meta_analysis/self_persistence/ci95/1",
+          "value": 0.15245232923134763,
+          "decimals": 3
+        },
+        "i2": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/meta_analysis/self_persistence/I2",
+          "value": 0.0,
+          "decimals": 2
+        }
+      }
+    },
+    {
+      "id": "v6-carrier",
+      "introduced": "6.0",
+      "status": "supported",
+      "headline": true,
+      "claim": "The authorship effect is carried by the comparator's prediction-error stream",
+      "evidence_text": "an author given a non-author's error stream falls to {mt} of the way from twin to master (G1 d_z {g1}); a non-author given the author's stream rises to {tm} (G2 d_z {g2})",
+      "evidence": {
+        "mt": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/G/fraction_of_effect/master:twinPE/fraction_of_authorship_effect",
+          "value": 0.08488553676501051,
+          "decimals": 2
+        },
+        "g1": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/G/primary/G1_pe_content_necessary/d_z",
+          "value": 1.0180495111917593,
+          "decimals": 2
+        },
+        "tm": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/G/fraction_of_effect/twin:masterPE/fraction_of_authorship_effect",
+          "value": 0.8511293526696692,
+          "decimals": 2
+        },
+        "g2": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/G/primary/G2_pe_content_sufficient/d_z",
+          "value": 0.9892540985330612,
+          "decimals": 2
+        }
+      }
+    },
+    {
+      "id": "v6-contingency",
+      "introduced": "6.0",
+      "status": "supported",
+      "headline": true,
+      "claim": "It is not only noise amplitude: the error must be in step with the network's own state",
+      "history": "Preregistered decision between an amplitude account and a contingency account: contingency (G1 and G3 significant). Amplitude also contributes (G4).",
+      "evidence_text": "desynchronizing the author's own stream (identical values and spectrum) keeps only {sh} of the effect (G3 d_z {g3}); rescaling the twin's stream to author amplitude lifts {tw} to {ts} (G4 d_z {g4})",
+      "evidence": {
+        "sh": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/G/fraction_of_effect/master:shift/fraction_of_authorship_effect",
+          "value": 0.5989138320299565,
+          "decimals": 2
+        },
+        "g3": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/G/primary/G3_contingency_matters/d_z",
+          "value": 0.640726558056128,
+          "decimals": 2
+        },
+        "tw": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/G/fraction_of_effect/master:twinPE/fraction_of_authorship_effect",
+          "value": 0.08488553676501051,
+          "decimals": 2
+        },
+        "ts": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/G/fraction_of_effect/master:twinPE_scaled/fraction_of_authorship_effect",
+          "value": 0.3641223444750685,
+          "decimals": 2
+        },
+        "g4": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/G/primary/G4_amplitude_matters/d_z",
+          "value": 1.1885505488319643,
+          "decimals": 2
+        }
+      }
+    },
+    {
+      "id": "v6-perturbation",
+      "introduced": "6.0",
+      "status": "supported",
+      "claim": "The comparator perturbs the slow mode; authorship makes the perturbation smaller and better timed",
+      "evidence_text": "silencing the comparator raises master persistence from {live} to {off} nats (twin: {tlive} → {toff}); both fall as the comparator gain rises (master d_z {jm}, twin d_z {jt})",
+      "evidence": {
+        "live": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/G/levels/master:live/mean",
+          "value": 1.1166275568987938,
+          "decimals": 2
+        },
+        "off": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/G/levels/master:off/mean",
+          "value": 1.4621293005022473,
+          "decimals": 2
+        },
+        "tlive": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/G/levels/twin:live/mean",
+          "value": 0.9811978443155281,
+          "decimals": 2
+        },
+        "toff": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/G/levels/twin:off/mean",
+          "value": 1.4768509757239852,
+          "decimals": 2
+        },
+        "jm": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/J/secondary/master_gain2_minus_gain0.5/d_z",
+          "value": -1.277235482655851,
+          "decimals": 2
+        },
+        "jt": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/J/secondary/twin_gain2_minus_gain0.5/d_z",
+          "value": -1.6406127523976748,
+          "decimals": 2
+        }
+      }
+    },
+    {
+      "id": "v4-H3",
+      "introduced": "4.0",
+      "status": "replicated",
+      "claim": "The effect depends on the efference-copy/comparator loop",
+      "evidence_text": "comparator interaction d_z {v4} (v4) → {rep} (replication); dose-response needs the comparator, d_z {b2}",
+      "evidence": {
+        "v4": {
+          "file": "results/v4/results_v4.json",
+          "pointer": "/v4/primary/H3_comparator_mechanism/d_z",
+          "value": 0.54,
+          "decimals": 2
+        },
+        "rep": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/A/primary/H3_comparator_mechanism/d_z",
+          "value": 0.75,
+          "decimals": 2
+        },
+        "b2": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/B/primary/B2_dose_response_needs_comparator/d_z",
+          "value": 0.62,
+          "decimals": 2
+        }
+      }
+    },
+    {
+      "id": "v4-H2",
+      "introduced": "4.0",
+      "status": "revised",
+      "claim": "The effect is specific to the 'self' population",
+      "history": "v5 Study F: rerouting the comparator moves the peak. The 'self' was special only because the comparator projected into it.",
+      "evidence_text": "self-specificity d_z {v4} (v4); rerouting the comparator to DMN moves the peak there (DMN d_z {std} → {rer}; shift d_z {f2})",
+      "evidence": {
+        "v4": {
+          "file": "results/v4/results_v4.json",
+          "pointer": "/v4/primary/H2_self_specificity/d_z",
+          "value": 0.84,
+          "decimals": 2
+        },
+        "std": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/F/atlas/standard/dmn/d_z",
+          "value": 0.96,
+          "decimals": 2
+        },
+        "rer": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/F/atlas/rerouted/dmn/d_z",
+          "value": 1.7,
+          "decimals": 2
+        },
+        "f2": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/F/primary/F2_effect_follows_comparator/d_z",
+          "value": 1.26,
+          "decimals": 2
+        }
+      }
+    },
+    {
+      "id": "v4-H4",
+      "introduced": "4.0",
+      "status": "revised",
+      "claim": "Authorship increases causal emergence of the self (Rosas Ψ)",
+      "evidence_text": "d_z {v4} (v4) → {rep} in the preregistered replication (p {p}); {g} in v6 Study G (secondary); pooled over {k} samples: +{pm} [{lo}, {hi}], I² {i2}; the replication cannot rule out d_z {d33} (small telescopes)",
+      "evidence": {
+        "v4": {
+          "file": "results/v4/results_v4.json",
+          "pointer": "/v4/primary/H4_authorship_causal_emergence/d_z",
+          "value": 0.59,
+          "decimals": 2
+        },
+        "rep": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/A/primary/H4_authorship_causal_emergence/d_z",
+          "value": 0.2,
+          "decimals": 2
+        },
+        "p": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/A/primary/H4_authorship_causal_emergence/p",
+          "value": 0.097,
+          "decimals": 3
+        },
+        "g": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/G/secondary/psi_live_master_minus_twin/d_z",
+          "value": 0.5507212118660936,
+          "decimals": 2
+        },
+        "k": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/meta_analysis/self_psi/k",
+          "value": 5,
+          "decimals": "int"
+        },
+        "pm": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/meta_analysis/self_psi/pooled_mean_diff",
+          "value": 0.12870674184254272,
+          "decimals": 3
+        },
+        "lo": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/meta_analysis/self_psi/ci95/0",
+          "value": 0.07674739403789452,
+          "decimals": 3
+        },
+        "hi": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/meta_analysis/self_psi/ci95/1",
+          "value": 0.18066608964719091,
+          "decimals": 3
+        },
+        "i2": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/meta_analysis/self_psi/I2",
+          "value": 0.19508108093992113,
+          "decimals": 2
+        },
+        "d33": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/posthoc_v5/A_H4_psi/small_telescopes/d33",
+          "value": 0.17524404052560308,
+          "decimals": 2
+        }
+      },
+      "history": "v4: supported (d_z 0.59). v5: the preregistered replication missed (d_z 0.20), reported as 'did not replicate'. v6 (post hoc): that null is not evidence of absence, Ψ was significant again in the Study G sample, and the pooled estimate over all independent samples is positive but smaller and more variable than v4 estimated."
+    },
+    {
+      "id": "v4-verdict",
+      "introduced": "4.0",
+      "status": "not replicated",
+      "claim": "Preregistered verdict level 4 (GHOST-v4)",
+      "evidence_text": "level {v4} in the v4 sample; level {rep} in the preregistered replication; single-sample verdicts are noisy (see the Ψ entry)",
+      "evidence": {
+        "v4": {
+          "file": "results/v4/results_v4.json",
+          "pointer": "/v4/verdict/level",
+          "value": 4,
+          "decimals": "int"
+        },
+        "rep": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/A/verdict/level",
+          "value": 3,
+          "decimals": "int"
+        }
+      }
+    },
+    {
+      "id": "v4-H7",
+      "introduced": "4.0",
+      "status": "replicated",
+      "claim": "Authorship increases the nonlinear arrow of time of the network dynamics",
+      "evidence_text": "d_z {v4} (v4) → {rep} (replication)",
+      "evidence": {
+        "v4": {
+          "file": "results/v4/results_v4.json",
+          "pointer": "/v4/primary/H7_authorship_arrow_of_time/d_z",
+          "value": 0.44,
+          "decimals": 2
+        },
+        "rep": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/A/primary/H7_authorship_arrow_of_time/d_z",
+          "value": 0.58,
+          "decimals": 2
+        }
+      }
+    },
+    {
+      "id": "v4-blind",
+      "introduced": "4.0",
+      "status": "replicated",
+      "claim": "Master and twin can be told apart blind, from the network dynamics alone",
+      "evidence_text": "AUC {v4} (v4) → {rep} (replication); placebo master-vs-master AUC {pl}",
+      "evidence": {
+        "v4": {
+          "file": "results/v4/results_v4.json",
+          "pointer": "/v4/discrimination/master_vs_twin_from_dynamics_alone/auc",
+          "value": 0.69,
+          "decimals": 2
+        },
+        "rep": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/A/discrimination/master_vs_twin_from_dynamics_alone/auc",
+          "value": 0.79,
+          "decimals": 2
+        },
+        "pl": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/A/discrimination/placebo_master_vs_master/auc",
+          "value": 0.5,
+          "decimals": 2
+        }
+      }
+    },
+    {
+      "id": "v5-B",
+      "introduced": "5.0",
+      "status": "supported",
+      "claim": "The effect grows with the degree of authorship",
+      "evidence_text": "per-network slope d_z {b1}, comparator-dependent (d_z {b2})",
+      "evidence": {
+        "b1": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/B/primary/B1_persistence_rises_with_authorship/d_z",
+          "value": 0.76,
+          "decimals": 2
+        },
+        "b2": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/B/primary/B2_dose_response_needs_comparator/d_z",
+          "value": 0.62,
+          "decimals": 2
+        }
+      }
+    },
+    {
+      "id": "v5-threshold",
+      "introduced": "5.0",
+      "status": "revised",
+      "claim": "The dose-response is a threshold at exactly full authorship",
+      "history": "v5 (exploratory): most of the effect appeared between 75% and 100% authorship. v6 Study I resolved the top of the curve.",
+      "evidence_text": "5% foreign actions cost {i1} nats (I1 d_z {i1d}); 1% cost nothing detectable (I2 d_z {i2d}); foreign actions degrade even own-action predictions (I3 d_z {i3d}) and persistence tracks the prediction error within networks (I4 d_z {i4d})",
+      "evidence": {
+        "i1": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/I/primary/I1_five_percent_foreign_reduces_persistence/mean_diff",
+          "value": 0.034321106939396925,
+          "decimals": 3
+        },
+        "i1d": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/I/primary/I1_five_percent_foreign_reduces_persistence/d_z",
+          "value": 0.8319264268807259,
+          "decimals": 2
+        },
+        "i2d": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/I/primary/I2_one_percent_foreign_reduces_persistence/d_z",
+          "value": 0.09453113874993521,
+          "decimals": 2
+        },
+        "i3d": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/I/primary/I3_foreign_actions_raise_own_step_error/d_z",
+          "value": 2.38577012068548,
+          "decimals": 2
+        },
+        "i4d": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/I/primary/I4_persistence_tracks_prediction_error/d_z",
+          "value": -2.5502732625286724,
+          "decimals": 2
+        }
+      }
+    },
+    {
+      "id": "v5-D",
+      "introduced": "5.0",
+      "status": "supported",
+      "claim": "The effect survives other unit and coupling settings",
+      "evidence_text": "leak 1.0: d_z {l1}; leak 0.3: {l3}; radius 0.9: {r9}; radius 1.1: {r11}",
+      "evidence": {
+        "l1": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/D/primary/D_leak1.0_self_persistence/d_z",
+          "value": 1.05,
+          "decimals": 2
+        },
+        "l3": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/D/primary/D_leak0.3_self_persistence/d_z",
+          "value": 0.87,
+          "decimals": 2
+        },
+        "r9": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/D/primary/D_radius0.9_self_persistence/d_z",
+          "value": 1.32,
+          "decimals": 2
+        },
+        "r11": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/D/primary/D_radius1.1_self_persistence/d_z",
+          "value": 0.53,
+          "decimals": 2
+        }
+      }
+    },
+    {
+      "id": "v5-E",
+      "introduced": "5.0",
+      "status": "supported",
+      "claim": "The effect is online: it exists while the comparator signal arrives",
+      "evidence_text": "appears when the comparator is switched on mid-run (d_z {e1}); disappears when switched off (d_z {e2}); residual when off at most +{hi} nats (90% CI upper bound)",
+      "evidence": {
+        "e1": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/E/primary/E1_effect_appears_when_comparator_switched_on/d_z",
+          "value": 1.28,
+          "decimals": 2
+        },
+        "e2": {
+          "file": "results/v5/results_v5.json",
+          "pointer": "/studies/E/primary/E2_effect_disappears_when_comparator_switched_off/d_z",
+          "value": 0.83,
+          "decimals": 2
+        },
+        "hi": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/posthoc_v5/E_switched_off_persistence/equivalence/ci90/1",
+          "value": 0.021091761731614412,
+          "decimals": 3
+        }
+      }
+    },
+    {
+      "id": "v6-gain",
+      "introduced": "6.0",
+      "status": "open",
+      "claim": "The authorship effect grows with the comparator's gain",
+      "evidence_text": "not supported (J2 d_z {j2}); the effect at half gain misses Holm (J1 p {j1p}), though at least {pos}/24 networks go in the predicted direction at every gain; two networks with near-frozen twins dominate the means",
+      "evidence": {
+        "j2": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/J/primary/J2_effect_grows_with_gain/d_z",
+          "value": 0.1565025429462684,
+          "decimals": 2
+        },
+        "j1p": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/studies/J/primary/J1_effect_present_at_half_gain/p",
+          "value": 0.052247387630618466,
+          "decimals": 3
+        },
+        "pos": {
+          "file": "results/v6/results_v6.json",
+          "pointer": "/descriptive/J_direction_counts/gain0.5/positive",
+          "value": 21,
+          "decimals": "int"
+        }
+      }
+    }
+  ]
+}
