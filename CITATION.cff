@@ -1,9 +1,18 @@
 cff-version: 1.2.0
-title: "Ghost in the Machine v3: Cross-Theory Causal Emergence Laboratory"
-message: "If you use this experimental software, cite the accompanying project paper and clearly state that it is a synthetic computational thought experiment, not a consciousness detector."
+title: "Ghost in the Machine v4: A Preregistered, Null-Calibrated Test of Authorship, Emergence and Specificity in a Synthetic Self"
+message: "If you use this experimental software, cite the accompanying project paper and state clearly that it is a synthetic computational experiment, not a consciousness detector."
 type: software
 authors:
   - family-names: "Piper"
     given-names: "Kai"
-version: "3.0"
+version: "4.0"
 date-released: "2026-09-27"
+repository-code: "https://github.com/kai9987kai/GhostInTheMachine"
+license: MIT
+keywords:
+  - computational consciousness
+  - causal emergence
+  - yoked control
+  - surrogate data
+  - preregistration
+  - comparator model

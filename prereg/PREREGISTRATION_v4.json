@@ -1,0 +1,277 @@
+{
+  "title": "Ghost in the Machine v4 \u2014 preregistration of the authorship / emergence / specificity campaign",
+  "version": "4.0",
+  "author": "Kai Piper",
+  "drafted": "2026-09-27",
+  "scientific_status": "Synthetic computational experiment. No hypothesis below concerns, measures or can establish phenomenal consciousness.",
+  "question": "Does a closed-loop self/world-modelling agent contain a macroscopic self-variable whose dynamics (E) are causally emergent, (A) depend on the agent authoring its own actions, and (S) are specific to the self population, to a comparator mechanism, and to structure that survives a calibrated null ladder?",
+  "development_phase": {
+    "seeds_examined": [
+      0,
+      1,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111
+    ],
+    "world_seeds_examined": [
+      1
+    ],
+    "decisions_taken_after_looking_at_development_data": [
+      "Leaky rate units (leak = 0.5) adopted instead of v3's memoryless update, because the self population's leading mode had near-zero lag-1 self-information without a leak. The direction of the main authorship effects was the same at leak 1.0, 0.5 and 0.3.",
+      "Macro-variable defined as the maximum-autocorrelation linear feature (MAF) of a population, because PC1 was dominated by fast input-driven variance.",
+      "Manipulation check uses transfer entropy with a 10-step observation history, because a 2-step history left the yoked twin's world-state estimation confounded with causal influence.",
+      "Endpoints H1-H3 were suggested by development data (self population was the only population with an authorship effect on persistence). They are therefore tested here on 48 fresh seeds in 4 fresh worlds.",
+      "H4 is the 'ghost conjecture' direction. Development data did NOT support it: d_z ranged from -0.73 to +0.35 across development configurations, and was +0.35 (one-sided p = 0.12) in the final 12-seed development campaign. It is kept as a risky preregistered test, not removed."
+    ],
+    "final_development_campaign": {
+      "seeds": "100-111, world seed 1, exactly the confirmatory pipeline (results/v4/dev_campaign, EXPLORATORY)",
+      "estimates_d_z": {
+        "M": 1.25,
+        "H1": 1.24,
+        "H2": 1.04,
+        "H3": 1.29,
+        "H4": 0.35,
+        "H5": 1.12,
+        "H6": 3.47,
+        "H7": 1.08
+      },
+      "development_verdict": "level 3 (exploratory)",
+      "watch_item": "One of five placebo A/A contrasts reached p = 0.033 (self_persistence, d_z = -0.72, 12 seeds). Placebo contrasts are exchangeable by design; the confirmatory placebo results are reported whatever they show.",
+      "power_note": "With 48 seeds, one-sided alpha 0.05: power is ~1.0 for d_z >= 1 and ~0.78 for d_z = 0.35 (H4)."
+    }
+  },
+  "design": {
+    "common": {
+      "steps": 6000,
+      "burn": 2000,
+      "n_surrogates": 49,
+      "placebo": true,
+      "conditions": [
+        "full",
+        "no_comparator",
+        "no_efference",
+        "no_selffeedback",
+        "frozen"
+      ],
+      "agent_defaults": "ghost_v4.engine.AgentConfig defaults: 120 nodes, 16 observation dims, 7 actions, radius 1.0 (no gain ramp), leak 0.5, temperature 0.18"
+    },
+    "dev": {
+      "seeds": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "world_blocks": 1,
+      "world_seed_base": 1
+    },
+    "confirm": {
+      "seeds": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026,
+        2027,
+        2028,
+        2029,
+        2030,
+        2031,
+        2032,
+        2033,
+        2034,
+        2035,
+        2036,
+        2037,
+        2038,
+        2039,
+        2040,
+        2041,
+        2042,
+        2043,
+        2044,
+        2045,
+        2046,
+        2047
+      ],
+      "world_blocks": 4,
+      "world_seed_base": 11
+    },
+    "yoking": "Cross-yoking within a world block: network s (same weights, same world) is run once closed-loop and once as a twin receiving the recorded observation stream and executed actions of the next network in its block (cyclic). The twin still forms intentions, sends efference copies and learns; its intentions no longer cause what it senses.",
+    "placebo": "Each full master is re-run with different world noise and action-sampling noise (replicate = 1): an A/A contrast with no authorship difference, used to check that the paired contrast pipeline is calibrated.",
+    "analysis_window": "cycles 2001-6000 of every run",
+    "unit_of_analysis": "network seed (paired contrasts within seed)"
+  },
+  "endpoints": {
+    "self_persistence": "I(V_t; V_t+1), V = maximum-autocorrelation linear feature of the self population, Gaussian estimator (nats).",
+    "self_psi": "Rosas et al. (2020) Psi for the same V against the self population's nodes as parts.",
+    "atlas_persistence_<population>": "the same persistence quantity for each of the 12 populations.",
+    "phi_r_mean": "Mean pairwise Phi_R (Mediano et al. 2022) across the 66 pairs of population mean-fields.",
+    "irr_nodes": "Mean over all 120 nodes of the ordinal-pattern (order 3) KL time-irreversibility.",
+    "te_net_to_obs": "Gaussian transfer entropy from the top-5 network PCs to the top-4 observation PCs, conditioned on 10 steps of observation history."
+  },
+  "gate": {
+    "id": "M",
+    "name": "manipulation check: authorship is real",
+    "test": "te_net_to_obs(master/full) > te_net_to_obs(twin/full), paired sign-flip test, one-sided, alpha 0.05",
+    "consequence": "If M fails, H1-H7 authorship contrasts are uninterpretable and the verdict is level 0."
+  },
+  "primary_family": [
+    {
+      "id": "H1",
+      "name": "authorship increases self persistence",
+      "contrast": "self_persistence master/full - twin/full",
+      "direction": "greater"
+    },
+    {
+      "id": "H2",
+      "name": "the authorship effect is self-specific",
+      "contrast": "(persistence_self master-twin) - mean over the 11 other populations of (persistence_p master-twin)",
+      "direction": "greater"
+    },
+    {
+      "id": "H3",
+      "name": "the authorship effect depends on the comparator",
+      "contrast": "(self_persistence master-twin | full) - (self_persistence master-twin | no_comparator)",
+      "direction": "greater"
+    },
+    {
+      "id": "H4",
+      "name": "authorship increases causal emergence of the self (ghost conjecture)",
+      "contrast": "self_psi master/full - twin/full",
+      "direction": "greater"
+    },
+    {
+      "id": "H5",
+      "name": "authorship increases integration",
+      "contrast": "phi_r_mean master/full - twin/full",
+      "direction": "greater"
+    },
+    {
+      "id": "H6",
+      "name": "the network's arrow of time is nonlinear",
+      "contrast": "per-seed z of irr_nodes(master/full) against 49 multivariate phase-randomized (L2) surrogates",
+      "direction": "greater (mean z > 0)"
+    },
+    {
+      "id": "H7",
+      "name": "authorship increases the arrow of time",
+      "contrast": "irr_nodes master/full - twin/full",
+      "direction": "greater"
+    }
+  ],
+  "test": "Exact/Monte-Carlo paired sign-flip randomization test on the mean (20000 flips), one-sided in the stated direction.",
+  "alpha": 0.05,
+  "multiplicity": "Holm-Bonferroni over H1-H7 (family-wise error rate 0.05). The gate M is tested separately.",
+  "effect_sizes": "mean paired difference with 95% percentile bootstrap CI, Cohen's d_z and Hedges' g_z.",
+  "verdict_levels": {
+    "0": "No authorship effect on the self (or manipulation check failed).",
+    "1": "Authorship effect: the self's slowest mode is more persistent when the agent authors its actions (M and H1).",
+    "2": "Self-specific authorship effect (M, H1, H2).",
+    "3": "Self-specific, comparator-dependent authorship effect (M, H1, H2, H3): a self-stabilization mechanism.",
+    "4": "GHOST-v4: level 3 plus authorship-dependent causal emergence of the self (H4). An operational label for a conjunction of synthetic results, not a claim about experience."
+  },
+  "secondary_exploratory": [
+    "Authorship x lesion interactions for no_efference, no_selffeedback and frozen learning (two-sided, BH-FDR).",
+    "Authorship effects on self_ntic, self_micro_dependence, self_env_dependence, self_delta, self_psi_r, Q3 asymmetry, lagged asymmetry, participation ratio, mean |FC|, multiscale entropy, PCI-like probe, ignition, activity, prediction error, self-model error (two-sided, BH-FDR).",
+    "Emergence atlas: authorship effect on persistence, Psi and PCI-like response for every population (two-sided, BH-FDR on persistence).",
+    "Specificity fingerprints: for 9 metrics x 4 null rungs, median z and the fraction of seeds in which the real value differs from its surrogates (two-sided surrogate p <= 0.05 AND relative deviation from the null mean >= 1%, the smallest effect size of interest), compared with each metric's predicted ceiling. A cell 'differs' when that fraction is >= 0.5. The same rule is applied to v3's metrics.",
+    "Blind discrimination (leave-one-seed-out logistic regression, within-pair label-swap permutation null): real vs each rung; master vs twin from network dynamics alone; placebo master vs master."
+  ],
+  "calibration": {
+    "replicates": 100,
+    "n_surrogates": 19,
+    "T": 4000,
+    "alpha": 0.05,
+    "criterion": "Rows where the property is absent by construction, and 'ceiling' rows where the rung preserves the property by construction, pass if their detection rate is not significantly above alpha (lower Wilson 95% bound <= 0.05). Rows where the property is present by construction pass if power >= 0.80.",
+    "role": "Reported alongside the verdict. A failed calibration row downgrades any claim that relies on that metric/rung pair."
+  },
+  "v3_forensics": {
+    "seeds": [
+      3000,
+      3001,
+      3002,
+      3003,
+      3004,
+      3005,
+      3006,
+      3007,
+      3008,
+      3009,
+      3010,
+      3011,
+      3012,
+      3013,
+      3014,
+      3015,
+      3016,
+      3017,
+      3018,
+      3019,
+      3020,
+      3021,
+      3022,
+      3023
+    ],
+    "steps": 5000,
+    "n_surrogates": 49,
+    "timepoints": [
+      1500,
+      3000,
+      5000
+    ],
+    "conditions": {
+      "master": "unmodified v3 (validated short-run configuration: calibration 1000, diagnostics 50, probes 500)",
+      "twin": "cross-yoked: world replaced by a replay of the next seed's master observations",
+      "clamp_low": "recurrent gain fixed at v3's initial 0.91 (ramp disabled)",
+      "clamp_high": "recurrent gain fixed at v3's 1.18 ceiling from cycle 1",
+      "frozen": "all predictive-model learning rates set to zero"
+    },
+    "planned_analyses": [
+      "Event rate, onset and active fraction per condition; exact McNemar tests of event occurrence master vs each control; paired sign-flip on active fraction.",
+      "Detector audit: per-channel pass rates, number of channels passing >= 95% of post-calibration windows ('free votes'), gate pass rates, switch-off condition rate, whether active duration equals T - onset + interval (hysteresis).",
+      "Gain audit: whether and when the homeostatic ramp reaches its 1.18 ceiling; gain at event onset.",
+      "Metric-identical null ladder: v3's own metric methods re-evaluated on real and surrogate 257-cycle windows at cycles 1500, 3000 and 5000."
+    ]
+  },
+  "deviations_policy": "Any change to a hashed source file or to this document after locking invalidates the lock; the confirmatory runner will then label its output EXPLORATORY. Deviations, if any, are listed in the paper with reasons."
+}
