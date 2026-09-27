@@ -310,5 +310,25 @@
     "burn": 2000
   },
   "pilot_policy": "A technical pilot of K, L and M on six development networks (seeds 100-105, world 1, already examined in v4 development) is run after this document is committed and pushed, and before locking. Its purpose is to catch software faults. Its results are recorded here; hypotheses, directions, bounds and the decision rule may not be changed because of them.",
-  "deviations_policy": "Any deviation from this document is reported as such in the results and the paper."
+  "deviations_policy": "Any deviation from this document is reported as such in the results and the paper.",
+  "pilot": {
+    "run": "2026-09-27, development networks 100-105 in world 1, studies K, L and M, exactly the confirmatory code (after commit 3731203).",
+    "software_faults_found": "none",
+    "manipulation_checks": {
+      "K_injected_rms": "master live 0.261, shift 0.261, fbLive_innShift 0.270, fbShift_innLive 0.267 (amplitude approximately preserved by the split)",
+      "K_state_predictable_share": "master 0.78, twin 0.57"
+    },
+    "observation_recorded_without_change": "In the pilot both split conditions had higher mean persistence than the live run (1.31 and 1.13 vs 1.06 nats), so the 'fraction of the desynchronization loss recovered' can exceed 1. K2 and K3 compare each split condition with the shift condition exactly as written; nothing was changed.",
+    "estimates_seen_d_z": {
+      "K:K1": 0.17,
+      "K:K2": 0.79,
+      "K:K3": 0.44,
+      "K:K4": 0.98,
+      "L:L1": 0.06,
+      "L:L2": 1.65,
+      "M:M1": 1.34,
+      "M:M2": 0.41
+    },
+    "changes_made_because_of_pilot": "none"
+  }
 }

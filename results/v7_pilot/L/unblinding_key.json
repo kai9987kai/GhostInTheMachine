@@ -1,0 +1,86 @@
+{
+  "762e79e0be57": {
+    "study": "L",
+    "seed": 100,
+    "cond": "live",
+    "role": "master",
+    "world": 1
+  },
+  "9a9777983ee2": {
+    "study": "L",
+    "seed": 101,
+    "cond": "live",
+    "role": "master",
+    "world": 1
+  },
+  "9e5bfece1498": {
+    "study": "L",
+    "seed": 102,
+    "cond": "live",
+    "role": "master",
+    "world": 1
+  },
+  "12453191d021": {
+    "study": "L",
+    "seed": 103,
+    "cond": "live",
+    "role": "master",
+    "world": 1
+  },
+  "10d8d7289063": {
+    "study": "L",
+    "seed": 104,
+    "cond": "live",
+    "role": "master",
+    "world": 1
+  },
+  "dac34ca21ebc": {
+    "study": "L",
+    "seed": 105,
+    "cond": "live",
+    "role": "master",
+    "world": 1
+  },
+  "ba14bdab0b26": {
+    "study": "L",
+    "seed": 100,
+    "cond": "live",
+    "role": "twin",
+    "world": 1
+  },
+  "220c0b7f9124": {
+    "study": "L",
+    "seed": 101,
+    "cond": "live",
+    "role": "twin",
+    "world": 1
+  },
+  "99f494f4ef64": {
+    "study": "L",
+    "seed": 102,
+    "cond": "live",
+    "role": "twin",
+    "world": 1
+  },
+  "1f585cef5db2": {
+    "study": "L",
+    "seed": 103,
+    "cond": "live",
+    "role": "twin",
+    "world": 1
+  },
+  "19c35b283efe": {
+    "study": "L",
+    "seed": 104,
+    "cond": "live",
+    "role": "twin",
+    "world": 1
+  },
+  "02d697a2df47": {
+    "study": "L",
+    "seed": 105,
+    "cond": "live",
+    "role": "twin",
+    "world": 1
+  }
+}
