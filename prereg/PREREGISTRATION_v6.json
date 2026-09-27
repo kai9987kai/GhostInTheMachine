@@ -1,0 +1,297 @@
+{
+  "title": "Ghost in the Machine v6 — preregistration: what does the comparator's prediction error carry?",
+  "version": "6.0",
+  "author": "Kai Piper",
+  "drafted": "2026-09-27",
+  "scientific_status": "Synthetic computational experiment. No hypothesis below concerns, measures or can establish phenomenal consciousness.",
+  "background": [
+    "v4 (lock 6a20b41) and v5 (lock 5c38075) established, in this model, that authoring one's own actions makes the slow collective mode of the population receiving the comparator's prediction-error signal more persistent. The effect replicated (d_z 0.89), grew with authorship (mostly between p = 0.75 and 1), survived nonlinear estimators and four architectures, is online (it appears and disappears with the comparator signal) and follows the comparator's wiring.",
+    "The comparator's only contribution to the network is the term W_cmp @ mismatch, with mismatch = observation - forward-model prediction for the intended action. In the yoked twin, intention and consequence are decoupled, so its mismatch is larger.",
+    "Observed in existing v4 confirmatory data before this document was written (no v6 data existed): the twin's mean prediction error was about twice the master's (0.232 vs 0.118) in all 48 networks, but across networks the size of that excess did not correlate with the size of the persistence effect (r = 0.05)."
+  ],
+  "question": "Is the authorship effect carried by the prediction-error stream, and if so by its amplitude (a deflationary account: the non-author's larger errors act as injected noise) or by its contingency on the network's own state and actions (the error is informative because it is the network's own)?",
+  "accounts": {
+    "amplitude": "Only the amplitude of the injected prediction error matters. Predicts G1 > 0, G2 > 0, G4 > 0, and G3 equivalent to zero.",
+    "contingency": "The prediction error matters because it is aligned in time with the network's own state and actions. Predicts G1 > 0 and G3 > 0 (desynchronizing the network's own error stream, which keeps its amplitude, waveform and spectrum exactly, removes persistence)."
+  },
+  "hypotheses_written_before_any_v6_data": true,
+  "code": "ghost_v4 and ghost_v5 frozen (their locks keep verifying); ghost_v6.engine mirrors ghost_v5.engine and reproduces it bit for bit at default settings, and replaying a run's own recorded mismatch reproduces that run bit for bit (tests/test_v6.py). Unit tests ran on tiny development runs (360 cycles, seeds 100-102) only to check the code; their numbers were not inspected.",
+  "intervention": "From cycle burn (= start of the analysis window) the comparator injects W_cmp @ r_t for a prescribed stream r instead of the live mismatch. Everything else stays live: the forward model learns from the real observation and salience uses the real prediction error. Before the window every run is identical to its live reference.",
+  "endpoint_definitions": "As in v4 and v5. self_persistence = Gaussian I(V_t; V_t+1) of the self population's maximum-autocorrelation feature V over cycles burn+1..6000. New descriptive metrics: mismatch_rms (mean per-cycle RMS of the live mismatch), own_step_mismatch_rms and foreign_step_mismatch_rms (the same restricted to cycles whose executed action was / was not the agent's intention), injected_rms (mean RMS of the stream the comparator actually injected).",
+  "test": "Paired sign-flip randomization test on the mean (exact for n <= 16, else 20000 flips), one-sided in the stated direction; effect sizes as mean difference with 95% bootstrap CI and d_z.",
+  "equivalence": {
+    "method": "TOST: two one-sided sign-flip tests against +/- the bound; equivalent if both p <= 0.05.",
+    "sesoi_self_persistence_nats": 0.04,
+    "rationale": "About one third of the authorship effect measured in v4 (0.140) and in its replication (0.120). A difference smaller than that is treated as negligible."
+  },
+  "alpha": 0.05,
+  "multiplicity": "Holm within each study's primary family (the confirmatory decision for that study). Holm across all v6 primary tests is also reported.",
+  "studies": {
+    "G": {
+      "name": "prediction-error transplant",
+      "spec": {
+        "seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009,
+          10010,
+          10011,
+          10012,
+          10013,
+          10014,
+          10015,
+          10016,
+          10017,
+          10018,
+          10019,
+          10020,
+          10021,
+          10022,
+          10023,
+          10024,
+          10025,
+          10026,
+          10027,
+          10028,
+          10029,
+          10030,
+          10031,
+          10032,
+          10033,
+          10034,
+          10035,
+          10036,
+          10037,
+          10038,
+          10039,
+          10040,
+          10041,
+          10042,
+          10043,
+          10044,
+          10045,
+          10046,
+          10047
+        ],
+        "world_blocks": 4,
+        "world_seed_base": 71,
+        "steps": 6000,
+        "burn": 2000
+      },
+      "design": "Per network s (master = s acting in its own live world; twin = s cross-yoked to the next network's master stream, as in v4). Conditions in the window: master live; master off (zero stream); master shift (its own live stream, circularly shifted within the window by half the window: identical values, amplitude, waveform and spectrum, desynchronized from its state); master phase (multivariate Fourier surrogate of its own stream: same auto- and cross-spectra, new phases); master twinPE (the twin's live stream of the same network); master twinPE_scaled (the twin's stream rescaled per channel to the master's window mean and SD); twin live; twin off; twin masterPE (the master's live stream of the same network).",
+      "gate": "Authorship effect self_persistence(master live) - self_persistence(twin live) > 0 (positive control; the study is uninterpretable if it fails).",
+      "hypotheses": [
+        {
+          "id": "G1",
+          "statement": "PE content is necessary: giving the author the non-author's stream lowers persistence",
+          "statistic": "self_persistence(master live) - self_persistence(master twinPE)",
+          "direction": "greater than 0"
+        },
+        {
+          "id": "G2",
+          "statement": "PE content is sufficient: giving the non-author the author's stream raises persistence",
+          "statistic": "self_persistence(twin masterPE) - self_persistence(twin live)",
+          "direction": "greater than 0"
+        },
+        {
+          "id": "G3",
+          "statement": "contingency matters: desynchronizing the author's own stream lowers persistence",
+          "statistic": "self_persistence(master live) - self_persistence(master shift)",
+          "direction": "greater than 0"
+        },
+        {
+          "id": "G4",
+          "statement": "amplitude matters: rescaling the non-author's stream to the author's amplitude raises persistence",
+          "statistic": "self_persistence(master twinPE_scaled) - self_persistence(master twinPE)",
+          "direction": "greater than 0"
+        }
+      ],
+      "decision_rule": "account = 'amplitude' if G1, G2 and G4 are significant (Holm), G3 is not, and G3 is equivalent to zero (TOST, bound 0.04 nats); account = 'contingency' if G1 and G3 are significant; otherwise 'undetermined'. TOST results are reported for all four contrasts.",
+      "secondary": "Mean persistence per condition; each condition's position as a fraction of the authorship effect ((condition - twin live) / (master live - twin live), bootstrap CI); injected RMS per condition (manipulation check: twinPE_scaled should match master live); phase vs live and shift vs phase; the G1 contrast in the association population (the comparator's other target); master-twin Psi."
+    },
+    "I": {
+      "name": "near-full authorship, with the prediction error as candidate mediator",
+      "spec": {
+        "seeds": [
+          11000,
+          11001,
+          11002,
+          11003,
+          11004,
+          11005,
+          11006,
+          11007,
+          11008,
+          11009,
+          11010,
+          11011,
+          11012,
+          11013,
+          11014,
+          11015,
+          11016,
+          11017,
+          11018,
+          11019,
+          11020,
+          11021,
+          11022,
+          11023,
+          11024,
+          11025,
+          11026,
+          11027,
+          11028,
+          11029,
+          11030,
+          11031,
+          11032,
+          11033,
+          11034,
+          11035,
+          11036,
+          11037,
+          11038,
+          11039,
+          11040,
+          11041,
+          11042,
+          11043,
+          11044,
+          11045,
+          11046,
+          11047
+        ],
+        "world_blocks": 4,
+        "world_seed_base": 81,
+        "steps": 6000,
+        "burn": 2000
+      },
+      "design": "Live world, comparator intact. Authorship p in {0.75, 0.90, 0.95, 0.99, 1}: with probability 1-p the executed action is the donor's recorded action (donor = the next network in the same world block at p = 1), otherwise the network's own intention. p = 1 is the v4 master.",
+      "hypotheses": [
+        {
+          "id": "I1",
+          "statement": "5% foreign actions reduce persistence",
+          "statistic": "self_persistence(p=1) - self_persistence(p=0.95)",
+          "direction": "greater than 0"
+        },
+        {
+          "id": "I2",
+          "statement": "1% foreign actions reduce persistence",
+          "statistic": "self_persistence(p=1) - self_persistence(p=0.99)",
+          "direction": "greater than 0"
+        },
+        {
+          "id": "I3",
+          "statement": "foreign actions corrupt the forward model: even the agent's own actions are predicted worse",
+          "statistic": "own_step_mismatch_rms(p=0.95) - own_step_mismatch_rms(p=1)",
+          "direction": "greater than 0"
+        },
+        {
+          "id": "I4",
+          "statement": "persistence tracks the prediction error across authorship levels",
+          "statistic": "per-network Fisher-z of the Pearson correlation between self_persistence and mismatch_rms across the five levels",
+          "direction": "less than 0"
+        }
+      ],
+      "secondary": "Means per level (persistence, mismatch RMS, own- and foreign-step mismatch, intention/outcome match, Psi); persistence relative to p = 1; adjacent-level differences."
+    },
+    "J": {
+      "name": "comparator gain",
+      "spec": {
+        "seeds": [
+          12000,
+          12001,
+          12002,
+          12003,
+          12004,
+          12005,
+          12006,
+          12007,
+          12008,
+          12009,
+          12010,
+          12011,
+          12012,
+          12013,
+          12014,
+          12015,
+          12016,
+          12017,
+          12018,
+          12019,
+          12020,
+          12021,
+          12022,
+          12023
+        ],
+        "world_blocks": 2,
+        "world_seed_base": 91,
+        "steps": 6000,
+        "burn": 2000
+      },
+      "design": "Master and cross-yoked twin with the injected comparator term multiplied by k in {0.5, 1, 2} (the twin at gain k is yoked to the donor's master at the same gain).",
+      "hypotheses": [
+        {
+          "id": "J1",
+          "statement": "the authorship effect is present at half gain",
+          "statistic": "master - twin self_persistence at k = 0.5",
+          "direction": "greater than 0"
+        },
+        {
+          "id": "J2",
+          "statement": "the authorship effect grows with the gain",
+          "statistic": "(master - twin at k = 2) - (master - twin at k = 0.5)",
+          "direction": "greater than 0"
+        }
+      ],
+      "secondary": "Authorship effect at each gain; master and twin persistence separately from k = 0.5 to 2 (the amplitude account expects the gain to hurt the twin more than the master); injected RMS."
+    }
+  },
+  "pilot_spec": {
+    "seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105
+    ],
+    "world_blocks": 1,
+    "world_seed_base": 1,
+    "steps": 6000,
+    "burn": 2000
+  },
+  "pilot_policy": "A technical pilot of G, I and J on six development networks (seeds 100-105, world 1, already examined in v4 development) is run after this document is committed and pushed, and before locking. Its purpose is to catch software faults. Its results are recorded here; hypotheses, directions, bounds and the decision rule may not be changed because of them.",
+  "posthoc_note": "Separately, and labelled exploratory, the v5 null results (A:H4, B3, the D Psi contrasts, E switched-off) are re-read with equivalence tests and the small-telescopes test (src/ghost_v6/posthoc_v5.py). That analysis is outside this lock because the v5 data have been seen.",
+  "deviations_policy": "Any deviation from this document is reported as such in the results and the paper.",
+  "pilot": {
+    "run": "2026-09-27, development networks 100-105 in world 1, studies G, I and J, exactly the confirmatory code (after commit e7da0f1).",
+    "software_faults_found": "none",
+    "manipulation_checks": {
+      "G_injected_rms": "master live 0.261, master twinPE_scaled 0.263 (rescaling matches the master's amplitude), off conditions 0.000",
+      "I_intention_outcome_match": "0.788, 0.915, 0.958, 0.992, 1.000 at p = 0.75, 0.90, 0.95, 0.99, 1 (expected 0.786, 0.914, 0.957, 0.991, 1.000)",
+      "J_injected_rms": "0.133 / 0.261 / 0.510 for the master at gains 0.5 / 1 / 2"
+    },
+    "estimates_seen_d_z": {
+      "G:G1": 0.43,
+      "G:G2": 0.75,
+      "G:G3": 0.17,
+      "G:G4": 1.19,
+      "I:I1": 0.18,
+      "I:I2": -0.39,
+      "I:I3": 1.66,
+      "I:I4": -2.4,
+      "J:J1": 1.67,
+      "J:J2": -0.01
+    },
+    "changes_made_because_of_pilot": "none"
+  }
+}

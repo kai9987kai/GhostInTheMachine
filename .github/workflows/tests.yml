@@ -24,9 +24,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install dependencies
-        run: python -m pip install "numpy>=1.26" "matplotlib>=3.8" pytest
+      - name: Install (editable, with test extras)
+        run: python -m pip install -e ".[test]"
       - name: Unit and pipeline tests
         run: python -m pytest -q
       - name: Preregistration locks verify (bytes unchanged since locking)
-        run: python src/ghost_in_the_machine_v4.py verify
+        shell: bash
+        run: |
+          python src/ghost_in_the_machine_v4.py verify
+          python src/ghost_in_the_machine_v5.py verify
+          python src/ghost_in_the_machine_v6.py verify
+      - name: Claims ledger (every headline number matches its results file)
+        run: python tools/claims.py check
+      - name: Console scripts installed
+        run: ghost-v6 verify

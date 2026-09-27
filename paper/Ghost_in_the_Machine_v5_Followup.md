@@ -5,6 +5,14 @@
 
 > **Scientific status.** Synthetic computational experiments. Nothing here creates, detects, measures or proves phenomenal consciousness in any system.
 
+> **Update after v6 (27 September 2026).** Three statements here have since been revised (`paper/Ghost_in_the_Machine_v6_Mechanism.md`, `docs/CLAIMS.md`).
+>
+> 1. **Ψ.** The v5 nulls are not evidence of absence. The replication cannot rule out a Ψ effect of d_z ≈ 0.18, and Ψ was significant again in the v6 Study G sample (d_z = 0.55, secondary). A post-hoc random-effects meta-analysis over all five independent samples (192 networks) gives +0.129 [0.077, 0.181], I² = 0.20. "Did not replicate" should read: significantly smaller than v4 estimated, and modest and variable across samples. The preregistered verdicts (level 4 in the v4 sample, level 3 in the replication) stand as reported.
+> 2. **Threshold.** A finer grid (v6 Study I) shows that the curve rises steadily from 75% to 99% authorship and is flat from 99% to 100%. It is not a threshold at exactly full authorship.
+> 3. **"Vanished" when switched off.** The residual is at most +0.021 nats (90% CI upper bound), under a fifth of the effect with the comparator on, but it is not formally equivalent to zero.
+>
+> The replication's blind-classification AUC is 0.79 (0.7947), not 0.80 as first printed.
+
 ## Abstract
 
 v4 reported, under a locked preregistration, that when a recurrent self/world-modelling agent authors its own actions, the slowest collective mode of its "self" population becomes more persistent. The effect depended on an efference-copy/comparator loop and came with a rise in Rosas' causal-emergence criterion Ψ, a conjunction v4 labelled GHOST-v4. v5 tests that result in six preregistered studies, hashed and locked before any confirmatory run, on 168 new networks in 14 new worlds plus a re-simulation of the 48 v4 networks.
@@ -83,7 +91,7 @@ All numbers come from `results/v5/results_v5.json`, produced under the verified 
 
 **Replication verdict: level 3** ("self-specific, comparator-dependent authorship effect: a self-stabilization mechanism"). GHOST-v4 (level 4) did not replicate.
 
-Blind discrimination of master from twin using network dynamics alone was stronger than in v4 (AUC 0.80, null 95th percentile 0.56). The placebo master-vs-master classifier stayed at chance (AUC 0.50). Four of five placebo A/A contrasts were null. The fifth (irreversibility, d_z = 0.32, p = 0.035) is about the rate expected by chance across five tests; it is reported as a watch item.
+Blind discrimination of master from twin using network dynamics alone was stronger than in v4 (AUC 0.79, null 95th percentile 0.56). The placebo master-vs-master classifier stayed at chance (AUC 0.50). Four of five placebo A/A contrasts were null. The fifth (irreversibility, d_z = 0.32, p = 0.035) is about the rate expected by chance across five tests; it is reported as a watch item.
 
 The lesion pattern replicated:
 - with the comparator lesioned, the authorship effect was d_z = −0.07;

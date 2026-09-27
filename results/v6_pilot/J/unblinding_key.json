@@ -1,0 +1,254 @@
+{
+  "82045560245d": {
+    "study": "J",
+    "seed": 100,
+    "cond": "gain0.5",
+    "role": "master",
+    "world": 1
+  },
+  "54a63514f4db": {
+    "study": "J",
+    "seed": 100,
+    "cond": "gain1",
+    "role": "master",
+    "world": 1
+  },
+  "5397f303357a": {
+    "study": "J",
+    "seed": 100,
+    "cond": "gain2",
+    "role": "master",
+    "world": 1
+  },
+  "b4df57e8cca8": {
+    "study": "J",
+    "seed": 101,
+    "cond": "gain0.5",
+    "role": "master",
+    "world": 1
+  },
+  "8933e34f65b8": {
+    "study": "J",
+    "seed": 101,
+    "cond": "gain1",
+    "role": "master",
+    "world": 1
+  },
+  "810c5e2ae91d": {
+    "study": "J",
+    "seed": 101,
+    "cond": "gain2",
+    "role": "master",
+    "world": 1
+  },
+  "5ec9abc9213b": {
+    "study": "J",
+    "seed": 102,
+    "cond": "gain0.5",
+    "role": "master",
+    "world": 1
+  },
+  "f93c1219703d": {
+    "study": "J",
+    "seed": 102,
+    "cond": "gain1",
+    "role": "master",
+    "world": 1
+  },
+  "1caf71777ddd": {
+    "study": "J",
+    "seed": 102,
+    "cond": "gain2",
+    "role": "master",
+    "world": 1
+  },
+  "ed9654008017": {
+    "study": "J",
+    "seed": 103,
+    "cond": "gain0.5",
+    "role": "master",
+    "world": 1
+  },
+  "dd56d5cf2ee8": {
+    "study": "J",
+    "seed": 103,
+    "cond": "gain1",
+    "role": "master",
+    "world": 1
+  },
+  "900a11641d3c": {
+    "study": "J",
+    "seed": 103,
+    "cond": "gain2",
+    "role": "master",
+    "world": 1
+  },
+  "9ce1057fee96": {
+    "study": "J",
+    "seed": 104,
+    "cond": "gain0.5",
+    "role": "master",
+    "world": 1
+  },
+  "f2e737fcaf1a": {
+    "study": "J",
+    "seed": 104,
+    "cond": "gain1",
+    "role": "master",
+    "world": 1
+  },
+  "f361c288efde": {
+    "study": "J",
+    "seed": 104,
+    "cond": "gain2",
+    "role": "master",
+    "world": 1
+  },
+  "ecb293d4ec8c": {
+    "study": "J",
+    "seed": 105,
+    "cond": "gain0.5",
+    "role": "master",
+    "world": 1
+  },
+  "09277190a803": {
+    "study": "J",
+    "seed": 105,
+    "cond": "gain1",
+    "role": "master",
+    "world": 1
+  },
+  "45703d4f06e5": {
+    "study": "J",
+    "seed": 105,
+    "cond": "gain2",
+    "role": "master",
+    "world": 1
+  },
+  "dcf38e413211": {
+    "study": "J",
+    "seed": 100,
+    "cond": "gain0.5",
+    "role": "twin",
+    "world": 1
+  },
+  "dbbe92c73558": {
+    "study": "J",
+    "seed": 100,
+    "cond": "gain1",
+    "role": "twin",
+    "world": 1
+  },
+  "0fecee04ab41": {
+    "study": "J",
+    "seed": 100,
+    "cond": "gain2",
+    "role": "twin",
+    "world": 1
+  },
+  "e8151e500423": {
+    "study": "J",
+    "seed": 101,
+    "cond": "gain0.5",
+    "role": "twin",
+    "world": 1
+  },
+  "95da21351a15": {
+    "study": "J",
+    "seed": 101,
+    "cond": "gain1",
+    "role": "twin",
+    "world": 1
+  },
+  "c4d19159d192": {
+    "study": "J",
+    "seed": 101,
+    "cond": "gain2",
+    "role": "twin",
+    "world": 1
+  },
+  "f51191d12224": {
+    "study": "J",
+    "seed": 102,
+    "cond": "gain0.5",
+    "role": "twin",
+    "world": 1
+  },
+  "e14930f9571c": {
+    "study": "J",
+    "seed": 102,
+    "cond": "gain1",
+    "role": "twin",
+    "world": 1
+  },
+  "e48f2f5f0ef1": {
+    "study": "J",
+    "seed": 102,
+    "cond": "gain2",
+    "role": "twin",
+    "world": 1
+  },
+  "4b0d4ac880d7": {
+    "study": "J",
+    "seed": 103,
+    "cond": "gain0.5",
+    "role": "twin",
+    "world": 1
+  },
+  "cc7778d3bdeb": {
+    "study": "J",
+    "seed": 103,
+    "cond": "gain1",
+    "role": "twin",
+    "world": 1
+  },
+  "1322dffbd6e4": {
+    "study": "J",
+    "seed": 103,
+    "cond": "gain2",
+    "role": "twin",
+    "world": 1
+  },
+  "08438aab0241": {
+    "study": "J",
+    "seed": 104,
+    "cond": "gain0.5",
+    "role": "twin",
+    "world": 1
+  },
+  "4d66830ed059": {
+    "study": "J",
+    "seed": 104,
+    "cond": "gain1",
+    "role": "twin",
+    "world": 1
+  },
+  "b6cfe853ea2f": {
+    "study": "J",
+    "seed": 104,
+    "cond": "gain2",
+    "role": "twin",
+    "world": 1
+  },
+  "2d0b199289f1": {
+    "study": "J",
+    "seed": 105,
+    "cond": "gain0.5",
+    "role": "twin",
+    "world": 1
+  },
+  "f5bc367161c1": {
+    "study": "J",
+    "seed": 105,
+    "cond": "gain1",
+    "role": "twin",
+    "world": 1
+  },
+  "e6601f39e307": {
+    "study": "J",
+    "seed": 105,
+    "cond": "gain2",
+    "role": "twin",
+    "world": 1
+  }
+}

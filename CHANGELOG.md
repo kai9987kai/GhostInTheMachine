@@ -1,5 +1,30 @@
 # Changelog
 
+## v6.0 - 2026-09-27 — what the comparator's prediction error carries
+
+Preregistered mechanism studies. Hypotheses were committed before any v6 data (`e7da0f1`); the lock was pushed before the confirmatory run (`88b10c2`); results are in `0d4a521`.
+
+- **`src/ghost_v6/`**: an engine that is bit-identical to v5 at defaults, with a replaceable prediction-error channel. It can replay a recorded stream from a chosen cycle, transplant it between master and twin, desynchronize it, phase-randomize it, rescale it, and set the comparator gain. It records the full mismatch vector and the injected RMS.
+- **Study G, prediction-error transplant (48 new networks):**
+  - The effect travels with the error stream (necessary d_z 1.02; sufficient d_z 0.99).
+  - Preregistered decision: **contingency account**. Desynchronizing the author's own stream keeps only 0.60 of the effect.
+  - Amplitude also contributes (d_z 1.19).
+  - Silencing the comparator raises persistence far above both agents. The comparator perturbs, and authorship attenuates the perturbation.
+- **Study I, near-full authorship (48 new networks):**
+  - 5% foreign actions reduce persistence; 1% do not.
+  - Foreign actions degrade even own-action predictions.
+  - Persistence tracks the prediction error within networks. v5's "threshold at full authorship" is revised.
+- **Study J, comparator gain (24 new networks):** not supported. The means are dominated by two networks with near-frozen twins, while 21–23/24 networks go in the predicted direction. The claim remains open.
+- **Equivalence tests (TOST)**, bound 0.04 nats, preregistered for null claims.
+- **Exploratory:**
+  - A re-reading of the v5 nulls (equivalence tests and small telescopes): none is evidence of absence.
+  - A living random-effects meta-analysis over all five independent samples (192 networks): persistence +0.134 nats, I² 0; Ψ +0.129 [0.077, 0.181], I² 0.20. The Ψ claim moves from "not replicated" to "revised: modest and variable".
+- **Claims ledger:** `claims/claims.json`, `tools/claims.py` and `docs/CLAIMS.md`. Every headline number is checked in CI against its results file, and the README evidence table is generated. The ledger caught a rounding error in the v5 report (AUC 0.7947 printed as 0.80; corrected to 0.79).
+- **Packaging:** `pyproject.toml`, installed with `pip install -e ".[test]"`, provides the `ghost-v4`, `ghost-v5` and `ghost-v6` commands.
+- **CI:** verifies all three locks, runs the claims check, and checks the installed command, on Linux and Windows.
+- Figure 6, `paper/Ghost_in_the_Machine_v6_Mechanism.{md,docx,pdf}`, update boxes in the v4 and v5 papers, and a README rewritten around the ledger.
+- v4 and v5 code are untouched; both locks still verify.
+
 ## v5.0 - 2026-09-27 — follow-up studies on the v4 authorship effect
 
 Six preregistered studies. Hypotheses were committed before any v5 data (7452b44); a technical pilot ran on development networks; the preregistration, the frozen v4 code and the v5 study code were then locked and pushed (5c38075) before the confirmatory runs.

@@ -1,0 +1,26 @@
+{
+  "locked_at_utc": "2026-09-27T15:54:13+00:00",
+  "git_head_at_lock": "e7da0f1b15382c084bf48315191765df0d4ac88e",
+  "digests": {
+    "prereg_v6": "75c762475ee9890f83835f7044a5678346dc8a1dd64be4e5f3fddb8f5ef3cad7",
+    "src/ghost_in_the_machine_v3.py": "2e5c8321c1e3cb8c85349a2f994f0c62cd16014ad2d5d26935d7b427650dd5c3",
+    "src/ghost_v4/__init__.py": "92e678da0a4663628ebfce3683068bea3a761aedbdd6c3cfd903ff8dbf0802f0",
+    "src/ghost_v4/campaign.py": "f811fa2d315dd2d0880269d9ee2d1145349a1f089574561baf3e05a034f2be8f",
+    "src/ghost_v4/classifier.py": "41adb776216324f2f9e49bc05e8ea329dd6aaa47e0ba9ab538d9ebf58a953ef9",
+    "src/ghost_v4/controls.py": "774da4f8591410c0863d305594635295880eafbe8623034ef9f5cca345a80298",
+    "src/ghost_v4/engine.py": "5d056d229cebc15f3e59711b35c629b5f6df5ff9bc9d444b738001778510ff95",
+    "src/ghost_v4/infotheory.py": "49b79725fec28a0cf3d6eb5662fc49298453d8ea4591531cb68346729a223973",
+    "src/ghost_v4/metrics.py": "6675a425d43111fbc526286017dbddbd909b72f5b73d712f0614d2606b0e1f90",
+    "src/ghost_v4/stats.py": "283d01670050a39b3ac299275f955a75207029a093e8ebfe860cfabbc0a399a1",
+    "src/ghost_v4/surrogates.py": "867907849070551c87e59d2ed33c480e6b97a97a77544505e90f23234b13d9a5",
+    "src/ghost_v4/temporal.py": "efad736b2e8ce616eb44901aa543e7243ff77d8557cb4ad0a442b7c31ec6332a",
+    "src/ghost_v4/v3_bridge.py": "9fece6ed9d7bb66347ce3b97f5078a7992b8397c84eb2fa46b3ed937fb52c812",
+    "src/ghost_v5/__init__.py": "fe2f4bd417f8c82045a71c8a364406db17eda334748b835227bf20459e054fca",
+    "src/ghost_v5/engine.py": "cfdfd7511ac5f7b9bf1cda859f891984904e135f703169e98e2b60d8dc132b79",
+    "src/ghost_v5/estimators.py": "9941aae626d0ab2eacd3bc4380b1b5c3ebf33fbe5f0add84b8201102227f1811",
+    "src/ghost_v5/studies.py": "d45200340a40cbb93446d28320331fd921c31399f7994c27dd2f569e772b3d55",
+    "src/ghost_v6/__init__.py": "1d41068ac31a955cfb7b6ee842499900c06917018dee3a31ed4b5af0570540a1",
+    "src/ghost_v6/engine.py": "6e83966043f51fb56f0b574afd52241aa562aee2d789f6ded00363c8e7de2b98",
+    "src/ghost_v6/studies.py": "cf65574bcd1ea29b3f562bbbd777a09273152215c99a8b01eddc871be50dca4c"
+  }
+}
