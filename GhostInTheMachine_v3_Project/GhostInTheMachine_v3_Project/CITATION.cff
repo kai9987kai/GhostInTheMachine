@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Ghost in the Machine v3: Cross-Theory Causal Emergence Laboratory"
+message: "If you use this experimental software, cite the accompanying project paper and clearly state that it is a synthetic computational thought experiment, not a consciousness detector."
+type: software
+authors:
+  - family-names: "Piper"
+    given-names: "Kai"
+version: "3.0"
+date-released: "2026-09-27"

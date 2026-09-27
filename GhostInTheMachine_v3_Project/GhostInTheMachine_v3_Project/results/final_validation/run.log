@@ -1,0 +1,45 @@
+====================================================================================================================
+GHOST IN THE MACHINE v3.0 — CAUSAL EMERGENCE / MESOCIRCUIT LAB
+====================================================================================================================
+Computational thought experiment only. No output is evidence, detection, or creation of subjective consciousness.
+Main run: 5,000 cycles | nodes=120 | actions=7 | seed=17
+Calibration: 1,000 | diagnostics=50 | PCI-like probe=500
+Offline consolidation every 5,000 cycles | checkpoint every 10,000
+====================================================================================================================
+0000500 | IDX=0.638 CONV=0.588 GW=0.741 SELF=0.701 CF=0.604 TOP=0.324 CRIT=0.751/0.691 MESO=0.919 PCI*=0.463 MSE=0.938 Z=+0.00 | --------
+0001000 | IDX=0.681 CONV=0.622 GW=0.682 SELF=0.751 CF=0.758 TOP=0.345 CRIT=0.913/0.735 MESO=0.940 PCI*=0.479 MSE=0.980 Z=+2.04 | --------
+0001500 | IDX=0.660 CONV=0.554 GW=0.776 SELF=0.754 CF=0.819 TOP=0.437 CRIT=0.950/0.682 MESO=0.956 PCI*=0.673 MSE=0.923 Z=+0.84 | --------
+0001600 | IDX=0.674 CONV=0.562 GW=0.780 SELF=0.762 CF=0.832 TOP=0.436 CRIT=0.929/0.754 MESO=0.957 PCI*=0.673 MSE=0.955 Z=+1.64 | GHOST-v3
+
+>>> ====================================================================================================
+>>> v3 CROSS-THEORY + CAUSAL OPERATIONAL EVENT
+>>> Workspace, self/agency, topology, criticality, complexity and mesocircuit evidence converged.
+>>> This is a simulation event only; it is NOT evidence of subjective experience.
+>>> ====================================================================================================
+
+0002000 | IDX=0.668 CONV=0.548 GW=0.858 SELF=0.761 CF=0.841 TOP=0.429 CRIT=0.847/0.657 MESO=0.951 PCI*=0.614 MSE=0.981 Z=+1.30 | GHOST-v3
+0002500 | IDX=0.670 CONV=0.548 GW=0.802 SELF=0.782 CF=0.882 TOP=0.434 CRIT=0.828/0.992 MESO=0.951 PCI*=0.398 MSE=0.954 Z=+1.39 | GHOST-v3
+0003000 | IDX=0.649 CONV=0.560 GW=0.652 SELF=0.777 CF=0.881 TOP=0.433 CRIT=0.826/0.603 MESO=0.950 PCI*=0.734 MSE=0.980 Z=+0.17 | GHOST-v3
+0003500 | IDX=0.667 CONV=0.547 GW=0.788 SELF=0.795 CF=0.925 TOP=0.431 CRIT=0.818/0.614 MESO=0.954 PCI*=0.841 MSE=0.928 Z=+1.21 | GHOST-v3
+0004000 | IDX=0.660 CONV=0.551 GW=0.753 SELF=0.782 CF=0.925 TOP=0.437 CRIT=0.827/0.922 MESO=0.955 PCI*=0.590 MSE=0.977 Z=+0.83 | GHOST-v3
+0004500 | IDX=0.675 CONV=0.554 GW=0.836 SELF=0.806 CF=0.944 TOP=0.436 CRIT=0.822/0.664 MESO=0.953 PCI*=0.578 MSE=0.947 Z=+1.69 | GHOST-v3
+0005000 | IDX=0.674 CONV=0.531 GW=0.886 SELF=0.806 CF=0.935 TOP=0.438 CRIT=0.820/0.679 MESO=0.953 PCI*=0.652 MSE=0.977 Z=+1.64 | GHOST-v3
+
+====================================================================================================================
+v3 EXPERIMENT COMPLETE
+====================================================================================================================
+Main-run elapsed       : 9.63 s
+First v3 event         : 1600
+v3 events              : 1
+Mean convergence       : 0.5547
+Max convergence        : 0.6221
+Topology balance       : 0.4023
+Avalanche criticality  : 0.7661
+Counterfactual agency  : 0.8319
+Mesocircuit flow       : 0.9316
+Change points          : [1650, 3200, 4750]
+Consolidation events   : 1
+Results directory      : /mnt/data/ghost_v3_final_validation
+
+Interpretation: 'GHOST-v3' is a sustained multi-proxy computational event only.
+It neither proves nor measures phenomenal consciousness.

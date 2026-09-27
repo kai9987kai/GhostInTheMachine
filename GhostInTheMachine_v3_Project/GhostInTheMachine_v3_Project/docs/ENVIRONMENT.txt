@@ -1,0 +1,2 @@
+Python 3.12+ recommended. The main script self-installs NumPy and Matplotlib when needed.
+Verified exact-build validation: Python runtime in OpenAI execution environment, 27 September 2026.

@@ -1,0 +1,146 @@
+{
+  "version": "3.0",
+  "seed": 17,
+  "ablation": "full",
+  "nodes": 120,
+  "steps": 5000,
+  "elapsed_seconds": 9.625148515000092,
+  "diagnostic_interval": 50,
+  "perturb_interval": 500,
+  "first_event_step": 1600,
+  "ghost_events": 1,
+  "ghost_step_estimate": 3450,
+  "change_points": [
+    1650,
+    3200,
+    4750
+  ],
+  "consolidation_events": 1,
+  "mean_ghost_index": 0.665713533700312,
+  "max_ghost_index": 0.7062108007919216,
+  "mean_convergence": 0.5546844279334594,
+  "max_convergence": 0.6220975936344886,
+  "mean_topology_balance": 0.40232018738035935,
+  "mean_functional_integration": 0.3647658652035693,
+  "mean_functional_segregation": 0.44980244248961776,
+  "mean_avalanche_criticality": 0.766126941589031,
+  "mean_branching_ratio": 0.8068637478873011,
+  "mean_counterfactual_agency": 0.8318581266609988,
+  "mean_multiscale_entropy": 0.9547900121902192,
+  "mean_mesocircuit_flow": 0.9316457308260077,
+  "mean_ei_balance": 0.9024723538328487,
+  "mean_geometry_score": 0.5347410901285976,
+  "final_recurrent_gain": 1.18,
+  "disclaimer": "Operational synthetic metrics only; not evidence or detection of phenomenal consciousness.",
+  "script_sha256": "2e5c8321c1e3cb8c85349a2f994f0c62cd16014ad2d5d26935d7b427650dd5c3",
+  "research_basis": [
+    "10.1038/s41593-026-02220-4",
+    "10.1038/s42003-026-10713-y",
+    "10.1038/s43856-026-01870-6",
+    "10.1038/s41586-025-08888-1",
+    "10.1038/s42003-024-06613-8",
+    "10.7554/eLife.86547"
+  ],
+  "stimulation_scan": [
+    {
+      "target": "sensory",
+      "perturbational_complexity": 0.38535888952572006,
+      "response_spread": 0.7333333333333333,
+      "response_duration": 0.44285714285714284,
+      "response_amplitude": 0.049344129159481144
+    },
+    {
+      "target": "association",
+      "perturbational_complexity": 0.7295825998962693,
+      "response_spread": 0.8083333333333333,
+      "response_duration": 1.0,
+      "response_amplitude": 0.13361669038366533
+    },
+    {
+      "target": "memory",
+      "perturbational_complexity": 0.2542906172260609,
+      "response_spread": 0.48333333333333334,
+      "response_duration": 0.2857142857142857,
+      "response_amplitude": 0.03329002432533468
+    },
+    {
+      "target": "workspace",
+      "perturbational_complexity": 0.7486935415434395,
+      "response_spread": 0.75,
+      "response_duration": 1.0,
+      "response_amplitude": 0.2833657063635944
+    },
+    {
+      "target": "self",
+      "perturbational_complexity": 0.43378136883361157,
+      "response_spread": 0.6416666666666667,
+      "response_duration": 0.8285714285714286,
+      "response_amplitude": 0.019959534616529107
+    },
+    {
+      "target": "dmn",
+      "perturbational_complexity": 0.3026169954635946,
+      "response_spread": 0.55,
+      "response_duration": 0.38571428571428573,
+      "response_amplitude": 0.035269341570048775
+    },
+    {
+      "target": "thalamus",
+      "perturbational_complexity": 0.7547671374345477,
+      "response_spread": 0.7833333333333333,
+      "response_duration": 1.0,
+      "response_amplitude": 0.1445952529451247
+    },
+    {
+      "target": "striatum",
+      "perturbational_complexity": 0.7771526374869194,
+      "response_spread": 0.7583333333333333,
+      "response_duration": 1.0,
+      "response_amplitude": 0.27062798084063133
+    },
+    {
+      "target": "gpe",
+      "perturbational_complexity": 0.5043085257126895,
+      "response_spread": 0.5333333333333333,
+      "response_duration": 0.9714285714285714,
+      "response_amplitude": 0.037168192391518806
+    },
+    {
+      "target": "stn",
+      "perturbational_complexity": 0.7731787619126594,
+      "response_spread": 0.7916666666666666,
+      "response_duration": 1.0,
+      "response_amplitude": 0.18316411692304788
+    },
+    {
+      "target": "gpi",
+      "perturbational_complexity": 0.7771139737465932,
+      "response_spread": 0.7666666666666667,
+      "response_duration": 1.0,
+      "response_amplitude": 0.2727196454628893
+    },
+    {
+      "target": "control",
+      "perturbational_complexity": 0.5917733393530116,
+      "response_spread": 0.625,
+      "response_duration": 1.0,
+      "response_amplitude": 0.12708396461737423
+    }
+  ],
+  "surrogate_nulls": [
+    {
+      "surrogate": "temporal_shuffle",
+      "convergence": 0.6067170355210106,
+      "topology_balance": 0.4448823313361796,
+      "multiscale_entropy": 0.9478394768599238,
+      "intrinsic_dimensionality": 3.8355314429168246
+    },
+    {
+      "surrogate": "node_circular_shift",
+      "convergence": 0.6309591798286317,
+      "topology_balance": 0.4546918566073389,
+      "multiscale_entropy": 0.9940227530769279,
+      "intrinsic_dimensionality": 4.985229629033001
+    }
+  ]
+}
