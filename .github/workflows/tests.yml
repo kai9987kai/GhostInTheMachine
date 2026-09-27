@@ -34,7 +34,8 @@ jobs:
           python src/ghost_in_the_machine_v4.py verify
           python src/ghost_in_the_machine_v5.py verify
           python src/ghost_in_the_machine_v6.py verify
+          python src/ghost_in_the_machine_v7.py verify
       - name: Claims ledger (every headline number matches its results file)
         run: python tools/claims.py check
       - name: Console scripts installed
-        run: ghost-v6 verify
+        run: ghost-v7 verify

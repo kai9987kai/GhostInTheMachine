@@ -8,6 +8,8 @@
 > **Update after the v5 follow-up (27 September 2026).** A preregistered direct replication with the frozen v4 pipeline (48 new networks, 4 new worlds) reached **level 3, not level 4**. The authorship-stabilization effect (H1–H3) and H5–H7 replicated, but authorship-dependent Ψ (H4) did not (d_z = 0.20, p = 0.10), showed no dose-response, and was null in four other architectures. **GHOST-v4 did not replicate.** Further v5 studies showed that the effect's apparent self-specificity follows the comparator's wiring: rerouting the comparator moves the peak effect to the new target population. The core effect proved robust to nonlinear estimators, other architectures and online switching of the comparator. See `paper/Ghost_in_the_Machine_v5_Followup.md`.
 >
 > **Update after v6.** The authorship effect is carried by the comparator's prediction-error stream: transplanting the stream between master and twin transfers it, and it depends on the error being in step with the network's own state, not only on its amplitude. v5's Ψ null was not evidence of absence. Pooled over all five independent samples (post hoc), authorship raises Ψ modestly and variably (+0.129 [0.077, 0.181]). See `paper/Ghost_in_the_Machine_v6_Mechanism.md` and `docs/CLAIMS.md`.
+>
+> **Update after v7.** A powered preregistered test of Ψ (72 networks) failed, and pooled over eight samples the Ψ effect is small and inconsistent, so H4 is not replicated. The persistence effect (H1) holds in all eight samples (360 networks; +0.139 nats, I² 0). See `paper/Ghost_in_the_Machine_v7_Feedback.md`.
 
 ## Abstract
 

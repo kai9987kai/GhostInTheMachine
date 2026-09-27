@@ -1,11 +1,11 @@
 cff-version: 1.2.0
-title: "Ghost in the Machine: Preregistered, Null-Calibrated Experiments on Authorship, Prediction Error and Self-Model Dynamics in a Synthetic Agent (v4-v6)"
+title: "Ghost in the Machine: Preregistered, Null-Calibrated Experiments on Authorship, Prediction Error and Self-Model Dynamics in a Synthetic Agent (v4-v7)"
 message: "If you use this experimental software, cite the accompanying project paper and state clearly that it is a synthetic computational experiment, not a consciousness detector."
 type: software
 authors:
   - family-names: "Piper"
     given-names: "Kai"
-version: "6.0"
+version: "7.0"
 date-released: "2026-09-27"
 repository-code: "https://github.com/kai9987kai/GhostInTheMachine"
 license: MIT
@@ -20,3 +20,4 @@ keywords:
   - sensory attenuation
   - equivalence testing
   - meta-analysis
+  - feedback control

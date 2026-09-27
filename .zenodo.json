@@ -1,7 +1,7 @@
 {
   "title": "Ghost in the Machine: preregistered, null-calibrated experiments on authorship, prediction error and self-model dynamics in a synthetic agent",
   "upload_type": "software",
-  "description": "Synthetic computational experiments on self-modelling recurrent agents. v4 re-adjudicates the v3 'cross-theory' event (a gain ramp measured against an early baseline and held on by detector hysteresis). It then tests, with a cryptographically locked preregistration, cross-yoked twins, paired lesions, placebo contrasts and a calibrated null ladder, whether authoring one's own actions stabilizes the slow dynamics of a self-model through an efference-copy/comparator loop. v5's six preregistered studies replicate that effect, show that it scales with authorship, survives nonlinear estimators and other architectures, is online, and follows the comparator's wiring. v6 shows, by transplanting prediction-error streams between agent and twin, that the effect is carried by the comparator's prediction error: the comparator perturbs the slow mode, and authorship attenuates that perturbation by making the error smaller and in step with the network's own state. A claims ledger checks every headline number against its results file. Nothing in this software creates, detects or measures consciousness.",
+  "description": "Synthetic computational experiments on self-modelling recurrent agents. v4 re-adjudicates the v3 'cross-theory' event (a gain ramp measured against an early baseline and held on by detector hysteresis). It then tests, with a cryptographically locked preregistration, cross-yoked twins, paired lesions, placebo contrasts and a calibrated null ladder, whether authoring one's own actions stabilizes the slow dynamics of a self-model through an efference-copy/comparator loop. v5's six preregistered studies replicate that effect, show that it scales with authorship, survives nonlinear estimators and other architectures, is online, and follows the comparator's wiring. v6 shows, by transplanting prediction-error streams between agent and twin, that the effect is carried by the comparator's prediction error: the comparator perturbs the slow mode, and authorship attenuates that perturbation by making the error smaller and in step with the network's own state. v7 shows that an author's prediction error is largely predictable from its own state and that this state-predicted part acts as a stabilizing feedback loop; the effect grows with the comparator's gain; a powered preregistered test of authorship-dependent causal emergence (Psi) failed, and across eight samples (360 networks) Psi is not replicated while the persistence effect holds without exception. A claims ledger and evidence explorer check every headline number against its results file. Nothing in this software creates, detects or measures consciousness.",
   "creators": [
     {
       "name": "Piper, Kai"
@@ -20,7 +20,8 @@
     "prediction error",
     "sensory attenuation",
     "equivalence testing",
-    "meta-analysis"
+    "meta-analysis",
+    "feedback control"
   ],
   "related_identifiers": [
     {

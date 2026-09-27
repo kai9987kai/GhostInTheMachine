@@ -5,6 +5,8 @@
 
 > **Scientific status.** Synthetic computational experiments. Nothing here creates, detects, measures or proves phenomenal consciousness in any system.
 
+> **Update after v7 (27 September 2026).** The Ψ revision above did not hold. A preregistered test sized for the pooled effect (72 networks, v7 Study L) failed (d_z 0.12, p 0.15). The prespecified eight-sample meta-analysis halved the pooled estimate to +0.083 (HKSJ 95% CI [0.025, 0.141]), with substantial heterogeneity (I² 0.56) and a prediction interval that includes zero. Ψ is back to **not replicated**. The comparator-gain question left open here was resolved in v7 Study M: the effect is present at half gain and grows with the gain. See `paper/Ghost_in_the_Machine_v7_Feedback.md` and `docs/CLAIMS.md`.
+
 ## Abstract
 
 v4 and v5 established, under locked preregistrations and a direct replication, a robust effect in a synthetic self/world-modelling agent: when the agent authors its own actions, the slowest collective mode of the population receiving its comparator's prediction-error signal becomes more persistent. v6 asks *why*. The comparator's only input to the network is the prediction error, so v6 makes that stream an experimental variable. It transplants the stream between an agent and its cross-yoked twin, desynchronizes it, phase-randomizes it and rescales it.

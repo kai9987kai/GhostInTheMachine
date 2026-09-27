@@ -12,6 +12,8 @@
 > 3. **"Vanished" when switched off.** The residual is at most +0.021 nats (90% CI upper bound), under a fifth of the effect with the comparator on, but it is not formally equivalent to zero.
 >
 > The replication's blind-classification AUC is 0.79 (0.7947), not 0.80 as first printed.
+>
+> **Update after v7.** Item 1 was itself revised. A powered preregistered Ψ test (72 networks) failed, and the eight-sample pooled estimate is +0.083 with I² 0.56 and a prediction interval including zero. The original v5 conclusion, that Ψ did not replicate, stands (`paper/Ghost_in_the_Machine_v7_Feedback.md`).
 
 ## Abstract
 

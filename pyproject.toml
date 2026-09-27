@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ghost-in-the-machine"
-version = "6.0"
+version = "7.0"
 description = "Preregistered, null-calibrated experiments on authorship, prediction error and self-model dynamics in synthetic recurrent agents. Nothing here creates, detects or measures consciousness."
 readme = "README.md"
 license = { text = "MIT" }
@@ -20,6 +20,7 @@ paper = ["pypandoc_binary"]
 ghost-v4 = "ghost_v4.cli:main"
 ghost-v5 = "ghost_v5.cli:main"
 ghost-v6 = "ghost_v6.cli:main"
+ghost-v7 = "ghost_v7.cli:main"
 
 [project.urls]
 Repository = "https://github.com/kai9987kai/GhostInTheMachine"
@@ -28,4 +29,4 @@ Repository = "https://github.com/kai9987kai/GhostInTheMachine"
 # read from the repository tree, so the packages must stay where they are.
 [tool.setuptools]
 package-dir = { "" = "src" }
-packages = ["ghost_v4", "ghost_v5", "ghost_v6"]
+packages = ["ghost_v4", "ghost_v5", "ghost_v6", "ghost_v7"]

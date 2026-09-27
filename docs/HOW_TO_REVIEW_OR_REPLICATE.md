@@ -7,10 +7,11 @@ This project's claims are only as good as the attempts to break them. This guide
 ```bash
 git clone https://github.com/kai9987kai/GhostInTheMachine && cd GhostInTheMachine
 python -m pip install -e ".[test]"                    # or: pip install "numpy>=1.26" "matplotlib>=3.8" pytest
-python -m pytest -q                                   # 50 tests, including an exact v3 reproduction and v4 = v5 = v6 identity
+python -m pytest -q                                   # 61 tests, including an exact v3 reproduction and v4 = v5 = v6 = v7 identity
 python src/ghost_in_the_machine_v4.py verify          # preregistration locks still match the code
 python src/ghost_in_the_machine_v5.py verify
 python src/ghost_in_the_machine_v6.py verify
+python src/ghost_in_the_machine_v7.py verify
 python tools/claims.py check                          # every headline number matches its results file
 python src/ghost_in_the_machine_v4.py all --out my_results --workers 4
 diff <(python -c "import json;print(json.dumps(json.load(open('my_results/results_v4.json'))['v4']['primary'],indent=1,sort_keys=True))") \
@@ -37,6 +38,8 @@ The pipeline is deterministic given seeds, so numbers should match. If they don'
 | Contingency, not just amplitude (v6 G3) | `studies.window_shift` | Is "desynchronization" really only a loss of synchrony? Separate the state-dependent feedback term `−W_cmp·f(state, intention)` from the rest of the error and inject each alone. |
 | Persistence metric | `metrics.self_persistence` | It is unbounded as the lag-1 autocorrelation → 1, and two Study J networks dominate its mean. Re-run the contrasts with a bounded or rank-based variant. |
 | Meta-analysis (v6, exploratory) | `ghost_v6/meta.py` | Challenge the sample-inclusion rule, and try other pooling methods (Hartung-Knapp, Bayesian). |
+| An author's error is its own (v7 K) | `ghost_v7/studies.fit_state_feedback`, `run_K` | The state-predicted part is a *linear* ridge map. Try nonlinear predictors, other lags, or fitting B on a different run than the one it is used in. Inject only `W_cmp B x` into a twin: does a pure self-feedback loop make a non-author look like an author? |
+| Ψ not replicated (v7 L, meta-analysis) | `ghost_v7/meta.py` | The Ψ decline over samples could be heterogeneity rather than an overestimated early effect. Model it (for example with meta-regression on sample order or design). |
 | The claims ledger | `claims/claims.json`, `tools/claims.py` | Find a number in the README, papers or summaries that is not in the ledger, or a ledger status that the evidence does not justify. |
 
 The known limitations (same analyst throughout, one model family, a heavy-tailed persistence metric, a cross-network yoke) are listed in the v4, v5 and v6 papers. Findings that go beyond them are the most valuable.
