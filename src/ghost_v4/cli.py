@@ -50,6 +50,9 @@ def cmd_demo(args) -> None:
     for k in keys:
         print(f"{k:28s} {pm[k]:10.4f} {pt[k]:12.4f}")
     print("\nSame network, same world, statistically matched input. Only authorship differs.")
+    print("One pair is an anecdote: single networks vary. Every claim in v4 rests on paired contrasts over")
+    print("48 held-out networks (results/v4/SUMMARY.md), where e.g. self_persistence is higher in the master")
+    print("in 44 of 48 networks (d_z = 1.21) while placebo master-vs-master contrasts are null.")
 
 
 def _phase_spec(prereg: dict, phase: str) -> dict:

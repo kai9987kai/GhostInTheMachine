@@ -29,6 +29,12 @@ Research process:
 - Confirmatory campaign: 48 held-out networks in 4 held-out worlds.
 - 28 tests (`pytest`).
 
+Results (see `results/v4/SUMMARY.md` and the v4 paper):
+- v3 re-adjudicated on 24 fresh seeds: event rate 22/24, but 18/24 in cross-yoked twins and 18/24 with learning frozen; 10/24 and 9/24 with the gain clamped at 0.91 / 1.18; persistence equals detector hysteresis in every firing run.
+- Instrument calibration: 11/13 rows pass; the two failures are the predicted FFT end-effect ceilings, removed post hoc by the 1% SESOI rule.
+- Confirmatory campaign (48 held-out networks, 4 held-out worlds): all preregistered tests pass; verdict level 4 (GHOST-v4). Authorship increases the persistence of the self population's slowest collective mode (d_z = 1.21), most strongly in the self population, only with an intact efference-copy/comparator loop; Ψ rises with authorship because the collective term rises while the parts' term does not; placebo contrasts are null.
+- Post-hoc module (`src/ghost_v4/posthoc.py`) and paper export tool (`tools/export_paper.py`).
+
 ## v3.0 - 2026-09-27
 
 - Expanded to a 100,000-cycle default long-run laboratory.

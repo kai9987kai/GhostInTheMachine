@@ -1,2 +1,12 @@
-Python 3.12+ recommended. The main script self-installs NumPy and Matplotlib when needed.
-Verified exact-build validation: Python runtime in OpenAI execution environment, 27 September 2026.
+v4 (27 September 2026)
+  Python 3.10+ (developed and validated with Python 3.11.15 on Linux, 4 cores).
+  NumPy >= 1.26 (validated with 2.4.6); Matplotlib >= 3.8 (validated with 3.11.2) for figures.
+  pytest for the test suite. Optional for paper export: pypandoc_binary and a Chromium/Chrome binary.
+  The entry point installs NumPy/Matplotlib if missing and pins BLAS to one thread per process.
+  Full preregistered pipeline: ~35 min on 4 cores (calibration ~4 min, v3 forensics ~6 min,
+  48-network campaign ~18 min, analysis ~1 min).
+
+v3
+  Python 3.12+ recommended. The main script self-installs NumPy and Matplotlib when needed.
+  Verified exact-build validation: Python runtime in OpenAI execution environment, 27 September 2026.
+  Re-verified bit-for-bit (same SHA-256, event at cycle 1600) under Python 3.11.15 / NumPy 2.4.6.
