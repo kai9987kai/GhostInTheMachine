@@ -1,16 +1,30 @@
-# Ghost in the Machine v4 — the Specificity Laboratory
+# Ghost in the Machine — v4 Specificity Laboratory and v5 follow-up
 
-**A preregistered, null-calibrated test of authorship, emergence and specificity in a synthetic self**
+**Preregistered, null-calibrated tests of authorship, emergence and specificity in a synthetic self**
 
-Author/project lead: **Kai Piper** · Version **4.0** · 27 September 2026
+Author/project lead: **Kai Piper** · Version **5.0** (v4 laboratory + v5 follow-up studies) · 27 September 2026
 
 > **Scientific status.** This is a synthetic computational experiment. It does **not** create, detect, measure or prove phenomenal consciousness in any system. "GHOST-v4" names a preregistered conjunction of statistical results in a simulated network, and nothing more.
 
-## In one paragraph
+## Current state of the evidence (after v5)
 
-v3 reported a sustained, spontaneous "cross-theory" event and a surrogate test it could not pass. v4 first **re-adjudicates v3**, with its code unchanged. The event turns out to be mostly a homeostatic gain ramp measured against an early baseline and held on by detector hysteresis. It fires almost as often in a twin that never authors its actions, and most of v3's evidence channels cannot, by construction, tell real dynamics from shuffled ones. v4 then replaces convergence-of-proxies with **contrasts**. The same network is run closed-loop and as a **cross-yoked twin** that receives an equivalent sensory/action stream it did not author. Each metric is tested against a **ladder of null models**, and false-positive rate and power were **measured on ground-truth systems first**. Everything ran under a **cryptographically locked preregistration** that was pushed before any confirmatory seed. On 48 held-out networks in 4 held-out worlds, authorship made the slowest collective mode of the agent's self-model population more persistent (d_z = 1.21, in 44 of 48 networks). The effect was strongest in the self population, vanished when the efference copy or the comparator was lesioned, and was detectable blind from the dynamics alone. By the preregistered ladder this is **GHOST-v4**, with bounds stated below.
+| claim | status |
+|---|---|
+| v3's event was a gain ramp + detector hysteresis, not an emergent self | established in v4 (24 seeds, v3 code unchanged) |
+| **Authoring one's actions stabilizes slow network dynamics via the efference-copy/comparator loop** | **replicated** on 48 new networks (d_z 0.89); grows with authorship, mostly at full authorship; robust to nonlinear estimators (KSG d_z 1.38) and four architectures; online (appears/disappears as the comparator is switched on/off) |
+| The effect is specific to the "self" population | **revised**: its peak follows wherever the comparator projects (rerouting to DMN moves it there, d_z 0.96 → 1.70) |
+| Authorship increases causal emergence (Rosas Ψ), the "GHOST-v4" criterion | **did not replicate** (d_z 0.20, p = 0.10), no dose-response, null in all four architectures; significant only in the original v4 sample |
+| Preregistered verdict | v4 sample: level 4 (GHOST-v4) · **replication: level 3** |
 
-## Headline results
+v5 report: [`paper/Ghost_in_the_Machine_v5_Followup.md`](paper/Ghost_in_the_Machine_v5_Followup.md) · all v5 numbers: [`results/v5/SUMMARY_v5.md`](results/v5/SUMMARY_v5.md)
+
+![Figure 5](figures/ghost_v5_figure_5_followup.png)
+
+## v4 in one paragraph
+
+v3 reported a sustained, spontaneous "cross-theory" event and a surrogate test it could not pass. v4 first **re-adjudicates v3**, with its code unchanged. The event turns out to be mostly a homeostatic gain ramp measured against an early baseline and held on by detector hysteresis. It fires almost as often in a twin that never authors its actions, and most of v3's evidence channels cannot, by construction, tell real dynamics from shuffled ones. v4 then replaces convergence-of-proxies with **contrasts**. The same network is run closed-loop and as a **cross-yoked twin** that receives an equivalent sensory/action stream it did not author. Each metric is tested against a **ladder of null models**, and false-positive rate and power were **measured on ground-truth systems first**. Everything ran under a **cryptographically locked preregistration** that was pushed before any confirmatory seed. On 48 held-out networks in 4 held-out worlds, authorship made the slowest collective mode of the agent's self-model population more persistent (d_z = 1.21, in 44 of 48 networks). The effect was strongest in the self population, vanished when the efference copy or the comparator was lesioned, and was detectable blind from the dynamics alone. By the preregistered ladder this is **GHOST-v4**, with bounds stated below; its Ψ component later failed to replicate (see above).
+
+## v4 headline results (original confirmatory sample)
 
 | | result |
 |---|---|
@@ -26,11 +40,11 @@ v3 reported a sustained, spontaneous "cross-theory" event and a surrogate test i
 | **H6** nonlinear arrow of time | z ≈ 88 above multivariate-phase surrogates |
 | placebo A/A (same network, new noise) | all 5 contrasts null; blind classifier at chance (AUC 0.52) |
 | blind master vs twin from dynamics alone | AUC **0.69** (null 95th pct 0.56) |
-| **Verdict (preregistered ladder)** | **level 4 — GHOST-v4** |
+| **Verdict (preregistered ladder)** | **level 4 — GHOST-v4** in this sample; **level 3 on replication** (v5 Study A) |
 
 **What it means:** in this model, authorship stabilizes a *world-coupled* self through the efference-copy/comparator loop, the dynamical signature of the comparator model of agency.
 
-**What it does not mean:** not experience; not "more emergent is better" (a self *disconnected* from its actions' consequences was the most persistent of all); not strong emergence (downward causation fell); not "the twin is just more surprised" (effect size does not track excess prediction error); not exclusive to the self population (six others show smaller effects). Full discussion: [`paper/Ghost_in_the_Machine_v4_Paper.md`](paper/Ghost_in_the_Machine_v4_Paper.md). Every number: [`results/v4/SUMMARY.md`](results/v4/SUMMARY.md).
+**What it does not mean:** not experience; not "more emergent is better" (a self *disconnected* from its actions' consequences was the most persistent of all); not strong emergence (downward causation fell); not "the twin is just more surprised" (effect size does not track excess prediction error); not exclusive to the self population (six others show smaller effects; v5 showed the peak follows the comparator's wiring). Full discussion: [`paper/Ghost_in_the_Machine_v4_Paper.md`](paper/Ghost_in_the_Machine_v4_Paper.md). Every number: [`results/v4/SUMMARY.md`](results/v4/SUMMARY.md).
 
 ![Figure 2](figures/ghost_v4_figure_2_authorship.png)
 
@@ -48,9 +62,15 @@ python src/ghost_in_the_machine_v4.py all --out results/v4 --workers 4      # ~3
 # post-hoc analyses (not preregistered; labelled as such)
 python src/ghost_in_the_machine_v4.py posthoc --out results/v4
 
-# tests (28, ~10 s)
+# v5 follow-up studies (replication, dose-response, estimators, architectures, timing, rerouting; ~30 min)
+python src/ghost_in_the_machine_v5.py verify
+python src/ghost_in_the_machine_v5.py run --study all && python src/ghost_in_the_machine_v5.py analyze && python src/ghost_in_the_machine_v5.py report
+
+# tests (36, ~15 s)
 python -m pip install pytest && python -m pytest
 ```
+
+To review, attack or independently replicate the results, see [`docs/HOW_TO_REVIEW_OR_REPLICATE.md`](docs/HOW_TO_REVIEW_OR_REPLICATE.md).
 
 Individual stages:
 
@@ -130,14 +150,22 @@ src/
     prereg.py                    cryptographic preregistration lock
     posthoc.py                   post-hoc (not preregistered) analyses
     report.py, figures.py, cli.py, _bootstrap.py
+  ghost_in_the_machine_v5.py     v5 entry point
+  ghost_v5/                      v5 studies: engine (bit-identical to v4 at defaults) with graded authorship,
+                                 comparator schedule and rerouting; KSG and Gaussian-copula estimators;
+                                 study runners and analyses; lock; report
   ghost_in_the_machine_v3.py     v3, byte-identical to the validated build
-prereg/                          PREREGISTRATION_v4.json + .lock.json
+prereg/                          v4 and v5 preregistrations, replication prereg, and their locks
 results/v4/                      SUMMARY.md, results_v4.json, pipeline.log,
                                  calibration/, v3_forensics/, campaign/, dev_campaign/, posthoc/
+results/v5/                      SUMMARY_v5.md, results_v5.json, per-study coded runs (A–F)
+results/v5_pilot/                v5 technical pilot (development networks)
 results/final_validation/        v3 validation run (unchanged)
-figures/                         ghost_v4_figure_{1..4}_*.png, ghost_v3_figure_{1..3}_*.png
-paper/                           v4 paper (md, docx, pdf); v3 paper
+figures/                         ghost_v5_figure_5_*.png, ghost_v4_figure_{1..4}_*.png, ghost_v3_figure_{1..3}_*.png
+paper/                           v5 follow-up report, v4 paper, v3 paper (md, docx, pdf)
+.github/workflows/tests.yml      CI: tests + lock verification on Linux and Windows
 docs/REVIEW_OF_V3_ASSESSMENT.md  point-by-point review of an external assessment of v3
+docs/HOW_TO_REVIEW_OR_REPLICATE.md  guide for reviewers and independent replicators
 tests/                           estimator ground-truth tests, pipeline tests
 tools/export_paper.py            Markdown → DOCX/PDF via LibreOffice
 legacy/                          v1, v2
@@ -145,8 +173,8 @@ legacy/                          v1, v2
 
 ## Interpretation, stated three ways
 
-1. **Observed.** In 48 held-out synthetic networks, authoring actions increased the persistence of the self population's slowest collective mode. That increase lived in the collective mode rather than in the parts, depended on the efference-copy/comparator loop, and was detectable blind. All preregistered tests passed; all placebo contrasts were null.
-2. **Supported computational interpretation.** In this architecture, the comparator couples the self-model to the consequences of action. Authorship keeps that coupling from disrupting the self-model's slow dynamics.
+1. **Observed.** In 48 held-out synthetic networks, authoring actions increased the persistence of the self population's slowest collective mode. That increase lived in the collective mode rather than in the parts, depended on the efference-copy/comparator loop, and was detectable blind. All preregistered tests passed; all placebo contrasts were null. In a preregistered replication on 48 new networks, everything except the Ψ (emergence) component replicated.
+2. **Supported computational interpretation.** In this architecture, the comparator couples a population to the consequences of action. Complete authorship keeps that coupling from disrupting the population's slow dynamics, online and wherever the comparator projects.
 3. **Not supported.** That the program is conscious, has experiences or a self in any philosophical sense, or that this model says anything about any person or clinical condition.
 
 ## Previous versions
@@ -179,6 +207,8 @@ v2 removed v1's scripted self-model phase and added learned recurrent modules, p
 ## Reproducibility
 
 - Preregistration locked 2026-09-27T12:48:56Z (`prereg/PREREGISTRATION_v4.lock.json`); `python src/ghost_in_the_machine_v4.py verify` checks it.
+- v5 hypotheses committed before any v5 data (`7452b44`); v5 lock 2026-09-27T14:57:16Z (`prereg/PREREGISTRATION_v5.lock.json`, commit `5c38075`); `python src/ghost_in_the_machine_v5.py verify` checks it.
+- `.gitattributes` disables line-ending conversion so these SHA-256 checks also pass on Windows checkouts.
 - Source hashes: `docs/SHA256SUMS.txt`.
 - The pipeline is deterministic given seeds; only the random run codes in `runs_coded.json` differ between re-runs.
 - Development (exploratory) and confirmatory results are kept separate: `results/v4/dev_campaign/` vs `results/v4/campaign/`.

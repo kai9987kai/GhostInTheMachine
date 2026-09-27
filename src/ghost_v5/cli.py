@@ -87,6 +87,7 @@ def cmd_run(args) -> None:
     status = _status(args)
     doc = pr.load()
     out = Path(args.out)
+    out.mkdir(parents=True, exist_ok=True)
     studies = list("ABCDEF") if args.study == "all" else [args.study]
     write_json(out / "manifest_v5.json", {"status": status, "studies": studies, "version": __version__,
                                           "lock": pr.verify()[2]})
@@ -135,6 +136,10 @@ def cmd_analyze(args) -> None:
         if (out / k / "runs_coded.json").exists():
             studies[k] = fn(out / k)
     results["studies"] = studies
+    if "B" in studies:
+        from .report import b_within_network
+        results["descriptive"] = {"B_within_network": b_within_network(out / "B"),
+                                  "note": "post-lock descriptive statistics for figures; not hypothesis tests"}
     results["across_study_holm"] = S.across_study_holm(studies)
     write_json(out / "results_v5.json", results)
     from .report import write_summary
