@@ -271,5 +271,27 @@
   },
   "pilot_policy": "A technical pilot of G, I and J on six development networks (seeds 100-105, world 1, already examined in v4 development) is run after this document is committed and pushed, and before locking. Its purpose is to catch software faults. Its results are recorded here; hypotheses, directions, bounds and the decision rule may not be changed because of them.",
   "posthoc_note": "Separately, and labelled exploratory, the v5 null results (A:H4, B3, the D Psi contrasts, E switched-off) are re-read with equivalence tests and the small-telescopes test (src/ghost_v6/posthoc_v5.py). That analysis is outside this lock because the v5 data have been seen.",
-  "deviations_policy": "Any deviation from this document is reported as such in the results and the paper."
+  "deviations_policy": "Any deviation from this document is reported as such in the results and the paper.",
+  "pilot": {
+    "run": "2026-09-27, development networks 100-105 in world 1, studies G, I and J, exactly the confirmatory code (after commit e7da0f1).",
+    "software_faults_found": "none",
+    "manipulation_checks": {
+      "G_injected_rms": "master live 0.261, master twinPE_scaled 0.263 (rescaling matches the master's amplitude), off conditions 0.000",
+      "I_intention_outcome_match": "0.788, 0.915, 0.958, 0.992, 1.000 at p = 0.75, 0.90, 0.95, 0.99, 1 (expected 0.786, 0.914, 0.957, 0.991, 1.000)",
+      "J_injected_rms": "0.133 / 0.261 / 0.510 for the master at gains 0.5 / 1 / 2"
+    },
+    "estimates_seen_d_z": {
+      "G:G1": 0.43,
+      "G:G2": 0.75,
+      "G:G3": 0.17,
+      "G:G4": 1.19,
+      "I:I1": 0.18,
+      "I:I2": -0.39,
+      "I:I3": 1.66,
+      "I:I4": -2.4,
+      "J:J1": 1.67,
+      "J:J2": -0.01
+    },
+    "changes_made_because_of_pilot": "none"
+  }
 }
