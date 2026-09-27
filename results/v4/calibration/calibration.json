@@ -1,0 +1,188 @@
+{
+  "alpha": 0.05,
+  "rows": [
+    {
+      "system": "independent_ar",
+      "metric": "irr_ordinal",
+      "rung": "L2_mvphase",
+      "ground_truth": false,
+      "role": "false_positive_rate",
+      "detection_rate": 0.03,
+      "ci95": [
+        0.010254524024038925,
+        0.08451936429052759
+      ],
+      "n": 100,
+      "pass": true
+    },
+    {
+      "system": "linear_nonnormal_var",
+      "metric": "irr_ordinal",
+      "rung": "L2_mvphase",
+      "ground_truth": false,
+      "role": "false_positive_rate",
+      "detection_rate": 0.04,
+      "ci95": [
+        0.01566330399154762,
+        0.09837071435887917
+      ],
+      "n": 100,
+      "pass": true
+    },
+    {
+      "system": "relaxation_oscillators",
+      "metric": "irr_ordinal",
+      "rung": "L2_mvphase",
+      "ground_truth": true,
+      "role": "power",
+      "detection_rate": 1.0,
+      "ci95": [
+        0.9630065017930143,
+        1.0
+      ],
+      "n": 100,
+      "pass": true
+    },
+    {
+      "system": "independent_ar",
+      "metric": "lagged_asymmetry",
+      "rung": "L1_iaaft",
+      "ground_truth": false,
+      "role": "false_positive_rate",
+      "detection_rate": 0.04,
+      "ci95": [
+        0.01566330399154762,
+        0.09837071435887917
+      ],
+      "n": 100,
+      "pass": true
+    },
+    {
+      "system": "linear_nonnormal_var",
+      "metric": "lagged_asymmetry",
+      "rung": "L1_iaaft",
+      "ground_truth": true,
+      "role": "power",
+      "detection_rate": 1.0,
+      "ci95": [
+        0.9630065017930143,
+        1.0
+      ],
+      "n": 100,
+      "pass": true
+    },
+    {
+      "system": "linear_nonnormal_var",
+      "metric": "lagged_asymmetry",
+      "rung": "L2_mvphase",
+      "ground_truth": null,
+      "role": "ceiling (property preserved by rung)",
+      "detection_rate": 0.21,
+      "ci95": [
+        0.141656540619153,
+        0.2997996883408986
+      ],
+      "n": 100,
+      "pass": false
+    },
+    {
+      "system": "independent_ar",
+      "metric": "persistence_maf",
+      "rung": "L1_iaaft",
+      "ground_truth": false,
+      "role": "false_positive_rate",
+      "detection_rate": 0.07,
+      "ci95": [
+        0.03431926106727268,
+        0.13749514739073498
+      ],
+      "n": 100,
+      "pass": true
+    },
+    {
+      "system": "shared_mode",
+      "metric": "persistence_maf",
+      "rung": "L1_iaaft",
+      "ground_truth": true,
+      "role": "power",
+      "detection_rate": 1.0,
+      "ci95": [
+        0.9630065017930143,
+        1.0
+      ],
+      "n": 100,
+      "pass": true
+    },
+    {
+      "system": "shared_mode",
+      "metric": "persistence_maf",
+      "rung": "L2_mvphase",
+      "ground_truth": null,
+      "role": "ceiling (property preserved by rung)",
+      "detection_rate": 0.23,
+      "ci95": [
+        0.15843265880303448,
+        0.3215438302287377
+      ],
+      "n": 100,
+      "pass": false
+    },
+    {
+      "system": "independent_ar",
+      "metric": "phi_r_mean",
+      "rung": "L1_iaaft",
+      "ground_truth": false,
+      "role": "false_positive_rate",
+      "detection_rate": 0.06,
+      "ci95": [
+        0.027786123963188185,
+        0.12476815445895917
+      ],
+      "n": 100,
+      "pass": true
+    },
+    {
+      "system": "linear_nonnormal_var",
+      "metric": "phi_r_mean",
+      "rung": "L1_iaaft",
+      "ground_truth": true,
+      "role": "power",
+      "detection_rate": 1.0,
+      "ci95": [
+        0.9630065017930143,
+        1.0
+      ],
+      "n": 100,
+      "pass": true
+    },
+    {
+      "system": "independent_ar",
+      "metric": "psi_mean_macro",
+      "rung": "L1_iaaft",
+      "ground_truth": false,
+      "role": "false_positive_rate",
+      "detection_rate": 0.05,
+      "ci95": [
+        0.02154367915436798,
+        0.11175046923191911
+      ],
+      "n": 100,
+      "pass": true
+    },
+    {
+      "system": "shared_mode",
+      "metric": "psi_mean_macro",
+      "rung": "L1_iaaft",
+      "ground_truth": true,
+      "role": "power",
+      "detection_rate": 1.0,
+      "ci95": [
+        0.9630065017930143,
+        1.0
+      ],
+      "n": 100,
+      "pass": true
+    }
+  ],
+  "all_pass": false
+}

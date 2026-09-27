@@ -142,6 +142,17 @@ def cmd_report(args) -> None:
         print("wrote", p)
 
 
+def cmd_posthoc(args) -> None:
+    from .posthoc import run_all
+    _banner("POST-HOC ANALYSES (not preregistered; labelled as such)")
+    res = run_all(Path(args.out), workers=args.workers)
+    from .campaign import _jsonable
+    print(json.dumps(_jsonable({k: v for k, v in res.items() if k != "sesoi_calibration"}), indent=1)[:4000])
+    for r in res["sesoi_calibration"]["rows"]:
+        print(f"{r['system']:22s} {r['metric']:17s} {r['rung']:11s} truth={r['ground_truth']!s:5s} "
+              f"raw={r['raw_detection_rate']:.2f} with_SESOI={r['sesoi_detection_rate']:.2f}")
+
+
 def cmd_all(args) -> None:
     base = Path(args.out)
     for sub, fn in (("calibration", cmd_calibrate), ("v3_forensics", cmd_v3)):
@@ -193,6 +204,11 @@ def main(argv=None) -> None:
     r.add_argument("--out", default=str(DEFAULT_OUT))
     r.add_argument("--figures", default=str(pr.ROOT / "figures"))
     r.set_defaults(fn=cmd_report)
+
+    ph = sub.add_parser("posthoc", help="post-hoc analyses (not preregistered)")
+    ph.add_argument("--out", default=str(DEFAULT_OUT))
+    ph.add_argument("--workers", type=int, default=4)
+    ph.set_defaults(fn=cmd_posthoc)
 
     al = sub.add_parser("all")
     al.add_argument("--out", default=str(DEFAULT_OUT))

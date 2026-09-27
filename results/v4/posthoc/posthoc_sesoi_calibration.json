@@ -1,0 +1,109 @@
+{
+  "label": "POST-HOC (not preregistered)",
+  "sesoi_relative": 0.01,
+  "alpha": 0.05,
+  "rows": [
+    {
+      "system": "linear_nonnormal_var",
+      "metric": "lagged_asymmetry",
+      "rung": "L2_mvphase",
+      "ground_truth": null,
+      "raw_detection_rate": 0.2,
+      "raw_ci95": [
+        0.1333669333310325,
+        0.28882916559315885
+      ],
+      "sesoi_detection_rate": 0.0,
+      "sesoi_ci95": [
+        0.0,
+        0.03699349820698566
+      ],
+      "median_abs_relative_deviation": 0.0004646314078385378
+    },
+    {
+      "system": "shared_mode",
+      "metric": "persistence_maf",
+      "rung": "L2_mvphase",
+      "ground_truth": null,
+      "raw_detection_rate": 0.25,
+      "raw_ci95": [
+        0.17545211362287674,
+        0.34304463548061603
+      ],
+      "sesoi_detection_rate": 0.0,
+      "sesoi_ci95": [
+        0.0,
+        0.03699349820698566
+      ],
+      "median_abs_relative_deviation": 0.00030134890228930274
+    },
+    {
+      "system": "linear_nonnormal_var",
+      "metric": "lagged_asymmetry",
+      "rung": "L1_iaaft",
+      "ground_truth": true,
+      "raw_detection_rate": 1.0,
+      "raw_ci95": [
+        0.9630065017930143,
+        1.0
+      ],
+      "sesoi_detection_rate": 1.0,
+      "sesoi_ci95": [
+        0.9630065017930143,
+        1.0
+      ],
+      "median_abs_relative_deviation": 4.40877798629393
+    },
+    {
+      "system": "shared_mode",
+      "metric": "persistence_maf",
+      "rung": "L1_iaaft",
+      "ground_truth": true,
+      "raw_detection_rate": 1.0,
+      "raw_ci95": [
+        0.9630065017930143,
+        1.0
+      ],
+      "sesoi_detection_rate": 1.0,
+      "sesoi_ci95": [
+        0.9630065017930143,
+        1.0
+      ],
+      "median_abs_relative_deviation": 6.577081197815461
+    },
+    {
+      "system": "independent_ar",
+      "metric": "lagged_asymmetry",
+      "rung": "L1_iaaft",
+      "ground_truth": false,
+      "raw_detection_rate": 0.05,
+      "raw_ci95": [
+        0.02154367915436798,
+        0.11175046923191911
+      ],
+      "sesoi_detection_rate": 0.05,
+      "sesoi_ci95": [
+        0.02154367915436798,
+        0.11175046923191911
+      ],
+      "median_abs_relative_deviation": 0.06610051743831821
+    },
+    {
+      "system": "independent_ar",
+      "metric": "persistence_maf",
+      "rung": "L1_iaaft",
+      "ground_truth": false,
+      "raw_detection_rate": 0.07,
+      "raw_ci95": [
+        0.03431926106727268,
+        0.13749514739073498
+      ],
+      "sesoi_detection_rate": 0.07,
+      "sesoi_ci95": [
+        0.03431926106727268,
+        0.13749514739073498
+      ],
+      "median_abs_relative_deviation": 0.010505622999135992
+    }
+  ]
+}
