@@ -100,10 +100,32 @@ def cmd_analyze(args) -> None:
     results["across_study_holm"] = S.across_study_holm(studies)
     if (out / "posthoc_v5_equivalence.json").exists():
         results["posthoc_v5"] = json.loads((out / "posthoc_v5_equivalence.json").read_text())
+    if "J" in studies:
+        results["descriptive"] = {"J_direction_counts": _direction_counts(out / "J"),
+                                  "note": "post-lock descriptive statistics; not hypothesis tests"}
+    if all(k in studies for k in ("G", "J")):
+        from .meta import run as meta_run
+        results["meta_analysis"] = meta_run(pr.ROOT)
     write_json(out / "results_v6.json", results)
     from .report import write_summary
     write_summary(results, out / "SUMMARY_v6.md")
     print((out / "SUMMARY_v6.md").read_text(encoding="utf-8"))
+
+
+def _direction_counts(run_dir: Path) -> dict:
+    """Networks with master > twin at each gain, an exact sign-test p and the median difference."""
+    import math
+
+    import numpy as np
+    from ghost_v5.studies import _col, _load
+    data, seeds = _load(run_dir)
+    out = {}
+    for k in S.GAINS_J:
+        d = _col(data, seeds, f"gain{k:g}", "master", "self_persistence") - _col(data, seeds, f"gain{k:g}", "twin", "self_persistence")
+        n, pos = len(d), int(np.sum(d > 0))
+        p = sum(math.comb(n, i) for i in range(pos, n + 1)) / 2 ** n
+        out[f"gain{k:g}"] = {"positive": pos, "n": n, "sign_test_p_one_sided": p, "median_diff": float(np.median(d))}
+    return out
 
 
 def cmd_posthoc(args) -> None:
