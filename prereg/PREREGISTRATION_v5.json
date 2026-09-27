@@ -1,18 +1,16 @@
 {
-  "title": "Ghost in the Machine v5 — preregistration of follow-up studies on the v4 authorship effect",
+  "title": "Ghost in the Machine v5 \u2014 preregistration of follow-up studies on the v4 authorship effect",
   "version": "5.0",
   "author": "Kai Piper",
   "drafted": "2026-09-27",
   "scientific_status": "Synthetic computational experiment. No hypothesis below concerns, measures or can establish phenomenal consciousness.",
   "background": "v4 (lock 6a20b41, results 7854e1e) found that when an agent authors its own actions, the maximum-autocorrelation feature of its self population is more persistent (H1, d_z = 1.21), most strongly in the self population (H2), only with the comparator intact (H3), with a rise in Gaussian Rosas Psi (H4). v5 asks whether that result replicates, scales with the degree of authorship, survives nonlinear estimation and other architectures, is an online effect of the comparator, and follows the comparator's wiring.",
   "hypotheses_written_before_any_v5_data": true,
-
   "code": "ghost_v4 (frozen, unchanged since the v4 lock) and ghost_v5 (engine.py mirrors ghost_v4.engine.run_agent and reproduces it bit for bit with default settings; tests/test_v5.py).",
   "endpoint_definitions": "As in v4 (prereg/PREREGISTRATION_v4.json). self_persistence = Gaussian I(V_t; V_t+1) of the self population's maximum-autocorrelation feature V; self_psi = Rosas Psi of V against the self nodes; atlas_persistence_<p> = the same persistence for population p. Analysis window cycles burn+1..6000.",
   "test": "Paired sign-flip randomization test on the mean (exact for n <= 16, else 20000 flips), one-sided in the stated direction; effect sizes as mean difference with 95% bootstrap CI and d_z.",
   "alpha": 0.05,
   "multiplicity": "Holm within each study's primary family (the confirmatory decision for that study). Holm across every v5 primary test is also reported.",
-
   "studies": {
     "A": {
       "name": "direct replication",
@@ -23,69 +21,383 @@
     "B": {
       "name": "graded authorship (dose-response)",
       "design": "Live world. Each network runs at authorship p in {0, 0.25, 0.5, 0.75, 1}: with probability 1-p the executed action is taken from the donor's recorded closed-loop actions (the next network in the same world block), otherwise it is the network's own intention. p = 1 is exactly the v4 master. Done with the comparator intact and lesioned.",
-      "spec": {"seeds": [6000, 6001, 6002, 6003, 6004, 6005, 6006, 6007, 6008, 6009, 6010, 6011, 6012, 6013, 6014, 6015, 6016, 6017, 6018, 6019, 6020, 6021, 6022, 6023, 6024, 6025, 6026, 6027, 6028, 6029, 6030, 6031, 6032, 6033, 6034, 6035, 6036, 6037, 6038, 6039, 6040, 6041, 6042, 6043, 6044, 6045, 6046, 6047],
-               "world_blocks": 4, "world_seed_base": 31, "steps": 6000, "burn": 2000},
+      "spec": {
+        "seeds": [
+          6000,
+          6001,
+          6002,
+          6003,
+          6004,
+          6005,
+          6006,
+          6007,
+          6008,
+          6009,
+          6010,
+          6011,
+          6012,
+          6013,
+          6014,
+          6015,
+          6016,
+          6017,
+          6018,
+          6019,
+          6020,
+          6021,
+          6022,
+          6023,
+          6024,
+          6025,
+          6026,
+          6027,
+          6028,
+          6029,
+          6030,
+          6031,
+          6032,
+          6033,
+          6034,
+          6035,
+          6036,
+          6037,
+          6038,
+          6039,
+          6040,
+          6041,
+          6042,
+          6043,
+          6044,
+          6045,
+          6046,
+          6047
+        ],
+        "world_blocks": 4,
+        "world_seed_base": 31,
+        "steps": 6000,
+        "burn": 2000
+      },
       "hypotheses": [
-        {"id": "B1", "statement": "self persistence rises with authorship", "statistic": "per-network OLS slope of self_persistence on p (comparator intact)", "direction": "greater than 0"},
-        {"id": "B2", "statement": "the dose-response needs the comparator", "statistic": "slope(intact) - slope(comparator lesioned)", "direction": "greater than 0"},
-        {"id": "B3", "statement": "Psi rises with authorship", "statistic": "per-network OLS slope of self_psi on p (comparator intact)", "direction": "greater than 0"}
+        {
+          "id": "B1",
+          "statement": "self persistence rises with authorship",
+          "statistic": "per-network OLS slope of self_persistence on p (comparator intact)",
+          "direction": "greater than 0"
+        },
+        {
+          "id": "B2",
+          "statement": "the dose-response needs the comparator",
+          "statistic": "slope(intact) - slope(comparator lesioned)",
+          "direction": "greater than 0"
+        },
+        {
+          "id": "B3",
+          "statement": "Psi rises with authorship",
+          "statistic": "per-network OLS slope of self_psi on p (comparator intact)",
+          "direction": "greater than 0"
+        }
       ],
       "secondary": "Mean persistence at each level with CIs; adjacent-level differences (shape of the curve: graded vs threshold); intention/outcome match per level (manipulation check, expected p + (1-p)/7)."
     },
     "C": {
       "name": "nonlinear-estimator robustness",
       "design": "Re-simulate the 48 v4 confirmatory networks (seeds 2000-2047, worlds 11-14; deterministic) as master and cross-yoked twin, and recompute persistence and Psi of the same macro-variable V with (i) the Kraskov-Stoegbauer-Grassberger k-NN estimator (k = 4) and (ii) Gaussian-copula MI. This reuses the v4 networks on purpose: the question is estimator dependence, not sampling.",
-      "spec": {"seeds": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035, 2036, 2037, 2038, 2039, 2040, 2041, 2042, 2043, 2044, 2045, 2046, 2047],
-               "world_blocks": 4, "world_seed_base": 11, "steps": 6000, "burn": 2000},
+      "spec": {
+        "seeds": [
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026,
+          2027,
+          2028,
+          2029,
+          2030,
+          2031,
+          2032,
+          2033,
+          2034,
+          2035,
+          2036,
+          2037,
+          2038,
+          2039,
+          2040,
+          2041,
+          2042,
+          2043,
+          2044,
+          2045,
+          2046,
+          2047
+        ],
+        "world_blocks": 4,
+        "world_seed_base": 11,
+        "steps": 6000,
+        "burn": 2000
+      },
       "hypotheses": [
-        {"id": "C1", "statement": "authorship increases KSG persistence", "statistic": "ksg_persistence master - twin", "direction": "greater"},
-        {"id": "C2", "statement": "authorship increases KSG Psi", "statistic": "ksg_psi master - twin", "direction": "greater"},
-        {"id": "C3", "statement": "authorship increases Gaussian-copula persistence", "statistic": "gc_persistence master - twin", "direction": "greater"},
-        {"id": "C4", "statement": "authorship increases Gaussian-copula Psi", "statistic": "gc_psi master - twin", "direction": "greater"}
+        {
+          "id": "C1",
+          "statement": "authorship increases KSG persistence",
+          "statistic": "ksg_persistence master - twin",
+          "direction": "greater"
+        },
+        {
+          "id": "C2",
+          "statement": "authorship increases KSG Psi",
+          "statistic": "ksg_psi master - twin",
+          "direction": "greater"
+        },
+        {
+          "id": "C3",
+          "statement": "authorship increases Gaussian-copula persistence",
+          "statistic": "gc_persistence master - twin",
+          "direction": "greater"
+        },
+        {
+          "id": "C4",
+          "statement": "authorship increases Gaussian-copula Psi",
+          "statistic": "gc_psi master - twin",
+          "direction": "greater"
+        }
       ],
       "secondary": "Reproducibility check: re-simulated Gaussian self_persistence must equal the stored v4 values exactly. KSG parts-information contrast."
     },
     "D": {
       "name": "architecture robustness",
       "design": "Master vs cross-yoked twin in four architectural variants not used for confirmation in v4: leak 1.0 (v3-style memoryless units), leak 0.3, spectral radius 0.9, spectral radius 1.1 (other parameters at v4 defaults).",
-      "spec": {"seeds": [7000, 7001, 7002, 7003, 7004, 7005, 7006, 7007, 7008, 7009, 7010, 7011, 7012, 7013, 7014, 7015, 7016, 7017, 7018, 7019, 7020, 7021, 7022, 7023],
-               "world_blocks": 2, "world_seed_base": 41, "steps": 6000, "burn": 2000},
+      "spec": {
+        "seeds": [
+          7000,
+          7001,
+          7002,
+          7003,
+          7004,
+          7005,
+          7006,
+          7007,
+          7008,
+          7009,
+          7010,
+          7011,
+          7012,
+          7013,
+          7014,
+          7015,
+          7016,
+          7017,
+          7018,
+          7019,
+          7020,
+          7021,
+          7022,
+          7023
+        ],
+        "world_blocks": 2,
+        "world_seed_base": 41,
+        "steps": 6000,
+        "burn": 2000
+      },
       "hypotheses": [
-        {"id": "D_leak1.0", "statement": "H1 holds with leak 1.0", "statistic": "self_persistence master - twin", "direction": "greater"},
-        {"id": "D_leak0.3", "statement": "H1 holds with leak 0.3", "statistic": "self_persistence master - twin", "direction": "greater"},
-        {"id": "D_radius0.9", "statement": "H1 holds with radius 0.9", "statistic": "self_persistence master - twin", "direction": "greater"},
-        {"id": "D_radius1.1", "statement": "H1 holds with radius 1.1", "statistic": "self_persistence master - twin", "direction": "greater"}
+        {
+          "id": "D_leak1.0",
+          "statement": "H1 holds with leak 1.0",
+          "statistic": "self_persistence master - twin",
+          "direction": "greater"
+        },
+        {
+          "id": "D_leak0.3",
+          "statement": "H1 holds with leak 0.3",
+          "statistic": "self_persistence master - twin",
+          "direction": "greater"
+        },
+        {
+          "id": "D_radius0.9",
+          "statement": "H1 holds with radius 0.9",
+          "statistic": "self_persistence master - twin",
+          "direction": "greater"
+        },
+        {
+          "id": "D_radius1.1",
+          "statement": "H1 holds with radius 1.1",
+          "statistic": "self_persistence master - twin",
+          "direction": "greater"
+        }
       ],
       "secondary": "Per variant: Psi contrast, self-specificity contrast, manipulation check."
     },
     "E": {
       "name": "comparator timing (online effect or trained trait?)",
       "design": "Three comparator schedules, each run as master and cross-yoked twin (twin yoked to the donor's master under the same schedule): sham (comparator on throughout), off_late (on for cycles < 3000, off afterwards), on_late (off for cycles < 3000, on afterwards). Analysis window cycles 3501-6000 (500 cycles after the switch).",
-      "spec": {"seeds": [8000, 8001, 8002, 8003, 8004, 8005, 8006, 8007, 8008, 8009, 8010, 8011, 8012, 8013, 8014, 8015, 8016, 8017, 8018, 8019, 8020, 8021, 8022, 8023],
-               "world_blocks": 2, "world_seed_base": 51, "steps": 6000, "burn": 3500},
+      "spec": {
+        "seeds": [
+          8000,
+          8001,
+          8002,
+          8003,
+          8004,
+          8005,
+          8006,
+          8007,
+          8008,
+          8009,
+          8010,
+          8011,
+          8012,
+          8013,
+          8014,
+          8015,
+          8016,
+          8017,
+          8018,
+          8019,
+          8020,
+          8021,
+          8022,
+          8023
+        ],
+        "world_blocks": 2,
+        "world_seed_base": 51,
+        "steps": 6000,
+        "burn": 3500
+      },
       "hypotheses": [
-        {"id": "E1", "statement": "the effect appears when the comparator is switched on", "statistic": "on_late: self_persistence master - twin", "direction": "greater"},
-        {"id": "E2", "statement": "the effect disappears when the comparator is switched off", "statistic": "(sham master - twin) - (off_late master - twin)", "direction": "greater"},
-        {"id": "E3", "statement": "the effect is present in the same window without a switch", "statistic": "sham: self_persistence master - twin", "direction": "greater"}
+        {
+          "id": "E1",
+          "statement": "the effect appears when the comparator is switched on",
+          "statistic": "on_late: self_persistence master - twin",
+          "direction": "greater"
+        },
+        {
+          "id": "E2",
+          "statement": "the effect disappears when the comparator is switched off",
+          "statistic": "(sham master - twin) - (off_late master - twin)",
+          "direction": "greater"
+        },
+        {
+          "id": "E3",
+          "statement": "the effect is present in the same window without a switch",
+          "statistic": "sham: self_persistence master - twin",
+          "direction": "greater"
+        }
       ],
       "secondary": "Authorship effect per schedule; on_late minus sham."
     },
     "F": {
       "name": "comparator rerouting (does the effect follow the wiring?)",
       "design": "Standard wiring (comparator -> self + association) vs rerouted wiring (comparator -> DMN + association; identical random projection, only the target mask moves). Master and cross-yoked twin in each wiring.",
-      "spec": {"seeds": [9000, 9001, 9002, 9003, 9004, 9005, 9006, 9007, 9008, 9009, 9010, 9011, 9012, 9013, 9014, 9015, 9016, 9017, 9018, 9019, 9020, 9021, 9022, 9023],
-               "world_blocks": 2, "world_seed_base": 61, "steps": 6000, "burn": 2000},
+      "spec": {
+        "seeds": [
+          9000,
+          9001,
+          9002,
+          9003,
+          9004,
+          9005,
+          9006,
+          9007,
+          9008,
+          9009,
+          9010,
+          9011,
+          9012,
+          9013,
+          9014,
+          9015,
+          9016,
+          9017,
+          9018,
+          9019,
+          9020,
+          9021,
+          9022,
+          9023
+        ],
+        "world_blocks": 2,
+        "world_seed_base": 61,
+        "steps": 6000,
+        "burn": 2000
+      },
       "hypotheses": [
-        {"id": "F1", "statement": "with the comparator rerouted to DMN, authorship increases DMN persistence", "statistic": "rerouted: atlas_persistence_dmn master - twin", "direction": "greater"},
-        {"id": "F2", "statement": "the effect follows the comparator", "statistic": "(DMN effect - self effect | rerouted) - (DMN effect - self effect | standard)", "direction": "greater"}
+        {
+          "id": "F1",
+          "statement": "with the comparator rerouted to DMN, authorship increases DMN persistence",
+          "statistic": "rerouted: atlas_persistence_dmn master - twin",
+          "direction": "greater"
+        },
+        {
+          "id": "F2",
+          "statement": "the effect follows the comparator",
+          "statistic": "(DMN effect - self effect | rerouted) - (DMN effect - self effect | standard)",
+          "direction": "greater"
+        }
       ],
       "secondary": "Authorship effect on every population's persistence in each wiring."
     }
   },
-
-  "pilot_spec": {"seeds": [100, 101, 102, 103, 104, 105], "world_blocks": 1, "world_seed_base": 1, "steps": 6000, "burn": 2000},
+  "pilot_spec": {
+    "seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105
+    ],
+    "world_blocks": 1,
+    "world_seed_base": 1,
+    "steps": 6000,
+    "burn": 2000
+  },
   "pilot_policy": "A technical pilot of studies B-F on six development networks (world 1, already examined in v4 development) is run after the hypotheses above were written and before locking. Its purpose is to catch software faults. Its results are recorded below; hypotheses and directions may not be changed because of them.",
-  "pilot": "to be filled in after the pilot, before locking",
-
+  "pilot": {
+    "run": "2026-09-27, development networks 100-105 in world 1, studies B-F, exactly the confirmatory code.",
+    "software_faults_found": "none",
+    "manipulation_check_B": "intention/outcome match 0.145, 0.362, 0.575, 0.788, 1.000 at p = 0, 0.25, 0.5, 0.75, 1 (expected 0.143, 0.357, 0.571, 0.786, 1.000)",
+    "estimates_seen_d_z": {
+      "B1": 1.39,
+      "B2": 0.92,
+      "B3": 0.02,
+      "D_leak1.0": 0.98,
+      "D_leak0.3": 1.29,
+      "D_radius0.9": 1.16,
+      "D_radius1.1": 1.83,
+      "E1": 1.43,
+      "E2": 0.74,
+      "E3": 0.85,
+      "F1": 0.75,
+      "F2": 0.83,
+      "C (pilot networks, mean master-twin)": {
+        "ksg_persistence": 0.066,
+        "ksg_psi": 0.001,
+        "gc_persistence": 0.075,
+        "gc_psi": 0.014
+      }
+    },
+    "changes_made_because_of_pilot": "none. B3 was null in the pilot (d_z = 0.02) and pilot Psi contrasts under KSG were near zero; both hypotheses are kept unchanged as risky tests."
+  },
   "deviations_policy": "Any change to a hashed file after locking invalidates the lock; the runner then refuses confirmatory labelling. Deviations are listed in the report with reasons."
 }
